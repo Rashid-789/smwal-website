@@ -41,7 +41,7 @@ export default function CommunityImpact() {
           className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-black/35 shadow-[0_25px_80px_rgba(0,0,0,0.55)] backdrop-blur"
           variant={scaleIn}
         >
-          <div className="relative h-55 w-full sm:h-70 md:h-85 lg:h-95">
+          <div className="relative h-55 w-full sm:h-70 md:h-85 lg:h-130">
             <Image
               src={HOME_IMPACT.image.src}
               alt={HOME_IMPACT.image.alt}

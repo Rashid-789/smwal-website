@@ -8,9 +8,9 @@ export default function CtaBanner() {
   return (
     <section className="py-12 md:py-16">
       <Container>
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/35 shadow-[0_25px_80px_rgba(0,0,0,0.55)]">
+        <div className="relative lg:h-130 overflow-hidden rounded-2xl border border-white/10 bg-black/35 shadow-[0_25px_80px_rgba(0,0,0,0.55)]">
           {/* background image */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 ">
             <Image
               src={HOME_CTA_BANNER.image.src}
               alt={HOME_CTA_BANNER.image.alt}
@@ -24,7 +24,7 @@ export default function CtaBanner() {
           </div>
 
           {/* content */}
-          <Stagger className="relative px-6 py-14 text-center md:px-10 md:py-16">
+          <Stagger className="relative px-6 py-10 text-center md:px-10 md:py-45">
             <Reveal
               as="h3"
               className="text-2xl font-display font-extrabold uppercase tracking-tight text-white md:text-3xl"

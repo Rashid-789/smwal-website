@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { SITE } from "@/config/site";
 import { cn } from "@/lib/cn";
+import useLockBodyScroll from "@/shared/hooks/useLockBodyScroll";
 
 type Props = {
   open: boolean;
@@ -12,6 +13,8 @@ type Props = {
 };
 
 export default function MobileMenu({ open, onClose, activePath }: Props) {
+  useLockBodyScroll(open);
+
   if (!open) return null;
 
   return (

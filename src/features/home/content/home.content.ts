@@ -11,9 +11,9 @@ export const HOME_HERO = {
     appStore: { href: "#", label: "Download on the App Store" },
   },
   polaroids: [
-    { src: "/images/hero-1.svg", alt: "Couple smiling", rotate: -6, x: 52, y: 10, z: 30 },
-    { src: "/images/hero-2.svg", alt: "Friends smiling", rotate: 8, x: 68, y: 20, z: 20 },
-    { src: "/images/hero-3.svg", alt: "Couple posing", rotate: -10, x: 38, y: 44, z: 10 },
+    { src: "/images/hero-3.svg", alt: "Couple smiling", rotate: -6, x: 52, y: 10, z: 30 },
+    { src: "/images/hero-1.svg", alt: "Friends smiling", rotate: 8, x: 68, y: 20, z: 20 },
+    { src: "/images/hero-2.svg", alt: "Couple posing", rotate: -10, x: 38, y: 44, z: 10 },
   ],
 };
 
@@ -195,4 +195,4 @@ export const HOME_CTA_BANNER = {
   primary: { label: "Join the Platform", href: "/join" },
   secondary: { label: "Support the Mission", href: "/donate" },
   image: { src: "/images/cta-banner.jpg", alt: "Happy couple" },
-};
+};  

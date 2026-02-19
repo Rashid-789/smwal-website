@@ -27,7 +27,7 @@ export default function PurposeCard({ image, alt, title, description, action }: 
   return (
     <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/35 shadow-[0_20px_60px_rgba(0,0,0,0.55)] backdrop-blur">
       <div className="p-4">
-        <div className="relative h-52.5 w-full overflow-hidden rounded-xl bg-black">
+        <div className="relative h-80.5 w-full overflow-hidden rounded-xl bg-black">
           <Image
             src={image}
             alt={alt}

@@ -21,8 +21,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SmoothScroll>
           <SiteShell>
             <Navbar />
-
-            {/* navbar is fixed (h-16), so add padding-top */}
             <main className="pt-16">{children}</main>
 
             <Footer />

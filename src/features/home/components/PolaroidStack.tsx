@@ -17,7 +17,7 @@ export default function PolaroidStack({ items }: { items: readonly PolaroidItem[
         <Polaroid
           src={left.src}
           alt={left.alt}
-          className="left-[2%] top-[44%] w-[44%] -rotate-12 opacity-95"
+          className="right-[60%] top-[48%] w-[44%] -rotate-12 opacity-95"
           z="z-10"
           floatDelay={0.15}
         />
@@ -37,7 +37,7 @@ export default function PolaroidStack({ items }: { items: readonly PolaroidItem[
         <Polaroid
           src={right.src}
           alt={right.alt}
-          className="right-[0%] top-[22%] w-[46%] rotate-10"
+          className="left-[75%] top-[35%] w-[46%] rotate-10"
           z="z-20"
           floatDelay={0.25}
         />
@@ -97,7 +97,7 @@ function Polaroid({
             fill
             sizes="(max-width: 1024px) 420px, 520px"
             unoptimized={isSvg}
-            className="object-cover"
+            className="object-center"
           />
         </div>
 

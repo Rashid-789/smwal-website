@@ -32,22 +32,16 @@ export default function Navbar() {
       lastY.current = latest;
       return;
     }
-
-    // Hide when scrolling down, show when scrolling up (with a small threshold)
     if (delta > 8) setHidden(true);
     if (delta < -8) setHidden(false);
 
     lastY.current = latest;
   });
-
-  // If navbar hides, close the mobile menu to avoid odd states
   useEffect(() => {
     if (hidden) setOpen(false);
   }, [hidden]);
 
   const items = useMemo(() => SITE.nav, []);
-
-  // Warm up route bundles so navbar navigation feels instant.
   useEffect(() => {
     items.forEach((item) => {
       router.prefetch(item.href);
