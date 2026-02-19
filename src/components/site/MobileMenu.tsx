@@ -15,7 +15,7 @@ export default function MobileMenu({ open, onClose, activePath }: Props) {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[60]">
+    <div className="fixed inset-0 z-60">
       <button
         aria-label="Close menu"
         className="absolute inset-0 bg-black/60"
@@ -31,6 +31,7 @@ export default function MobileMenu({ open, onClose, activePath }: Props) {
               <Link
                 key={item.href}
                 href={item.href}
+                prefetch
                 onClick={onClose}
                 className={cn(
                   "rounded-xl px-3 py-2 text-sm font-semibold tracking-wide",
@@ -47,7 +48,7 @@ export default function MobileMenu({ open, onClose, activePath }: Props) {
           <Link
             href="#"
             onClick={onClose}
-            className="flex-1 rounded-full bg-gradient-to-r from-fuchsia-600 to-blue-600 px-4 py-2 text-center text-sm font-semibold hover:brightness-110"
+            className="flex-1 rounded-full bg-linear-to-r from-fuchsia-600 to-blue-600 px-4 py-2 text-center text-sm font-semibold hover:brightness-110"
           >
             Download App
           </Link>

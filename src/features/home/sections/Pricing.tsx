@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import Container from "@/components/ui/Container";
+import { HoverLift, Reveal, Stagger } from "@/shared/motion/Motion";
+import { fadeIn, scaleIn } from "@/shared/motion/variants";
 import { HOME_PRICING } from "../content/home.content";
 import PricingToggle from "../components/PricingToggle";
 import PricingCard from "../components/PricingCard";
@@ -15,24 +17,28 @@ export default function Pricing() {
   return (
     <section className="py-14 md:py-20">
       <Container>
-        {/* Header */}
-        <div className="flex flex-col gap-6">
+        <Stagger className="flex flex-col gap-6">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white/80">
+            <Reveal
+              as="span"
+              className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white/80"
+            >
               {HOME_PRICING.pill}
-            </span>
+            </Reveal>
 
-            <h2 className="mt-5 text-[28px] font-display font-extrabold uppercase leading-[1.12] tracking-tight text-white md:text-[44px]">
+            <Reveal
+              as="h2"
+              className="mt-5 text-[28px] font-display font-extrabold uppercase leading-[1.12] tracking-tight text-white md:text-[44px]"
+            >
               {HOME_PRICING.title}
-            </h2>
+            </Reveal>
 
-            <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+            <Reveal as="p" className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
               {HOME_PRICING.subtitle}
-            </p>
+            </Reveal>
           </div>
 
-          {/* ✅ Centered toggle (as screenshot) */}
-          <div className="flex justify-center">
+          <Reveal className="flex justify-center" variant={fadeIn}>
             <PricingToggle
               value={period}
               onChange={setPeriod}
@@ -40,15 +46,21 @@ export default function Pricing() {
               yearlyLabel={HOME_PRICING.toggle.yearly}
               badge={HOME_PRICING.toggle.badge}
             />
-          </div>
-        </div>
+          </Reveal>
+        </Stagger>
 
-        {/* Cards */}
-        <div className="mt-10 grid gap-6 lg:grid-cols-3 lg:items-stretch">
+        <Stagger className="mt-10 grid gap-6 lg:grid-cols-3 lg:items-stretch">
           {plans.map((plan) => (
-            <PricingCard key={plan.key} plan={plan} period={period} />
+            <Reveal
+              key={plan.key}
+              variant={"bestDeal" in plan && plan.bestDeal ? scaleIn : undefined}
+            >
+              <HoverLift>
+                <PricingCard plan={plan} period={period} />
+              </HoverLift>
+            </Reveal>
           ))}
-        </div>
+        </Stagger>
       </Container>
     </section>
   );

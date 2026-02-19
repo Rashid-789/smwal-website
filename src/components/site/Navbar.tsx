@@ -1,34 +1,75 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useRef, useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import { SITE } from "@/config/site";
 import Brand from "./Brand";
 import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
 
-  const items = useMemo(
-    () => [
-      { label: "HOME", href: "/" },
-      { label: "ABOUT US", href: "/about" },
-      { label: "JOIN US", href: "/join" },
-      { label: "DONATE US", href: "/donate" },
-      { label: "CONTACT US", href: "/contact" },
-    ],
-    []
-  );
+  // --- scroll show/hide ---
+  const [hidden, setHidden] = useState(false);
+  const { scrollY } = useScroll();
+  const lastY = useRef(0);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const prev = lastY.current;
+    const delta = latest - prev;
+
+    // Always show near top
+    if (latest < 80) {
+      setHidden(false);
+      lastY.current = latest;
+      return;
+    }
+
+    // Hide when scrolling down, show when scrolling up (with a small threshold)
+    if (delta > 8) setHidden(true);
+    if (delta < -8) setHidden(false);
+
+    lastY.current = latest;
+  });
+
+  // If navbar hides, close the mobile menu to avoid odd states
+  useEffect(() => {
+    if (hidden) setOpen(false);
+  }, [hidden]);
+
+  const items = useMemo(() => SITE.nav, []);
+
+  // Warm up route bundles so navbar navigation feels instant.
+  useEffect(() => {
+    items.forEach((item) => {
+      router.prefetch(item.href);
+    });
+  }, [items, router]);
 
   return (
     <>
-      <header className="sticky top-0 z-50">
+      <motion.header
+        initial={false}
+        animate={hidden ? "hidden" : "visible"}
+        variants={{
+          visible: { y: 0, opacity: 1 },
+          hidden: { y: -90, opacity: 0 },
+        }}
+        transition={{ duration: 0.28, ease: "easeOut" }}
+        className="fixed inset-x-0 top-0 z-50"
+        style={{ pointerEvents: hidden ? "none" : "auto" }}
+      >
         <div className="bg-black/35 backdrop-blur">
           <Container className="flex h-16 items-center justify-between">
-            <Link href="/" className="shrink-0">
+            <Link href="/" className="shrink-0" aria-label="Go to home">
               <Brand />
             </Link>
 
@@ -40,6 +81,7 @@ export default function Navbar() {
                   <Link
                     key={it.href}
                     href={it.href}
+                    prefetch
                     className={[
                       "text-sm font-semibold tracking-wide transition",
                       active ? "text-sky-400" : "text-white/75 hover:text-white",
@@ -63,16 +105,21 @@ export default function Navbar() {
                 onClick={() => setOpen(true)}
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 hover:bg-white/10 md:hidden"
                 aria-label="Open menu"
+                type="button"
               >
-                {/* hamburger */}
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M4 7h16M4 12h16M4 17h16"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
                 </svg>
               </button>
             </div>
           </Container>
         </div>
-      </header>
+      </motion.header>
 
       <MobileMenu open={open} onClose={() => setOpen(false)} activePath={pathname} />
     </>

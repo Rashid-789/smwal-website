@@ -1,5 +1,7 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import { Reveal, Stagger } from "@/shared/motion/Motion";
+import { scaleIn } from "@/shared/motion/variants";
 import { HOME_HERO } from "../content/home.content";
 import StoreBadges from "../components/StoreBadges";
 import PolaroidStack from "../components/PolaroidStack";
@@ -17,21 +19,24 @@ export default function Hero() {
       <Container>
         <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
           {/* Left content */}
-          <div className="max-w-2xl">
-            <h1 className="text-[36px] font-extrabold uppercase leading-[1.05] tracking-tight text-white md:text-[52px] lg:text-[62px]">
+          <Stagger className="max-w-2xl">
+            <Reveal
+              as="h1"
+              className="text-[36px] font-extrabold uppercase leading-[1.05] tracking-tight text-white md:text-[52px] lg:text-[62px]"
+            >
               {/* supports 2 lines or 4 lines (high approach) */}
               {HOME_HERO.titleLines.map((line) => (
                 <span key={line} className="block">
                   {line}
                 </span>
               ))}
-            </h1>
+            </Reveal>
 
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70 md:text-base">
+            <Reveal as="p" className="mt-4 max-w-xl text-sm leading-relaxed text-white/70 md:text-base">
               {HOME_HERO.subtitle}
-            </p>
+            </Reveal>
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <Reveal className="mt-7 flex flex-wrap gap-3">
               {/* Primary = gradient pill (like screenshot) */}
               <Button
                 href={HOME_HERO.ctas.primary.href}
@@ -49,20 +54,20 @@ export default function Hero() {
               >
                 {HOME_HERO.ctas.secondary.label}
               </Button>
-            </div>
+            </Reveal>
 
-            <div className="mt-5">
+            <Reveal className="mt-5">
               <StoreBadges
                 googlePlayHref={HOME_HERO.stores.googlePlay.href}
                 appStoreHref={HOME_HERO.stores.appStore.href}
               />
-            </div>
-          </div>
+            </Reveal>
+          </Stagger>
 
           {/* Right polaroids */}
-          <div className="lg:justify-self-end">
+          <Reveal className="lg:justify-self-end" variant={scaleIn}>
             <PolaroidStack items={HOME_HERO.polaroids} />
-          </div>
+          </Reveal>
         </div>
       </Container>
     </section>

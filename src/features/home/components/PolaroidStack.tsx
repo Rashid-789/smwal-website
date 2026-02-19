@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
 
 type PolaroidItem = {
   src: string;
@@ -10,33 +13,33 @@ export default function PolaroidStack({ items }: { items: readonly PolaroidItem[
 
   return (
     <div className="relative mx-auto h-85 w-85 sm:h-105 sm:w-105 lg:h-105 lg:w-130">
-      {/* Left / back */}
       {left && (
         <Polaroid
           src={left.src}
           alt={left.alt}
           className="left-[2%] top-[44%] w-[44%] -rotate-12 opacity-95"
           z="z-10"
+          floatDelay={0.15}
         />
       )}
 
-      {/* Center / front */}
       {center && (
         <Polaroid
           src={center.src}
           alt={center.alt}
           className="left-[26%] top-[10%] w-[56%] rotate-[8deg]"
           z="z-30"
+          floatDelay={0}
         />
       )}
 
-      {/* Right */}
       {right && (
         <Polaroid
           src={right.src}
           alt={right.alt}
           className="right-[0%] top-[22%] w-[46%] rotate-10"
           z="z-20"
+          floatDelay={0.25}
         />
       )}
     </div>
@@ -48,22 +51,43 @@ function Polaroid({
   alt,
   className,
   z,
+  floatDelay,
 }: {
   src: string;
   alt: string;
   className: string;
   z: string;
+  floatDelay: number;
 }) {
   const isSvg = src.toLowerCase().endsWith(".svg");
+  const reduce = useReducedMotion();
 
   return (
-    <div
+    <motion.div
       className={[
         "absolute",
         z,
         className,
         "rounded-[22px] bg-neutral-900 p-3 shadow-[0_28px_80px_rgba(0,0,0,0.65)]",
       ].join(" ")}
+      initial={reduce ? false : { opacity: 0, y: 14 }}
+      animate={
+        reduce
+          ? undefined
+          : {
+              opacity: 1,
+              y: [0, -8, 0],
+            }
+      }
+      transition={
+        reduce
+          ? undefined
+          : {
+              opacity: { duration: 0.45, ease: "easeOut" },
+              y: { duration: 5.8, repeat: Infinity, ease: "easeInOut", delay: floatDelay },
+            }
+      }
+      whileHover={reduce ? undefined : { y: -10, scale: 1.02 }}
     >
       <div className="relative overflow-hidden rounded-2xl bg-black">
         <div className="relative aspect-4/5 w-full">
@@ -77,9 +101,8 @@ function Polaroid({
           />
         </div>
 
-        {/* subtle sheen like screenshot */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_55%_at_30%_0%,rgba(255,255,255,0.16),transparent_55%)]" />
       </div>
-    </div>
+    </motion.div>
   );
 }

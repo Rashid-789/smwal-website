@@ -1,5 +1,7 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import { HoverLift, Reveal, Stagger } from "@/shared/motion/Motion";
+import { scaleIn } from "@/shared/motion/variants";
 import Image from "next/image";
 import { HOME_EXPERIENCE } from "../content/home.content";
 import ExperienceFeatureCard from "../components/ExperienceFeatureCard";
@@ -20,44 +22,55 @@ export default function Experience() {
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_560px] xl:grid-cols-[1fr_640px]">
           {/* Left */}
           <div className="max-w-xl">
-            <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white/80">
-              {HOME_EXPERIENCE.pill}
-            </span>
-
-            <h2 className="mt-5 text-[28px] font-display font-extrabold uppercase leading-[1.08] tracking-tight text-white md:text-[44px]">
-              <span className="block">A SAFE AND GUIDED</span>
-              <span className="block">EXPERIENCE</span>
-            </h2>
-
-            <p className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
-              {HOME_EXPERIENCE.subtitle}
-            </p>
-
-            <div className="mt-6">
-              {/* force gradient pill like screenshot */}
-              <Button
-                href={HOME_EXPERIENCE.cta.href}
-                variant="primary"
-                className="h-11 rounded-full bg-linear-to-r from-fuchsia-600 to-sky-500 px-6 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
+            <Stagger>
+              <Reveal
+                as="span"
+                className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white/80"
               >
-                {HOME_EXPERIENCE.cta.label}
-              </Button>
-            </div>
+                {HOME_EXPERIENCE.pill}
+              </Reveal>
 
-            <div className="mt-10 space-y-4">
+              <Reveal
+                as="h2"
+                className="mt-5 text-[28px] font-display font-extrabold uppercase leading-[1.08] tracking-tight text-white md:text-[44px]"
+              >
+                <span className="block">A SAFE AND GUIDED</span>
+                <span className="block">EXPERIENCE</span>
+              </Reveal>
+
+              <Reveal as="p" className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+                {HOME_EXPERIENCE.subtitle}
+              </Reveal>
+
+              <Reveal className="mt-6">
+                {/* force gradient pill like screenshot */}
+                <Button
+                  href={HOME_EXPERIENCE.cta.href}
+                  variant="primary"
+                  className="h-11 rounded-full bg-linear-to-r from-fuchsia-600 to-sky-500 px-6 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
+                >
+                  {HOME_EXPERIENCE.cta.label}
+                </Button>
+              </Reveal>
+            </Stagger>
+
+            <Stagger className="mt-10 space-y-4">
               {HOME_EXPERIENCE.features.map((f) => (
-                <ExperienceFeatureCard
-                  key={f.title}
-                  icon={f.icon}
-                  title={f.title}
-                  description={f.description}
-                />
+                <Reveal key={f.title}>
+                  <HoverLift>
+                    <ExperienceFeatureCard
+                      icon={f.icon}
+                      title={f.title}
+                      description={f.description}
+                    />
+                  </HoverLift>
+                </Reveal>
               ))}
-            </div>
+            </Stagger>
           </div>
 
           {/* Right image */}
-          <div className="w-full lg:justify-self-end">
+          <Reveal className="w-full lg:justify-self-end" variant={scaleIn}>
             <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-black/30 p-1 shadow-[0_30px_90px_rgba(0,0,0,0.65)] backdrop-blur">
               <div className="relative overflow-hidden rounded-3xl">
                 <div className="relative aspect-3/4 w-full">
@@ -77,7 +90,7 @@ export default function Experience() {
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_55%_at_30%_0%,rgba(255,255,255,0.10),transparent_55%)]" />
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </Container>
     </section>

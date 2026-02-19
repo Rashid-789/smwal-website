@@ -1,9 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { display, sans } from "./fonts";
+
 import SiteShell from "@/components/site/SiteShell";
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
+
+//  add this import
+import SmoothScroll from "@/shared/motion/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "SMWAL",
@@ -14,11 +18,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${sans.variable} ${display.variable}`}>
       <body className="font-sans antialiased">
-        <SiteShell>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </SiteShell>
+        <SmoothScroll>
+          <SiteShell>
+            <Navbar />
+
+            {/* navbar is fixed (h-16), so add padding-top */}
+            <main className="pt-16">{children}</main>
+
+            <Footer />
+          </SiteShell>
+        </SmoothScroll>
       </body>
     </html>
   );
