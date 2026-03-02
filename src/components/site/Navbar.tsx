@@ -62,7 +62,6 @@ export default function Navbar() {
         className="fixed inset-x-0 top-0 z-50"
         style={{ pointerEvents: hidden ? "none" : "auto" }}
       >
-        {/* ✅ SINGLE solid background (no gradient, no overlay layers) */}
         <div className="bg-[#141414] shadow-[0_14px_40px_rgba(0,0,0,0.45)]">
           {/* subtle bottom border like the screenshot */}
           <div className=" border-white/10">
@@ -75,7 +74,6 @@ export default function Navbar() {
               {/* CENTER: desktop nav */}
               <nav className="hidden flex-1 items-center justify-center gap-8 md:flex lg:gap-8">
                 {items.map((it) => {
-                  // ✅ active when exact match OR child route (e.g. /about/team)
                   const active =
                     pathname === it.href ||
                     (it.href !== "/" && pathname.startsWith(it.href + "/"));

@@ -25,8 +25,6 @@ export default function Impact() {
           >
             {impact.pill}
           </Reveal>
-
-          {/* one-line heading like screenshot */}
           <Reveal
             as="h2"
             className="mt-5 whitespace-nowrap font-display font-extrabold uppercase leading-[1.05] tracking-tight text-white"
@@ -34,11 +32,9 @@ export default function Impact() {
           >
             {impact.title}
           </Reveal>
-
-          {/* ✅ subheading EXACT like screenshot */}
           <Reveal
             as="p"
-            className="mt-4 max-w-[980px] text-[14px] leading-[1.8] text-white/80 sm:text-[15px] md:text-[16px] md:leading-[1.85]"
+            className="mt-4 max-w-245 text-[14px] leading-[1.8] text-white/80 sm:text-[15px] md:text-[16px] md:leading-[1.85]"
           >
             {impact.subtitle}
           </Reveal>

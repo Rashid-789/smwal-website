@@ -20,14 +20,14 @@ export default function JoinHero() {
 
       <Reveal variant={scaleIn} className="relative">
         {/* banner height like your screenshot */}
-        <div className="relative w-full overflow-hidden h-[320px] sm:h-[380px] md:h-[520px] lg:h-[600px] xl:h-[640px]">
+        <div className="relative w-full overflow-hidden h-80 sm:h-95 md:h-130 lg:h-150 xl:h-160">
           <Image
             src={hero.image.src}
             alt={hero.image.alt}
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[50%_75%]" // ✅ crops some top (adjust 70/75/80)
+            className="object-cover object-[50%_75%]"
           />
 
           {/* overlays (same readable look) */}

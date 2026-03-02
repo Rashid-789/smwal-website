@@ -46,7 +46,7 @@ export default function Button(props: ButtonProps) {
       ...a
     } = props;
 
-    // ✅ hash-only links scroll best with plain <a>
+   
     if (href.startsWith("#")) {
       return (
         <a href={href} className={cls} {...a}>

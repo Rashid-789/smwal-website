@@ -19,7 +19,6 @@ export default function JoinExperience() {
       </div>
 
       <Container>
-        {/* ✅ pill at top of section (like screenshot) */}
         <Reveal
           as="span"
           className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/80"
@@ -47,7 +46,6 @@ export default function JoinExperience() {
           {/* right content */}
           <div>
             <Stagger>
-              {/* ✅ heading EXACT 2 lines like image (uses your \n in content) */}
               <Reveal
                 as="h3"
                 className=" text-[20px] font-display uppercase font-semibold leading-[1.06] text-white md:text-[24px] lg:text-[29px]"
@@ -81,7 +79,11 @@ export default function JoinExperience() {
               {experience.items.map((it) => (
                 <Reveal key={it.n}>
                   <HoverLift>
-                    <JoinExperienceCard n={it.n} title={it.title} desc={it.desc} />
+                    <JoinExperienceCard
+                      n={it.n}
+                      title={it.title}
+                      desc={it.desc}
+                    />
                   </HoverLift>
                 </Reveal>
               ))}

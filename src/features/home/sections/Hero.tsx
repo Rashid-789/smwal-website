@@ -10,6 +10,10 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-10 pb-14 md:pt-23 md:pb-20">
       {/* Background glows */}
+         <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -left-44 top-1/2 h-140 w-140 -translate-y-1/2 rounded-full bg-violet-600/25 blur-[130px]" />
+        <div className="absolute left-10 top-20 h-85 w-85 rounded-full bg-violet-500/15 blur-[120px]" />
+      </div>
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -left-40 -top-40 h-130 w-130 rounded-full bg-purple-600/30 blur-[130px]" />
         <div className="absolute -right-65 -top-35 h-155 w-155 rounded-full bg-indigo-600/25 blur-[140px]" />

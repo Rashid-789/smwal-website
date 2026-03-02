@@ -28,7 +28,7 @@ export default function Contribution() {
       </div>
 
       <Container>
-        <Stagger className="max-w-[1100px]">
+        <Stagger className="max-w-275">
           <Reveal
             as="h2"
             className="font-display text-[34px] font-bold uppercase leading-[1.05] tracking-tight text-white sm:text-[42px] md:text-[37px]"
@@ -38,7 +38,7 @@ export default function Contribution() {
 
           <Reveal
             as="p"
-            className="mt-3 max-w-[900px] text-[14px] leading-[1.75] text-white/70 sm:text-[15px] md:text-[16px]"
+            className="mt-3 max-w-225 text-[14px] leading-[1.75] text-white/70 sm:text-[15px] md:text-[16px]"
           >
             {contribution.subtitle}
           </Reveal>
@@ -51,7 +51,6 @@ export default function Contribution() {
               {contribution.label}
             </div>
 
-            {/* ✅ input + button row (note moved out so button aligns with input) */}
             <div className="mt-5">
               <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-6">
                 {/* input pill only */}
@@ -75,7 +74,6 @@ export default function Contribution() {
                   </div>
                 </div>
 
-                {/* ✅ button aligned with input pill */}
                 <button
                   type="button"
                   onClick={onDonate}
@@ -86,7 +84,7 @@ export default function Contribution() {
                     "shadow-[0_18px_55px_rgba(0,0,0,0.55)]",
                     "transition hover:brightness-110",
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60",
-                    "md:min-w-[220px]",
+                    "md:min-w-55",
                   ].join(" ")}
                 >
                   {contribution.button}

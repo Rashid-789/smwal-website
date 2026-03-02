@@ -10,6 +10,10 @@ export default function SiteShell({ children, className }: Props) {
   return (
     <div className={cn("relative min-h-screen overflow-x-hidden bg-[#07060b] text-white", className)}>
       {/* background glows */}
+         <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -left-44 top-1/2 h-140 w-140 -translate-y-1/2 rounded-full bg-violet-600/25 blur-[130px]" />
+        <div className="absolute left-10 top-20 h-85 w-85 rounded-full bg-violet-500/15 blur-[120px]" />
+      </div>
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
         <div className="absolute -left-40 -top-30 h-130 w-130 rounded-full bg-purple-800/40 blur-[110px]" />
         <div className="absolute -left-16 top-130 h-105 w-105 rounded-full bg-indigo-700/20 blur-[120px]" />

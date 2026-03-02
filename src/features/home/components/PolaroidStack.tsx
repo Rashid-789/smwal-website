@@ -36,8 +36,8 @@ export default function PolaroidStack({ alt = "Polaroid collage" }: Props) {
         {/* frame */}
         <div className="">
           <div className="">
-            {/* ✅ single image */}
-            <div className="relative aspect-[16/10] w-full">
+            {/*  single image */}
+            <div className="relative aspect-16/10 w-full">
               <Image
                 src="/images/3in1.svg"
                 alt={alt}

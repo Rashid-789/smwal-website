@@ -8,7 +8,6 @@ export default function Purpose() {
   return (
     <section className="py-14 md:py-20">
       <Container>
-        {/* ✅ give the text area more room so it stays in one line like Figma */}
         <Stagger className="max-w-full lg:max-w-[1100px]">
           <Reveal
             as="span"
@@ -17,7 +16,6 @@ export default function Purpose() {
             {HOME_PURPOSE.pill}
           </Reveal>
 
-          {/* ✅ straight inline-flex heading like Figma */}
           <Reveal
             as="h2"
             className="mt-5 inline-flex flex-wrap items-baseline font-display font-extrabold uppercase leading-[1.1] tracking-tight text-white text-[28px] md:text-[44px] lg:text-[37px] lg:whitespace-nowrap"
@@ -25,7 +23,6 @@ export default function Purpose() {
             {HOME_PURPOSE.title}
           </Reveal>
 
-          {/* ✅ subtitle/paragraph style like screenshot (smaller + controlled width) */}
           <Reveal
             as="p"
             className="mt-3 max-w-[640px] text-[13px] leading-[1.65] text-white/70 sm:text-[14px] md:text-[15px]"
@@ -34,7 +31,11 @@ export default function Purpose() {
           </Reveal>
 
           <Reveal className="mt-6">
-            <Button href={HOME_PURPOSE.cta.href} variant="primary" className="h-11 px-6">
+            <Button
+              href={HOME_PURPOSE.cta.href}
+              variant="primary"
+              className="h-11 px-6"
+            >
               {HOME_PURPOSE.cta.label}
             </Button>
           </Reveal>

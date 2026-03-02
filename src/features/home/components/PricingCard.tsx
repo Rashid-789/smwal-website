@@ -39,7 +39,7 @@ export default function PricingCard({
   const price = period === "monthly" ? plan.price.monthly : plan.price.yearly;
   const suffix = period === "monthly" ? "/Month" : "/Year";
 
-  // ✅ BEST DEAL (Guided) card style from screenshots
+  // BEST DEAL (Guided) card style from screenshots
   if (plan.bestDeal) {
     return (
       <article className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-sky-500/35 bg-black/35 shadow-[0_35px_90px_rgba(0,0,0,0.70)] backdrop-blur lg:-translate-y-3">
@@ -109,7 +109,9 @@ function Header({ plan }: { plan: Plan }) {
 function Price({ price, suffix }: { price: number; suffix: string }) {
   return (
     <div className="mt-5 flex items-end gap-1">
-      <div className="text-2xl font-extrabold text-white">{formatPrice(price)}</div>
+      <div className="text-2xl font-extrabold text-white">
+        {formatPrice(price)}
+      </div>
       <div className="pb-0.5 text-sm font-semibold text-white/70">{suffix}</div>
     </div>
   );
@@ -133,7 +135,11 @@ function Features({ list }: { list: readonly Feature[] }) {
       {list.map((f) => (
         <li key={f.text} className="flex gap-3">
           <Diamond muted={f.muted} />
-          <span className={f.muted ? "text-sm text-white/45" : "text-sm text-white/80"}>
+          <span
+            className={
+              f.muted ? "text-sm text-white/45" : "text-sm text-white/80"
+            }
+          >
             {f.text}
           </span>
         </li>

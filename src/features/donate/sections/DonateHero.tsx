@@ -25,9 +25,8 @@ export default function DonateHero() {
         <div className="absolute left-1/2 -bottom-80 h-190 w-190 -translate-x-1/2 rounded-full bg-sky-500/10 blur-[170px]" />
       </div>
 
-      {/* ✅ hero media + content INSIDE (exact banner sizing like screenshot) */}
       <Reveal variant={scaleIn} className="relative">
-        <div className="relative w-full overflow-hidden h-[260px] sm:h-[320px] md:h-[420px] lg:h-[480px] xl:h-[620px]">
+        <div className="relative w-full overflow-hidden h-65 sm:h-80 md:h-105 lg:h-120 xl:h-155">
           <Image
             src={hero.image.src}
             alt={hero.image.alt}

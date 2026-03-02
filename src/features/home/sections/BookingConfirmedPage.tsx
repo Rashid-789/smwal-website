@@ -30,17 +30,17 @@ export default function BookingConfirmedPage({
     <main className="relative min-h-screen overflow-hidden bg-[#07070B] py-10 sm:py-14">
       {/* purple glow background (like screenshot) */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-44 top-1/2 h-[560px] w-[560px] -translate-y-1/2 rounded-full bg-violet-600/25 blur-[130px]" />
-        <div className="absolute left-10 top-20 h-[340px] w-[340px] rounded-full bg-violet-500/15 blur-[120px]" />
+        <div className="absolute -left-44 top-1/2 h-140 w-140 -translate-y-1/2 rounded-full bg-violet-600/25 blur-[130px]" />
+        <div className="absolute left-10 top-20 h-85 w-85 rounded-full bg-violet-500/15 blur-[120px]" />
       </div>
 
       <Container>
-        <div className="relative mx-auto w-full max-w-[760px] px-4 sm:px-0">
+        <div className="relative mx-auto w-full max-w-190 px-4 sm:px-0">
           <section className="rounded-2xl border border-white/10 bg-black/70 shadow-[0_24px_70px_rgba(0,0,0,0.7)] backdrop-blur-md">
             <div className="p-6 sm:p-10">
               {/* illustration */}
               <div className="flex justify-center">
-                <div className="relative h-[180px] w-[280px] sm:h-[240px] sm:w-[360px]">
+                <div className="relative h-45 w-70 sm:h-60 sm:w-90">
                   <Image
                     src="/images/bookingconfirmed.svg"
                     alt="Booking confirmed"
@@ -124,7 +124,7 @@ export default function BookingConfirmedPage({
               <div className="mt-6">
                 <Link
                   href="/"
-                  className="block w-full rounded-full bg-gradient-to-r from-violet-600 to-blue-600 px-5 py-3 text-center text-sm font-semibold text-white shadow-[0_16px_40px_rgba(37,99,235,0.25)] transition hover:opacity-95 active:scale-[0.99]"
+                  className="block w-full rounded-full bg-linear-to-r from-violet-600 to-blue-600 px-5 py-3 text-center text-sm font-semibold text-white shadow-[0_16px_40px_rgba(37,99,235,0.25)] transition hover:opacity-95 active:scale-[0.99]"
                 >
                   Go to Home
                 </Link>

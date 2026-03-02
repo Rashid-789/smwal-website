@@ -1,12 +1,16 @@
-
 type IconKey = "mentor" | "match" | "faith";
 
 function Icon({ type }: { type: IconKey }) {
   return (
     <div className="grid h-11 w-11 place-items-center rounded-2xl bg-yellow-400 text-white shadow-[0_10px_22px_rgba(0,0,0,0.35)] ring-1 ring-black/15">
-      {/* ✅ 1) Book icon */}
       {type === "mentor" && (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
           <path
             d="M7 6.5h9.5c1.1 0 2 .9 2 2V19H9c-1.1 0-2-.9-2-2V6.5Z"
             stroke="currentColor"
@@ -22,9 +26,14 @@ function Icon({ type }: { type: IconKey }) {
         </svg>
       )}
 
-      {/* ✅ 2) User icon */}
       {type === "match" && (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
           <path
             d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"
             stroke="currentColor"
@@ -39,9 +48,14 @@ function Icon({ type }: { type: IconKey }) {
         </svg>
       )}
 
-      {/* ✅ 3) User + Check icon */}
       {type === "faith" && (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
           <path
             d="M10.5 12a3.5 3.5 0 1 0-3.5-3.5A3.5 3.5 0 0 0 10.5 12Z"
             stroke="currentColor"
@@ -85,7 +99,9 @@ export default function ExperienceFeatureCard({
       <div className="relative">
         <Icon type={icon} />
 
-        <h3 className="mt-4 truncate text-[16px] font-extrabold text-white">{title}</h3>
+        <h3 className="mt-4 truncate text-[16px] font-extrabold text-white">
+          {title}
+        </h3>
 
         <p className="mt-1 text-[13px] leading-relaxed text-white/70 sm:text-[14px]">
           {description}

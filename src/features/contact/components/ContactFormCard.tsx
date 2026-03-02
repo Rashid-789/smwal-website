@@ -82,16 +82,16 @@ export default function ContactFormCard() {
         className={[
           "group relative w-full max-w-140 overflow-hidden rounded-2xl",
           "border border-white/10",
-          // ✅ card background like screenshot
+          //  card background like screenshot
           "bg-[#171717]/90",
           "shadow-[0_25px_80px_rgba(0,0,0,0.55)]",
           "backdrop-blur",
           "p-6 md:p-8",
         ].join(" ")}
       >
-        {/* ✅ soft card gradient + vignette like screenshot */}
+        {/* soft card gradient + vignette like screenshot */}
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] via-transparent to-black/30" />
+          <div className="absolute inset-0 bg-linear-to-b from-white/4 via-transparent to-black/30" />
           <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_0%_0%,rgba(255,255,255,0.05),transparent_55%)]" />
         </div>
 

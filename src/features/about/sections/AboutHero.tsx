@@ -17,17 +17,14 @@ export default function AboutHero() {
         <div className="absolute left-1/2 -bottom-70 h-180 w-180 -translate-x-1/2 rounded-full bg-sky-500/10 blur-[160px]" />
       </div>
 
-      {/* ✅ one wrapper so text overlays ONLY the image */}
       <Reveal variant={scaleIn} className="relative">
-        {/* ✅ smaller hero height like screenshot */}
-        <div className="relative w-full overflow-hidden h-[260px] sm:h-[320px] md:h-[400px] lg:h-[460px] xl:h-[650px]">
+        <div className="relative w-full overflow-hidden h-65 sm:h-80 md:h-100 lg:h-115 xl:h-162.5">
           <Image
             src={hero.image.src}
             alt={hero.image.alt}
             fill
             priority
             sizes="100vw"
-            /* ✅ IMPORTANT: remove mt-1.5 + shift focus up so top isn’t cut */
             className="object-cover object-[50%_20%]"
           />
 
