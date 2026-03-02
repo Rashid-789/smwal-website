@@ -66,7 +66,7 @@ export default function Navbar() {
         <div className="bg-[#141414] shadow-[0_14px_40px_rgba(0,0,0,0.45)]">
           {/* subtle bottom border like the screenshot */}
           <div className=" border-white/10">
-            <Container className="flex h-[82px] items-center">
+            <Container className="flex h-20.5 items-center">
               {/* LEFT: brand */}
               <Link href="/" className="shrink-0" aria-label="Go to home">
                 <Brand />
@@ -104,7 +104,7 @@ export default function Navbar() {
                   <Button
                     href="#"
                     variant="primary"
-                    className="rounded-full bg-gradient-to-r from-[#D4145A] to-[#00A3FF] px-6 py-2 text-[17px] font-semibold text-white shadow-[0_10px_25px_rgba(0,0,0,0.35)] hover:opacity-95"
+                    className="rounded-full bg-linear-to-r from-[#D4145A] to-[#00A3FF] px-6 py-2 text-[17px] font-semibold text-white shadow-[0_10px_25px_rgba(0,0,0,0.35)] hover:opacity-95"
                   >
                     Download App
                   </Button>

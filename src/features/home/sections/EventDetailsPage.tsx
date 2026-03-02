@@ -19,30 +19,30 @@ export default function EventDetailsPage({ event }: { event: EventDetail }) {
                 className="object-cover object-center"
               />
               <div className="absolute inset-0 bg-black/15" />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/45" />
-              {/* ✅ dots removed */}
+              <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/45" />
+        
             </div>
 
             {/* BELOW HERO */}
             <div className="relative">
               <div className="pointer-events-none absolute inset-0">
-                <div className="absolute -left-44 top-0 h-[520px] w-[520px] rounded-full bg-purple-600/18 blur-[150px]" />
+                <div className="absolute -left-44 top-0 h-130 w-130 rounded-full bg-purple-600/18 blur-[150px]" />
               </div>
 
-              <div className="relative mx-auto max-w-[1400px] px-6 py-10 sm:px-10 lg:px-14">
+              <div className="relative mx-auto max-w-350 px-6 py-10 sm:px-10 lg:px-14">
                 <div className="grid gap-10 lg:grid-cols-[620px_1fr] lg:items-start">
                   <div className="text-left">
-                    {/* ✅ bigger title */}
+                    {/* bigger title */}
                     <h1 className="text-[20px] font-bold text-white sm:text-[22px]">
                       {event.title}
                     </h1>
 
-                    {/* ✅ bigger subtitle */}
+                    {/* bigger subtitle */}
                     <p className="mt-3 text-[14px] leading-relaxed text-white/75 sm:text-[16px]">
                       {event.subtitle}
                     </p>
 
-                    {/* ✅ overall text bigger */}
+                    {/* overall text bigger */}
                     <div className="mt-8 space-y-6 text-[16px] text-white/75">
                       <Block label="Date" value={event.date} />
                       <Block label="Time" value={event.timeRange} />
@@ -69,7 +69,7 @@ export default function EventDetailsPage({ event }: { event: EventDetail }) {
                         </div>
                       </div>
 
-                      <div className="pt-3 max-w-[240px]">
+                      <div className="pt-3 max-w-60">
                         <Button
                           href="/events"
                           variant="secondary"

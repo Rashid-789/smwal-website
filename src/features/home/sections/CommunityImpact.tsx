@@ -11,7 +11,7 @@ export default function CommunityImpact() {
     <section className="py-14 md:py-20">
       <Container>
         {/* ✅ wider on desktop so heading stays one line like Figma */}
-        <Stagger className="max-w-3xl lg:max-w-[1200px]">
+        <Stagger className="max-w-3xl lg:max-w-300">
           <Reveal
             as="span"
             className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/80"
