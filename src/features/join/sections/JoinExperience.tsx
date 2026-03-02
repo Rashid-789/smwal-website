@@ -19,11 +19,19 @@ export default function JoinExperience() {
       </div>
 
       <Container>
-        <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-10">
+        {/* ✅ pill at top of section (like screenshot) */}
+        <Reveal
+          as="span"
+          className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white/80"
+        >
+          {experience.pill}
+        </Reveal>
+
+        <div className="mt-6 grid items-start gap-8 lg:grid-cols-2 lg:gap-10">
           {/* left image */}
           <Reveal variant={scaleIn}>
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/35 shadow-[0_25px_80px_rgba(0,0,0,0.55)] backdrop-blur">
-              <div className="relative h-80 w-full sm:h-95 md:h-110 lg:h-180">
+              <div className="relative h-50 w-full sm:h-85 md:h-110 lg:h-168">
                 <Image
                   src={experience.image.src}
                   alt={experience.image.alt}
@@ -39,28 +47,26 @@ export default function JoinExperience() {
           {/* right content */}
           <div>
             <Stagger>
+              {/* ✅ heading EXACT 2 lines like image (uses your \n in content) */}
               <Reveal
-                as="span"
-                className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white/80"
+                as="h3"
+                className=" text-[20px] font-display uppercase font-semibold leading-[1.06] text-white md:text-[24px] lg:text-[29px]"
               >
-                {experience.pill}
-              </Reveal>
-
-              <Reveal
-                as="h2"
-                className="mt-5 whitespace-pre-line text-[26px] font-display font-extrabold uppercase leading-[1.15] tracking-tight text-white md:text-[38px]"
-              >
-                {experience.title}
+                {experience.title.split("\n").map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
               </Reveal>
 
               <Reveal
                 as="p"
-                className="mt-3 max-w-xl text-sm leading-relaxed text-white/70 md:text-base"
+                className="mt-4 max-w-xl text-[14px] leading-[1.7] text-white/70 md:text-[15px]"
               >
                 {experience.subtitle}
               </Reveal>
 
-              <Reveal className="mt-6">
+              <Reveal className="mt-7">
                 <Button
                   href={experience.cta.href}
                   variant="primary"
@@ -71,7 +77,7 @@ export default function JoinExperience() {
               </Reveal>
             </Stagger>
 
-            <Stagger className="mt-8 space-y-4">
+            <Stagger className="mt-10 space-y-4">
               {experience.items.map((it) => (
                 <Reveal key={it.n}>
                   <HoverLift>

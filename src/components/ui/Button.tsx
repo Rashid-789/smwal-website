@@ -38,7 +38,23 @@ export default function Button(props: ButtonProps) {
   const cls = cn(base, styles(variant), className);
 
   if ("href" in props && typeof props.href === "string") {
-    const { href, variant: _variant, className: _className, children: _children, ...a } = props;
+    const {
+      href,
+      variant: _variant,
+      className: _className,
+      children: _children,
+      ...a
+    } = props;
+
+    // ✅ hash-only links scroll best with plain <a>
+    if (href.startsWith("#")) {
+      return (
+        <a href={href} className={cls} {...a}>
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={cls} {...a}>
         {children}
@@ -46,7 +62,8 @@ export default function Button(props: ButtonProps) {
     );
   }
 
-  const { variant: _variant, className: _className, children: _children, ...b } = props;
+  const { variant: _variant, className: _className, children: _children, ...b } =
+    props;
   return (
     <button className={cls} {...b}>
       {children}

@@ -7,12 +7,37 @@ type Props = {
   image: string;
 };
 
-function MailDot() {
+function YellowIcon() {
   return (
-    <span className="grid h-7 w-7 place-items-center rounded-full bg-yellow-400 text-black shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M4 6h16v12H4V6Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-        <path d="M4 7l8 6 8-6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+    <span className="grid h-12 w-12 place-items-center rounded-full bg-yellow-400 text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+      {/* briefcase icon (same look as screenshot) */}
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M9 7V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M6 7h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9 12h6"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
       </svg>
     </span>
   );
@@ -27,13 +52,13 @@ export default function TeamCard({ name, role, email, image }: Props) {
       </div>
 
       <div className="relative p-4">
-        <div className="relative h-45 w-full overflow-hidden rounded-xl bg-black">
+        <div className="relative h-60 w-full overflow-hidden rounded-xl bg-black">
           <Image
             src={image}
             alt={name}
             fill
             sizes="(max-width: 1024px) 100vw, 33vw"
-            className="object-center transition duration-500 group-hover:scale-[1.03]"
+            className="object-cover object-center transition duration-500 group-hover:scale-[1.03]"
           />
           <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
         </div>
@@ -42,8 +67,9 @@ export default function TeamCard({ name, role, email, image }: Props) {
           <div className="text-base font-extrabold text-white">{name}</div>
           <div className="mt-1 text-sm text-white/65">{role}</div>
 
-          <div className="mt-3 flex items-center gap-2 text-sm text-white/75">
-            <MailDot />
+          {/* same icon for all cards */}
+          <div className="mt-4 flex items-center gap-4 text-base text-white/80">
+            <YellowIcon />
             <span className="transition group-hover:text-white">{email}</span>
           </div>
         </div>

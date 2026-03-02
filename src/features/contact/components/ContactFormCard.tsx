@@ -15,8 +15,38 @@ type FormState = {
 
 function FlagIcon() {
   return (
-    <span className="ml-2 inline-flex h-5 w-5 items-center justify-center rounded-md bg-white/10 text-[11px]">
-      🏳️
+    <span className="ml-2 inline-flex items-center">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        fill="none"
+      >
+        {/* pole */}
+        <path
+          d="M5.5 3.5v17"
+          stroke="#0B4FD6"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+
+        {/* flag (filled + outlined) */}
+        <path
+          d="M7.6 5.3c3.1-1.5 5.9-1.5 9 0 2.1 1 3.8 1 5.9 0v10.9c-2.1 1-3.8 1-5.9 0-3.1-1.5-5.9-1.5-9 0V5.3Z"
+          fill="#168BFF"
+          stroke="#0B4FD6"
+          strokeWidth="1"
+          strokeLinejoin="round"
+        />
+
+        {/* subtle highlight (like the glossy look) */}
+        <path
+          d="M8.2 6.3c2.8-1.2 5.2-1.1 8 .2 1.7.8 3.1.9 4.7.2v2.2c-1.6.6-3 .5-4.7-.3-2.8-1.3-5.2-1.4-8-.2V6.3Z"
+          fill="#FFFFFF"
+          opacity="0.14"
+        />
+      </svg>
     </span>
   );
 }
@@ -36,13 +66,12 @@ export default function ContactFormCard() {
     (
       e: React.ChangeEvent<
         HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-      >
+      >,
     ) =>
       setForm((p) => ({ ...p, [key]: e.target.value }));
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // UI only; wire to API later
     alert(`Message sent!\n\n${JSON.stringify(form, null, 2)}`);
   };
 
@@ -50,11 +79,20 @@ export default function ContactFormCard() {
     <Reveal variant={scaleIn} className="w-full">
       <form
         onSubmit={onSubmit}
-        className="group relative w-full max-w-140 overflow-hidden rounded-2xl border border-white/10 bg-black/35 p-6 shadow-[0_25px_80px_rgba(0,0,0,0.55)] backdrop-blur md:p-8"
+        className={[
+          "group relative w-full max-w-140 overflow-hidden rounded-2xl",
+          "border border-white/10",
+          // ✅ card background like screenshot
+          "bg-[#171717]/90",
+          "shadow-[0_25px_80px_rgba(0,0,0,0.55)]",
+          "backdrop-blur",
+          "p-6 md:p-8",
+        ].join(" ")}
       >
-        {/* subtle hover spotlight */}
-        <div className="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100">
-          <div className="absolute inset-0 bg-[radial-gradient(70%_55%_at_20%_0%,rgba(59,130,246,0.16),transparent_55%)]" />
+        {/* ✅ soft card gradient + vignette like screenshot */}
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] via-transparent to-black/30" />
+          <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_0%_0%,rgba(255,255,255,0.05),transparent_55%)]" />
         </div>
 
         <Stagger className="relative">
@@ -98,8 +136,20 @@ export default function ContactFormCard() {
 
               {/* chevron */}
               <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/45">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </span>
             </div>
@@ -114,7 +164,7 @@ export default function ContactFormCard() {
             {/* Submit */}
             <button
               type="submit"
-              className="mt-2 h-12 w-full rounded-xl bg-sky-500 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
+              className="mt-2 h-12 w-full rounded-xl bg-sky-800 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
             >
               {CONTACT.form.button}
             </button>
@@ -140,7 +190,10 @@ function Input(props: React.InputHTMLAttributes<HTMLInputElement>) {
 
 function Select(props: React.SelectHTMLAttributes<HTMLSelectElement>) {
   return (
-    <select {...props} className={[baseField(), "appearance-none pr-10"].join(" ")}>
+    <select
+      {...props}
+      className={[baseField(), "appearance-none pr-10"].join(" ")}
+    >
       {props.children}
     </select>
   );

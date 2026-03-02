@@ -21,14 +21,14 @@ export default function Pricing() {
           <div className="max-w-2xl">
             <Reveal
               as="span"
-              className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white/80"
+              className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/80"
             >
               {HOME_PRICING.pill}
             </Reveal>
 
             <Reveal
               as="h2"
-              className="mt-5 text-[28px] font-display font-extrabold uppercase leading-[1.12] tracking-tight text-white md:text-[44px]"
+              className="mt-5 text-[28px] font-display font-extrabold uppercase leading-[1.12] tracking-tight text-white md:text-[37px]"
             >
               {HOME_PRICING.title}
             </Reveal>

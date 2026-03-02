@@ -2,12 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { display, sans } from "./fonts";
 
-import SiteShell from "@/components/site/SiteShell";
-import Navbar from "@/components/site/Navbar";
-import Footer from "@/components/site/Footer";
-
-//  add this import
 import SmoothScroll from "@/shared/motion/SmoothScroll";
+import SiteFrame from "@/components/site/SiteFrame";
 
 export const metadata: Metadata = {
   title: "SMWAL",
@@ -19,12 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${sans.variable} ${display.variable}`}>
       <body className="font-sans antialiased">
         <SmoothScroll>
-          <SiteShell>
-            <Navbar />
-            <main className="pt-16">{children}</main>
-
-            <Footer />
-          </SiteShell>
+          <SiteFrame>{children}</SiteFrame>
         </SmoothScroll>
       </body>
     </html>

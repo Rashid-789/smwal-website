@@ -21,19 +21,25 @@ export default function Impact() {
         <Stagger className="max-w-3xl">
           <Reveal
             as="span"
-            className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white/80"
+            className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/80"
           >
             {impact.pill}
           </Reveal>
 
+          {/* one-line heading like screenshot */}
           <Reveal
             as="h2"
-            className="mt-5 text-[26px] font-display font-extrabold uppercase leading-[1.15] tracking-tight text-white md:text-[38px]"
+            className="mt-5 whitespace-nowrap font-display font-extrabold uppercase leading-[1.05] tracking-tight text-white"
+            style={{ fontSize: "clamp(18px, 2.25vw, 38px)" }}
           >
             {impact.title}
           </Reveal>
 
-          <Reveal as="p" className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+          {/* ✅ subheading EXACT like screenshot */}
+          <Reveal
+            as="p"
+            className="mt-4 max-w-[980px] text-[14px] leading-[1.8] text-white/80 sm:text-[15px] md:text-[16px] md:leading-[1.85]"
+          >
             {impact.subtitle}
           </Reveal>
 

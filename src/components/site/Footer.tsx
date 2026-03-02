@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-end">
           <div>
             <h2 className="text-3xl font-extrabold tracking-tight">READY TO BEGIN YOUR JOURNEY?</h2>
-            <p className="mt-2 text-sm text-white/65">
+            <p className="mt-2 text-sm text-white/65 font-extrabold">
               Starting your journey on SMWAL is simple and intentional.
             </p>
 

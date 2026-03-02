@@ -195,4 +195,249 @@ export const HOME_CTA_BANNER = {
   primary: { label: "Join the Platform", href: "/join" },
   secondary: { label: "Support the Mission", href: "/donate" },
   image: { src: "/images/cta-banner.jpg", alt: "Happy couple" },
-};  
+};     
+
+
+export const HOME_HANGOUTS = {
+  pill: "Our Hangouts & Community Events",
+  title: "CONNECT BEYOND THE SCREEN",
+  subtitle:
+    "Whether you,re part of the app or visiting for thr firsur secinh upoi join okjde humnb hfui iui uywu cw ",
+  cta: { label: "View Upcoming Events", href: "/events" },
+  events: [
+    {
+      image: "/images/houngouts.svg",
+      alt: "Community Hangout",
+      title: "Community\nHangout",
+      price: "$15",
+      time: "Sat, Oct 26 - 1:00 PM",
+      place: "Greenfield Farm",
+    },
+    {
+      image: "/images/houngouts1.svg",
+      alt: "Ministry Teaching Night",
+      title: "Ministry Teaching\nNight",
+      price: "$10",
+      time: "Sat, Nov 10 - 7:00 PM",
+      place: "Downtown Theater",
+    },
+    {
+      image: "/images/hongouts2.svg",
+      alt: "Guided Group Session",
+      title: "Guided Group\nSession",
+      price: "$30",
+      time: "Sun, Nov 3 - 9:00 AM",
+      place: "Riverside Center",
+    },
+    {
+      image: "/images/houngouts1.svg",
+      alt: "Weekend Camping Trip",
+      title: "Weekend Camping\nTrip",
+      price: "$30",
+      time: "Sat, Sept 28 - 8:00 AM",
+      place: "Community Grounds",
+    },
+  ],
+};
+
+
+
+
+export type EventDetail = {
+  slug: string;
+  title: string;
+  subtitle: string;
+  heroImage: { src: string; alt: string };
+  date: string;
+  timeRange: string;
+  location: string;
+  fee: string;
+  whatToExpect: string[];
+  cancellationPolicy: string;
+};
+
+export type EventCardItem = {
+  slug: string;
+  image: string;
+  alt: string;
+  title: string;
+  price: string;
+  time: string;
+  place: string;
+};
+
+export const EVENTS_HERO = {
+  title: "VIEW UPCOMING EVENTS",
+  subtitle:
+    "Explore our upcoming ministry events designed to bring like-minded individuals together in a safe, guided, and faith-aligned setting.",
+  image: { src: "/images/donate-hero.jpg", alt: "Upcoming events hero" },
+  primary: { label: "See Events", href: "#events" },
+  secondary: { label: "Support our Mission", href: "/donate" },
+  stores: {
+    googlePlay: { href: "#", label: "Get it on Google Play" },
+    appStore: { href: "#", label: "Download on the App Store" },
+  },
+} as const;
+
+/** 9 cards like screenshot */
+export const EVENTS_GRID: EventCardItem[] = [
+  {
+    slug: "community-hangout-greenfield",
+    image: "/images/houngouts.svg",
+    alt: "Community Hangout",
+    title: "Community Hangout",
+    price: "$15",
+    time: "Sat, Oct 26 - 1:00 PM",
+    place: "Greenfield Farm",
+  },
+  {
+    slug: "art-workshop-city-gallery",
+    image: "/images/houngouts1.svg",
+    alt: "Art Workshop",
+    title: "Art Workshop",
+    price: "$20",
+    time: "Sun, Oct 27 - 10:00 AM",
+    place: "City Gallery",
+  },
+  {
+    slug: "food-festival-riverside",
+    image: "/images/hongouts2.svg",
+    alt: "Food Festival",
+    title: "Food Festival",
+    price: "$32",
+    time: "Fri, Nov 1 - 5:00 PM",
+    place: "Riverside Park",
+  },
+
+  {
+    slug: "community-hangout-greenfield-2",
+    image: "/images/houngouts.svg",
+    alt: "Community Hangout",
+    title: "Community Hangout",
+    price: "$15",
+    time: "Sat, Oct 26 - 1:00 PM",
+    place: "Greenfield Farm",
+  },
+  {
+    slug: "art-workshop-city-gallery-2",
+    image: "/images/houngouts1.svg",
+    alt: "Art Workshop",
+    title: "Art Workshop",
+    price: "$20",
+    time: "Sun, Oct 27 - 10:00 AM",
+    place: "City Gallery",
+  },
+  {
+    slug: "food-festival-riverside-2",
+    image: "/images/hongouts2.svg",
+    alt: "Food Festival",
+    title: "Food Festival",
+    price: "$32",
+    time: "Fri, Nov 1 - 5:00 PM",
+    place: "Riverside Park",
+  },
+
+  {
+    slug: "art-workshop-riverside-gallery",
+    image: "/images/houngouts1.svg",
+    alt: "Art Workshop",
+    title: "Art Workshop",
+    price: "$25",
+    time: "Sun, Nov 10 - 3:00 PM",
+    place: "Riverside Gallery",
+  },
+  {
+    slug: "art-workshop-city-gallery-3",
+    image: "/images/houngouts.svg",
+    alt: "Art Workshop",
+    title: "Art Workshop",
+    price: "$20",
+    time: "Sun, Oct 27 - 10:00 AM",
+    place: "City Gallery",
+  },
+  {
+    slug: "food-festival-riverside-3",
+    image: "/images/hongouts2.svg",
+    alt: "Food Festival",
+    title: "Food Festival",
+    price: "$32",
+    time: "Fri, Nov 1 - 5:00 PM",
+    place: "Riverside Park",
+  },
+];
+
+/** Detail page data (map by slug) */
+export const EVENT_DETAILS: EventDetail[] = [
+  {
+    slug: "community-hangout-greenfield",
+    title: "Community Hangout",
+    subtitle: "A guided in-person gathering organized by the ministry.",
+    heroImage: { src: "/images/houngouts1.svg", alt: "Community Hangout hero" },
+    date: "June 14, 2025",
+    timeRange: "Start: 8:00 AM | End: 6:00 PM",
+    location: "Yosemite National Park",
+    fee: "$100",
+    whatToExpect: [
+      "Guided group sessions",
+      "Ministry-led teachings",
+      "Safe and respectful interactions",
+    ],
+    cancellationPolicy:
+      "Registrations are non-refundable unless the event is cancelled by the ministry.",
+  },
+  // fallback: reuse same detail structure for other slugs
+  ...EVENTS_GRID.filter((e) => e.slug !== "community-hangout-greenfield").map(
+    (e) => ({
+      slug: e.slug,
+      title: e.title,
+      subtitle: "A guided in-person gathering organized by the ministry.",
+      heroImage: { src: e.image, alt: e.alt },
+      date: "June 14, 2025",
+      timeRange: "Start: 8:00 AM | End: 6:00 PM",
+      location: e.place,
+      fee: e.price,
+      whatToExpect: [
+        "Guided group sessions",
+        "Ministry-led teachings",
+        "Safe and respectful interactions",
+      ],
+      cancellationPolicy:
+        "Registrations are non-refundable unless the event is cancelled by the ministry.",
+    }),
+  ),
+];
+
+export function getEventDetailBySlug(slug: string) {
+  return EVENT_DETAILS.find((e) => e.slug === slug) || null;
+}
+
+
+export type EventContent = {
+  slug: string;
+  title: string;
+  dateText: string;
+  timeText: string;
+  locationText: string;
+  priceText: string;
+
+  // optional (if you show event hero/thumbnail elsewhere)
+  heroImage?: { src: string; alt: string };
+};
+
+export const EVENTS: EventContent[] = [
+  {
+    slug: "art-workshop-city-gallery",
+    title: "Community Hangout",
+    dateText: "June 14, 2025",
+    timeText: "8:00 AM - 6:00 PM",
+    locationText: "Yosemite National Park",
+    priceText: "1,120 Rs",
+    heroImage: { src: "/images/houngouts.svg", alt: "Hangout" },
+  },
+
+  // add more events here...
+];
+
+export function getEventBySlug(slug: string): EventContent | null {
+  return EVENTS.find((e) => e.slug === slug) ?? null;
+}

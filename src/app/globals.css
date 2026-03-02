@@ -24,3 +24,45 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* infinite horizontal marquee */
+.marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee__track {
+  display: flex;
+  gap: var(--marquee-gap, 24px);
+  animation: marquee var(--marquee-duration, 28s) linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-1 * var(--marquee-shift, 50%)));
+  }
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+}

@@ -19,16 +19,18 @@ export default function ContactHero() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           {/* Left */}
           <Stagger className="pt-2">
+            {/* ✅ heading like screenshot */}
             <Reveal
               as="h1"
-              className="whitespace-pre-line text-3xl font-display font-extrabold uppercase tracking-tight text-white md:text-5xl"
+              className="whitespace-pre-line text-[34px] font-display font-bold uppercase leading-[1.05] tracking-tight text-white sm:text-[44px] md:text-[56px] lg:text-[36px]"
             >
               {CONTACT.left.title}
             </Reveal>
 
+            {/* ✅ subheading like screenshot */}
             <Reveal
               as="p"
-              className="mt-4 whitespace-pre-line text-sm leading-relaxed text-white/70 md:text-base"
+              className="mt-4 max-w-[620px] whitespace-pre-line text-[15px] leading-[1.75] text-white/80 sm:text-[16px] md:text-[18px]"
             >
               {CONTACT.left.subtitle}
             </Reveal>

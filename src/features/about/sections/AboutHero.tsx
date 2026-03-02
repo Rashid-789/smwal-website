@@ -19,14 +19,18 @@ export default function AboutHero() {
 
       {/* hero media */}
       <Reveal variant={scaleIn} className="relative">
-        <div className="relative h-70 w-full md:h-220">
+        {/* responsive hero height */}
+        <div
+          className="relative w-full overflow-hidden rounded-none
+                  h-[260px] sm:h-[360px] md:h-[520px] lg:h-[680px] xl:h-[760px]"
+        >
           <Image
             src={hero.image.src}
             alt={hero.image.alt}
             fill
             priority
             sizes="100vw"
-            className="object-center"
+            className="object-cover object-center mt-1.5"
           />
 
           {/* overlays for readability */}

@@ -34,7 +34,7 @@ export default function CtaBanner() {
 
             <Reveal
               as="p"
-              className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/85 md:text-base"
+              className="mx-auto mt-3 max-w-2xl text-xl leading-relaxed text-white/85 md:text-base font-extrabold"
             >
               {HOME_CTA_BANNER.subtitle}
             </Reveal>

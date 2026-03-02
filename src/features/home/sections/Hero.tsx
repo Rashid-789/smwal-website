@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
@@ -8,12 +9,26 @@ import PolaroidStack from "../components/PolaroidStack";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-10 pb-14 md:pt-14 md:pb-20">
-      {/* Background glows (like screenshot) */}
+    <section className="relative overflow-hidden pt-10 pb-14 md:pt-23 md:pb-20">
+      {/* Background glows */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -left-40 -top-40 h-130 w-130 rounded-full bg-purple-600/30 blur-[130px]" />
         <div className="absolute -right-65 -top-35 h-155 w-155 rounded-full bg-indigo-600/25 blur-[140px]" />
         <div className="absolute left-1/2 -bottom-80 h-180 w-180 -translate-x-1/2 rounded-full bg-purple-600/20 blur-[160px]" />
+      </div>
+
+      {/* ✅ Add 3in1.svg */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute right-6 top-10 hidden md:block">
+          <Image
+            src="/images/3in1.svg"
+            alt=""
+            width={360}
+            height={360}
+            className="opacity-90"
+            priority={false}
+          />
+        </div>
       </div>
 
       <Container>
@@ -22,9 +37,8 @@ export default function Hero() {
           <Stagger className="max-w-2xl">
             <Reveal
               as="h1"
-              className="text-[36px] font-extrabold uppercase leading-[1.05] tracking-tight text-white md:text-[52px] lg:text-[62px]"
+              className="text-[36px] font-bold uppercase leading-[1.05] tracking-tight text-white md:text-[52px] lg:text-[45px]"
             >
-              {/* supports 2 lines or 4 lines (high approach) */}
               {HOME_HERO.titleLines.map((line) => (
                 <span key={line} className="block">
                   {line}
@@ -32,12 +46,14 @@ export default function Hero() {
               ))}
             </Reveal>
 
-            <Reveal as="p" className="mt-4 max-w-xl text-sm leading-relaxed text-white/70 md:text-base">
+            <Reveal
+              as="p"
+              className="mt-4 max-w-[680px] text-[14px] leading-[1.65] text-white/80 sm:text-[15px] md:text-[18px] md:leading-[1.7]"
+            >
               {HOME_HERO.subtitle}
             </Reveal>
 
-            <Reveal className="mt-7 flex flex-wrap gap-3">
-              {/* Primary = gradient pill (like screenshot) */}
+            <Reveal className="mt-8 flex flex-wrap gap-3">
               <Button
                 href={HOME_HERO.ctas.primary.href}
                 variant="primary"
@@ -46,7 +62,6 @@ export default function Hero() {
                 {HOME_HERO.ctas.primary.label}
               </Button>
 
-              {/* Secondary = dark pill */}
               <Button
                 href={HOME_HERO.ctas.secondary.href}
                 variant="secondary"
@@ -56,7 +71,7 @@ export default function Hero() {
               </Button>
             </Reveal>
 
-            <Reveal className="mt-5">
+            <Reveal className="mt-7">
               <StoreBadges
                 googlePlayHref={HOME_HERO.stores.googlePlay.href}
                 appStoreHref={HOME_HERO.stores.appStore.href}
