@@ -34,7 +34,7 @@ export default function HowBegan() {
               </Reveal>
 
               <Reveal className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-black">
-                <div className="relative h-60 w-full sm:h-75 md:h-130">
+                <div className="relative h-60 w-full sm:h-75 md:h-150">
                   <Image
                     src={began.image.src}
                     alt={began.image.alt}
