@@ -16,7 +16,7 @@ export default function CtaBanner() {
               alt={HOME_CTA_BANNER.image.alt}
               fill
               sizes="(max-width: 1024px) 100vw, 1200px"
-              className="object-cover"
+              className="object-cover object-[50%_15%]"
               priority={false}
             />
             {/* dark overlay like screenshot */}

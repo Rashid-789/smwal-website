@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Container from "@/components/ui/Container";
@@ -13,7 +12,6 @@ export default function DonateHero() {
   const { hero } = DONATE;
 
   const onDonateNow = (e: React.MouseEvent) => {
-    // Keep href for SEO/backup, but smooth-scroll in client
     e.preventDefault();
     scrollToId("contribute");
   };
@@ -27,62 +25,63 @@ export default function DonateHero() {
         <div className="absolute left-1/2 -bottom-80 h-190 w-190 -translate-x-1/2 rounded-full bg-sky-500/10 blur-[170px]" />
       </div>
 
-      {/* hero image */}
-      <Reveal variant={scaleIn}>
-        <div className="relative h-70 w-full md:h-220">
+      {/* ✅ hero media + content INSIDE (exact banner sizing like screenshot) */}
+      <Reveal variant={scaleIn} className="relative">
+        <div className="relative w-full overflow-hidden h-[260px] sm:h-[320px] md:h-[420px] lg:h-[480px] xl:h-[620px]">
           <Image
             src={hero.image.src}
             alt={hero.image.alt}
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-[40%_10%]" // adjust 35/40/45 if needed
           />
+
+          {/* overlays like screenshot */}
           <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
+
+          {/* content */}
+          <div className="absolute inset-0 flex items-center">
+            <Container className="py-10 md:py-14">
+              <Stagger className="max-w-2xl">
+                <Reveal
+                  as="h1"
+                  className="whitespace-pre-line text-[34px] font-display font-bold uppercase leading-[1.05] tracking-tight text-white sm:text-[40px] md:text-[53px]"
+                >
+                  {hero.title}
+                </Reveal>
+
+                <Reveal
+                  as="p"
+                  className="mt-4 max-w-xl text-[14px] leading-relaxed text-white/80 sm:text-[15px] md:text-[16px]"
+                >
+                  {hero.subtitle}
+                </Reveal>
+
+                <Reveal className="mt-6 flex flex-wrap gap-3">
+                  <Button
+                    href={hero.primary.href}
+                    onClick={onDonateNow as any}
+                    variant="primary"
+                    className="h-11 rounded-full bg-linear-to-r from-fuchsia-600 to-sky-500 px-6 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
+                  >
+                    {hero.primary.label}
+                  </Button>
+
+                  <Button
+                    href={hero.secondary.href}
+                    variant="secondary"
+                    className="h-11 rounded-full border border-white/15 bg-white/5 px-6 text-sm font-extrabold text-white/90 hover:bg-white/10"
+                  >
+                    {hero.secondary.label}
+                  </Button>
+                </Reveal>
+              </Stagger>
+            </Container>
+          </div>
         </div>
       </Reveal>
-
-      {/* content */}
-      <div className="absolute inset-0 flex items-end">
-        <Container className="pb-8 md:pb-80">
-          <Stagger className="max-w-2xl">
-            <Reveal
-              as="h1"
-              className="whitespace-pre-line text-3xl font-display font-extrabold uppercase tracking-tight text-white md:text-5xl"
-            >
-              {hero.title}
-            </Reveal>
-
-            <Reveal
-              as="p"
-              className="mt-3 max-w-xl text-sm leading-relaxed text-white/80 md:text-base"
-            >
-              {hero.subtitle}
-            </Reveal>
-
-            <Reveal className="mt-5 flex flex-wrap gap-3">
-              {/* Donate Now -> smooth scroll to #contribute */}
-              <Button
-                href={hero.primary.href}
-                onClick={onDonateNow as any}
-                variant="primary"
-                className="h-11 rounded-full bg-linear-to-r from-fuchsia-600 to-sky-500 px-6 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
-              >
-                {hero.primary.label}
-              </Button>
-
-              <Button
-                href={hero.secondary.href}
-                variant="secondary"
-                className="h-11 rounded-full border border-white/15 bg-white/5 px-6 text-sm font-extrabold text-white/90 hover:bg-white/10"
-              >
-                {hero.secondary.label}
-              </Button>
-            </Reveal>
-          </Stagger>
-        </Container>
-      </div>
     </section>
   );
 }
