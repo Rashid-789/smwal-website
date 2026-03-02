@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
@@ -17,22 +16,8 @@ export default function Hero() {
         <div className="absolute left-1/2 -bottom-80 h-180 w-180 -translate-x-1/2 rounded-full bg-purple-600/20 blur-[160px]" />
       </div>
 
-      {/* ✅ Add 3in1.svg */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute right-6 top-10 hidden md:block">
-          <Image
-            src="/images/3in1.svg"
-            alt=""
-            width={360}
-            height={360}
-            className="opacity-90"
-            priority={false}
-          />
-        </div>
-      </div>
-
       <Container>
-        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] mt-9">
           {/* Left content */}
           <Stagger className="max-w-2xl">
             <Reveal
@@ -79,9 +64,9 @@ export default function Hero() {
             </Reveal>
           </Stagger>
 
-          {/* Right polaroids */}
+          {/* Right polaroids (✅ only 3in1.svg via PolaroidStack) */}
           <Reveal className="lg:justify-self-end" variant={scaleIn}>
-            <PolaroidStack items={HOME_HERO.polaroids} />
+            <PolaroidStack />
           </Reveal>
         </div>
       </Container>
