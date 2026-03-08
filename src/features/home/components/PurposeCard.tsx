@@ -11,21 +11,37 @@ type Props = {
 
 function ArrowRight() {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      {/* line */}
       <path
-        d="M10 7l5 5-5 5"
+        d="M5 12h12"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        vectorEffect="non-scaling-stroke"
+      />
+      {/* head */}
+      <path
+        d="M13 6l6 6-6 6"
+        stroke="currentColor"
+        strokeWidth="1.6"
         strokeLinecap="round"
         strokeLinejoin="round"
+        vectorEffect="non-scaling-stroke"
       />
     </svg>
   );
 }
 
-export default function PurposeCard({ image, alt, title, description, action }: Props) {
+export default function PurposeCard({
+  image,
+  alt,
+  title,
+  description,
+  action,
+}: Props) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/35 shadow-[0_20px_60px_rgba(0,0,0,0.55)] backdrop-blur">
+    <div className="overflow-hidden rounded-2xl border border-gray-800 bg-black/35 shadow-[0_20px_60px_rgba(0,0,0,0.55)] backdrop-blur">
       <div className="p-4">
         <div className="relative h-80.5 w-full overflow-hidden rounded-xl bg-black">
           <Image

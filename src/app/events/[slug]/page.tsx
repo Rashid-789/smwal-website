@@ -4,13 +4,13 @@ import { getEventDetailBySlug } from "@/features/home/content/home.content";
 export default function Page({ params }: { params: { slug: string } }) {
   const event = getEventDetailBySlug(params.slug);
 
-  // ✅ don’t throw 404 — show a fallback event instead (so you ALWAYS see data)
+  //  don’t throw 404 — show a fallback event instead (so you ALWAYS see data)
   return (
     <EventDetailsPage
       event={
         event ?? {
           slug: params.slug,
-          title: "Event",
+          title: "Community Hangout",
           subtitle: "A guided in-person gathering organized by the ministry.",
           heroImage: { src: "/images/cta-banner.jpg", alt: "Event hero" },
           date: "June 14, 2025",

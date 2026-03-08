@@ -5,6 +5,7 @@ import { DONATE } from "../content/donate.content";
 import ImpactCard from "../components/ImpactCard";
 import { HoverLift, Reveal, Stagger } from "@/shared/motion/Motion";
 import { scaleIn } from "@/shared/motion/variants";
+import { SECTION_HEADING_CLASS, SECTION_SUBHEADING_CLASS } from "@/lib/sectionTypography";
 
 export default function Impact() {
   const { impact } = DONATE;
@@ -18,7 +19,7 @@ export default function Impact() {
       </div>
 
       <Container>
-        <Stagger className="max-w-3xl">
+        <Stagger className="max-w-310">
           <Reveal
             as="span"
             className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/80"
@@ -27,14 +28,13 @@ export default function Impact() {
           </Reveal>
           <Reveal
             as="h2"
-            className="mt-5 whitespace-nowrap font-display font-extrabold uppercase leading-[1.05] tracking-tight text-white"
-            style={{ fontSize: "clamp(18px, 2.25vw, 38px)" }}
+            className={`mt-5 lg:whitespace-nowrap ${SECTION_HEADING_CLASS}`}
           >
             {impact.title}
           </Reveal>
           <Reveal
             as="p"
-            className="mt-4 max-w-245 text-[14px] leading-[1.8] text-white/80 sm:text-[15px] md:text-[16px] md:leading-[1.85]"
+            className={`mt-5 max-w-300 whitespace-pre-line text-[15px]! sm:text-[16px]! md:text-[18px]! ${SECTION_SUBHEADING_CLASS}`}
           >
             {impact.subtitle}
           </Reveal>
@@ -43,8 +43,8 @@ export default function Impact() {
             <Button
               href={impact.cta.href}
               variant="primary"
-              className="h-11 rounded-full bg-linear-to-r from-fuchsia-600 to-sky-500 px-6 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
-            >
+                       className="h-12 rounded-full bg-linear-to-r from-pink-800 to-blue-700 px-7 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
+              >
               {impact.cta.label}
             </Button>
           </Reveal>

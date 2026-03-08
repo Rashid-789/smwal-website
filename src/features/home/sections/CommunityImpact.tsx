@@ -5,12 +5,13 @@ import { scaleIn } from "@/shared/motion/variants";
 import { HOME_IMPACT } from "../content/home.content";
 import Image from "next/image";
 import StatItem from "../components/StatItem";
+import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 
 export default function CommunityImpact() {
   return (
     <section className="py-14 md:py-20">
       <Container>
-        {/* ✅ wider on desktop so heading stays one line like Figma */}
+        {/*wider on desktop so heading stays one line like Figma */}
         <Stagger className="max-w-3xl lg:max-w-300">
           <Reveal
             as="span"
@@ -19,18 +20,24 @@ export default function CommunityImpact() {
             {HOME_IMPACT.pill}
           </Reveal>
 
-          {/* ✅ heading one-line on desktop */}
+          {/*  heading one-line on desktop */}
           <Reveal
             as="h2"
-            className="mt-5 inline-flex items-baseline font-display font-extrabold uppercase leading-[1.1] tracking-tight text-white
-                       text-[26px] md:text-[36px] lg:text-[37px]
-                       lg:whitespace-nowrap"
+            className={`mt-5 lg:whitespace-nowrap ${SECTION_HEADING_FONT_CLASS} text-[48px] font-normal leading-[1] tracking-[0] text-white`}
           >
             {HOME_IMPACT.title}
           </Reveal>
 
-          <Reveal as="p" className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
-            {HOME_IMPACT.subtitle}
+          <Reveal
+            as="p"
+            className="mt-5 text-[20px] font-medium leading-[1.35] tracking-[0] text-white"
+            style={{ fontFamily: "'General Sans', var(--font-sans)" }}
+          >
+            <span className="block">
+              Every connection formed through SMWAL contributes to stronger families and a more
+              connected
+            </span>
+            <span className="block">community rooted in shared values, faith, and purpose.</span>
           </Reveal>
 
           <Reveal className="mt-6">
@@ -58,7 +65,7 @@ export default function CommunityImpact() {
         </Reveal>
 
         {/* Stats row */}
-        <Stagger className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <Stagger className="mt-15 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {HOME_IMPACT.stats.map((s) => (
             <Reveal key={s.label}>
               <StatItem value={s.value} label={s.label} />

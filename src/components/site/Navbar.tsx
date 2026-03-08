@@ -9,6 +9,7 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { SITE } from "@/config/site";
+import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 import Brand from "./Brand";
 import MobileMenu from "./MobileMenu";
 
@@ -72,28 +73,31 @@ export default function Navbar() {
               </Link>
 
               {/* CENTER: desktop nav */}
-              <nav className="hidden flex-1 items-center justify-center gap-8 md:flex lg:gap-8">
-                {items.map((it) => {
-                  const active =
-                    pathname === it.href ||
-                    (it.href !== "/" && pathname.startsWith(it.href + "/"));
+              <nav className="hidden flex-1 justify-center md:flex">
+                <div className="flex h-[58px] w-[508px] items-center gap-5 px-2 py-1 opacity-100">
+                  {items.map((it) => {
+                    const active =
+                      pathname === it.href ||
+                      (it.href !== "/" && pathname.startsWith(it.href + "/"));
 
-                  return (
-                    <Link
-                      key={it.href}
-                      href={it.href}
-                      prefetch
-                      className={[
-                        "text-[16px] sm:text-[17px] md:text-[18px] font-extrabold uppercase tracking-[0.02em] leading-none transition-colors duration-200 drop-shadow-[0_1px_0_rgba(0,0,0,0.65)]",
-                        active
-                          ? "text-blue-400"
-                          : "text-white/85 hover:text-white",
-                      ].join(" ")}
-                    >
-                      {it.label}
-                    </Link>
-                  );
-                })}
+                    return (
+                      <Link
+                        key={it.href}
+                        href={it.href}
+                        prefetch
+                        className={[
+                          SECTION_HEADING_FONT_CLASS,
+                          "shrink-0 whitespace-nowrap text-[16px] sm:text-[17px] md:text-[29px] font-normal uppercase tracking-[0.04em] leading-none transition-colors duration-200 drop-shadow-[0_1px_0_rgba(0,0,0,0.65)]",
+                          active
+                            ? "text-blue-400"
+                            : "text-white/85 hover:text-white",
+                        ].join(" ")}
+                      >
+                        {it.label}
+                      </Link>
+                    );
+                  })}
+                </div>
               </nav>
 
               {/* RIGHT: button + mobile menu */}

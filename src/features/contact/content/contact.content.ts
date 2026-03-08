@@ -2,7 +2,7 @@ export const CONTACT = {
   left: {
     title: "A COMMUNITY BUILT ON CARE AND\nRESPECT",
     subtitle:
-      "Every message matters to us.\nSMWAL is more than a platform — it's a mission-driven community focused on helping individuals build meaningful and lasting marriages.",
+      "Every message matters to us.\n SMWAL is more than a platform - it's a mission-driven community focused on helping individuals build meaningful and lasting marriages.",
     cta: { label: "Download the App", href: "#" },
   },
 

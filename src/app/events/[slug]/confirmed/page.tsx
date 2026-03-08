@@ -4,11 +4,11 @@ import { getEventDetailBySlug } from "@/features/home/content/home.content";
 export default function Page({ params }: { params: { slug: string } }) {
   const event = getEventDetailBySlug(params.slug);
 
-  // ✅ same fallback behavior as /events/[slug]
+  //  same fallback behavior as /events/[slug]
   const safeEvent =
     event ?? {
       slug: params.slug,
-      title: "Event",
+      title: "Community Hangout",
       subtitle: "A guided in-person gathering organized by the ministry.",
       heroImage: { src: "/images/cta-banner.jpg", alt: "Event hero" },
       date: "June 14, 2025",

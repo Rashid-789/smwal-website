@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import { SITE } from "@/config/site";
 import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "./SocialIcons";
+import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 
 export default function Footer() {
   return (
@@ -11,8 +12,12 @@ export default function Footer() {
       <Container className="py-14">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-end">
           <div>
-            <h2 className="text-3xl font-extrabold tracking-tight">READY TO BEGIN YOUR JOURNEY?</h2>
-            <p className="mt-2 text-sm text-white/65 font-extrabold">
+            <h2
+              className={`${SECTION_HEADING_FONT_CLASS} text-[48px] font-normal uppercase leading-[1] tracking-[0] text-white`}
+            >
+              READY TO BEGIN YOUR JOURNEY?
+            </h2>
+            <p className="mt-3 text-[19px] font-medium leading-[1.2] text-white/90">
               Starting your journey on SMWAL is simple and intentional.
             </p>
 
@@ -41,8 +46,8 @@ export default function Footer() {
             </p>
 
             <div className="mt-3 flex w-full max-w-md items-center gap-2">
-              <Input placeholder="Enter your email Address" type="email" />
-              <button className="h-10 rounded-full bg-sky-500 px-5 text-sm font-semibold text-white hover:brightness-110">
+              <Input placeholder="Enter your email Address" type="email " />
+              <button className="h-10 rounded-xl bg-blue-500 px-5 text-sm font-semibold text-white hover:brightness-110">
                 Subscribe
               </button>
             </div>
@@ -51,7 +56,7 @@ export default function Footer() {
 
         <div className="mt-10 border-t border-white/10 pt-8">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-            <div className="text-sm text-white/60">© 2021 All Rights Reserved</div>
+            <div className="text-sm text-white/60 text-[17px]">© 2021 All Rights Reserved</div>
 
             <div className="flex items-center gap-4">
               <a href="#" aria-label="YouTube" className="opacity-95 hover:opacity-100">

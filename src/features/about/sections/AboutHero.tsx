@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ABOUT } from "../content/about.content";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
 import { scaleIn } from "@/shared/motion/variants";
+import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 
 export default function AboutHero() {
   const { hero } = ABOUT;
@@ -38,24 +39,31 @@ export default function AboutHero() {
               <Stagger className="max-w-2xl">
                 <Reveal
                   as="h1"
-                  className="text-[38px] font-display font-extrabold uppercase tracking-tight text-white md:text-[64px]"
+                  className={`${SECTION_HEADING_FONT_CLASS} text-[56px] font-normal uppercase leading-[1] tracking-[0] text-white sm:text-[64px] md:text-[72px] lg:text-[65px]`}
                 >
                   {hero.title}
                 </Reveal>
 
                 <Reveal
                   as="p"
-                  className="mt-3 max-w-xl text-[16px] leading-relaxed text-white/80 md:text-[18px]"
+                  className="mt-5 max-w-none text-[20px] font-medium leading-[1.2] tracking-[0] text-white"
+                  style={{ fontFamily: "'General Sans', var(--font-sans)" }}
                 >
-                  {hero.subtitle}
+                  <span className="block">
+                    A mission-driven platform dedicated to helping individuals build
+                  </span>
+                  <span className="mt-1 block">
+                    meaningful, guided, and faith-centered marriages through mentorship,
+                  </span>
+                  <span className="mt-1 block">education, and intentional connections.</span>
                 </Reveal>
 
                 <Reveal className="mt-5 flex flex-wrap gap-3">
                   <Button
                     href={hero.primary.href}
                     variant="primary"
-                    className="h-11 rounded-full bg-linear-to-r from-fuchsia-600 to-sky-500 px-6 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
-                  >
+                      className="h-12 rounded-full bg-linear-to-r from-pink-800 to-blue-700 px-7 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
+              >
                     {hero.primary.label}
                   </Button>
 

@@ -4,12 +4,13 @@ import Button from "@/components/ui/Button";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
 import { HOME_JOURNEY } from "../content/home.content";
 import JourneyStep from "../components/JourneyStep";
+import { SECTION_HEADING_FONT_CLASS, SECTION_SUBHEADING_CLASS } from "@/lib/sectionTypography";
 
 export default function Journey() {
   return (
     <section className="py-14 md:py-20">
       <Container>
-        {/* ✅ wider on desktop so subtitle can stay 1 line like Figma */}
+        {/* wider on desktop so subtitle can stay 1 line like Figma */}
         <Stagger className="max-w-3xl lg:max-w-[1100px]">
           <Reveal
             as="span"
@@ -20,16 +21,15 @@ export default function Journey() {
 
           <Reveal
             as="h2"
-            className="mt-5 text-[24px] font-display font-extrabold uppercase leading-[1.1] tracking-tight text-white sm:text-[26px] md:text-[37px]"
+            className={`mt-5 ${SECTION_HEADING_FONT_CLASS} text-[48px] font-normal leading-[1] tracking-[0] text-white`}
           >
             {HOME_JOURNEY.title}
           </Reveal>
 
-          {/* ✅ subtitle single-line on desktop */}
+          {/*  subtitle single-line on desktop */}
           <Reveal
             as="p"
-            className="mt-3 text-[13px] leading-[1.65] text-white/70 sm:text-[14px] md:text-[15px]
-                       lg:whitespace-nowrap lg:max-w-none"
+            className={`mt-5 lg:max-w-none lg:whitespace-nowrap ${SECTION_SUBHEADING_CLASS}`}
           >
             {HOME_JOURNEY.subtitle}
           </Reveal>

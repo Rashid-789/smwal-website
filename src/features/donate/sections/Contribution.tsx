@@ -6,6 +6,7 @@ import { DONATE } from "../content/donate.content";
 import AmountChip from "../components/AmountChip";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
 import { scaleIn } from "@/shared/motion/variants";
+import { SECTION_HEADING_CLASS, SECTION_SUBHEADING_CLASS } from "@/lib/sectionTypography";
 
 export default function Contribution() {
   const { contribution } = DONATE;
@@ -31,14 +32,14 @@ export default function Contribution() {
         <Stagger className="max-w-275">
           <Reveal
             as="h2"
-            className="font-display text-[34px] font-bold uppercase leading-[1.05] tracking-tight text-white sm:text-[42px] md:text-[37px]"
+            className={SECTION_HEADING_CLASS}
           >
             {contribution.title}
           </Reveal>
 
           <Reveal
             as="p"
-            className="mt-3 max-w-225 text-[14px] leading-[1.75] text-white/70 sm:text-[15px] md:text-[16px]"
+            className={`mt-5 max-w-225 ${SECTION_SUBHEADING_CLASS}`}
           >
             {contribution.subtitle}
           </Reveal>
@@ -78,13 +79,12 @@ export default function Contribution() {
                   type="button"
                   onClick={onDonate}
                   className={[
-                    "h-14 rounded-full px-10",
-                    "bg-linear-to-r from-fuchsia-600 to-sky-500",
-                    "text-[14px] font-extrabold text-white",
+                    "h-12 rounded-full px-7",
+                    "bg-linear-to-r from-pink-800 to-[#007AFF]",
+                    "text-lg font-bold text-white",
                     "shadow-[0_18px_55px_rgba(0,0,0,0.55)]",
                     "transition hover:brightness-110",
-                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60",
-                    "md:min-w-55",
+                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007AFF]/60",
                   ].join(" ")}
                 >
                   {contribution.button}
@@ -92,7 +92,7 @@ export default function Contribution() {
               </div>
 
               {/* note below input (like screenshot) */}
-              <p className="mt-3 text-[13px] leading-relaxed text-white/55">
+              <p className="mt-3 text-[15px] leading-relaxed text-white/55">
                 {contribution.note}
               </p>
             </div>

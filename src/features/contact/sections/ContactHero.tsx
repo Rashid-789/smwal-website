@@ -4,6 +4,7 @@ import { CONTACT } from "../content/contact.content";
 import ContactFormCard from "../components/ContactFormCard";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
 import { scaleIn } from "@/shared/motion/variants";
+import { SECTION_HEADING_CLASS, SECTION_SUBHEADING_CLASS } from "@/lib/sectionTypography";
 
 export default function ContactHero() {
   return (
@@ -22,7 +23,7 @@ export default function ContactHero() {
             {/* heading like screenshot */}
             <Reveal
               as="h1"
-              className="whitespace-pre-line text-[34px] font-display font-bold uppercase leading-[1.05] tracking-tight text-white sm:text-[44px] md:text-[56px] lg:text-[36px]"
+              className={`whitespace-pre-line !leading-[1.08] ${SECTION_HEADING_CLASS}`}
             >
               {CONTACT.left.title}
             </Reveal>
@@ -30,7 +31,7 @@ export default function ContactHero() {
             {/*  subheading like screenshot */}
             <Reveal
               as="p"
-              className="mt-4 max-w-155 whitespace-pre-line text-[15px] leading-[1.75] text-white/80 sm:text-[16px] md:text-[18px]"
+              className={`mt-3 max-w-155 whitespace-pre-line text-[15px]! sm:text-[16px]! md:text-[18px]! ${SECTION_SUBHEADING_CLASS}`}
             >
               {CONTACT.left.subtitle}
             </Reveal>
@@ -39,8 +40,8 @@ export default function ContactHero() {
               <Button
                 href={CONTACT.left.cta.href}
                 variant="primary"
-                className="h-11 rounded-full bg-linear-to-r from-fuchsia-600 to-sky-500 px-6 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
-              >
+                 className="h-12 rounded-full bg-linear-to-r from-pink-800 to-blue-700 px-7 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
+                  >
                 {CONTACT.left.cta.label}
               </Button>
             </Reveal>

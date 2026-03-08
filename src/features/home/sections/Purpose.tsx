@@ -3,12 +3,13 @@ import Button from "@/components/ui/Button";
 import { HoverLift, Reveal, Stagger } from "@/shared/motion/Motion";
 import { HOME_PURPOSE } from "../content/home.content";
 import PurposeCard from "../components/PurposeCard";
+import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 
 export default function Purpose() {
   return (
     <section className="py-14 md:py-20">
       <Container>
-        <Stagger className="max-w-full lg:max-w-[1100px]">
+        <Stagger className="max-w-full lg:max-w-275">
           <Reveal
             as="span"
             className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/80"
@@ -18,16 +19,22 @@ export default function Purpose() {
 
           <Reveal
             as="h2"
-            className="mt-5 inline-flex flex-wrap items-baseline font-display font-extrabold uppercase leading-[1.1] tracking-tight text-white text-[28px] md:text-[44px] lg:text-[37px] lg:whitespace-nowrap"
+            className={`mt-5 ${SECTION_HEADING_FONT_CLASS} text-[48px] font-normal uppercase leading-[1] tracking-[0] text-white`}
           >
             {HOME_PURPOSE.title}
           </Reveal>
 
           <Reveal
             as="p"
-            className="mt-3 max-w-[640px] text-[13px] leading-[1.65] text-white/70 sm:text-[14px] md:text-[15px]"
+            className="mt-5 max-w-[1120px] text-[20px] font-medium leading-[1.35] tracking-[0] text-white"
+            style={{ fontFamily: "'General Sans', var(--font-sans)" }}
           >
-            {HOME_PURPOSE.subtitle}
+            <>
+              We believe strong marriages don’t happen by chance — they are built
+              with intention,
+            </>
+            <br />
+            <>preparation, and the right support.</>
           </Reveal>
 
           <Reveal className="mt-6">

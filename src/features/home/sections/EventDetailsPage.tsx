@@ -2,6 +2,14 @@ import Button from "@/components/ui/Button";
 import Image from "next/image";
 import type { EventDetail } from "../content/home.content";
 
+const META_LABEL_BOX_CLASS =
+  "h-[22px] w-[37px] whitespace-nowrap opacity-100 text-[14px] font-bold text-white/90";
+const META_VALUE_CLASS =
+  "text-[14px] font-medium leading-[1] tracking-[0] text-white/75";
+const META_VALUE_STYLE = {
+  fontFamily: "'General Sans', var(--font-sans)",
+} as const;
+
 export default function EventDetailsPage({ event }: { event: EventDetail }) {
   return (
     <main className="bg-black">
@@ -9,7 +17,7 @@ export default function EventDetailsPage({ event }: { event: EventDetail }) {
         <div className="relative left-1/2 w-screen -translate-x-1/2">
           <div className="w-full overflow-hidden bg-black/35 shadow-[0_25px_80px_rgba(0,0,0,0.55)] backdrop-blur">
             {/* HERO FULL WIDTH */}
-            <div className="relative h-[260px] w-full sm:h-[340px] md:h-[420px] lg:h-[370px]">
+            <div className="relative h-65 w-full sm:h-85 md:h-105 lg:h-92.5">
               <Image
                 src="/images/tent.svg"
                 alt={event.heroImage?.alt ?? "Event hero"}
@@ -33,12 +41,18 @@ export default function EventDetailsPage({ event }: { event: EventDetail }) {
                 <div className="grid gap-10 lg:grid-cols-[620px_1fr] lg:items-start">
                   <div className="text-left">
                     {/* bigger title */}
-                    <h1 className="text-[20px] font-bold text-white sm:text-[22px]">
+                    <h1
+                      className="text-[20px] font-semibold leading-none tracking-[0] text-white"
+                      style={{ fontFamily: "'General Sans', var(--font-sans)" }}
+                    >
                       {event.title}
                     </h1>
 
                     {/* bigger subtitle */}
-                    <p className="mt-3 text-[14px] leading-relaxed text-white/75 sm:text-[16px]">
+                    <p
+                      className="mt-5 text-[16px] font-medium leading-none tracking-[0] text-white"
+                      style={{ fontFamily: "'General Sans', var(--font-sans)" }}
+                    >
                       {event.subtitle}
                     </p>
 
@@ -49,35 +63,32 @@ export default function EventDetailsPage({ event }: { event: EventDetail }) {
                       <Block label="Location" value={event.location} />
                       <Block label="Event Fee" value={event.fee} />
 
-                      <div>
-                        <div className="text-[16px] font-bold text-white/90">
+                      <div className="space-y-3">
+                        <div className={META_LABEL_BOX_CLASS}>
                           What to Expect
                         </div>
-                        <ul className="mt-3 list-disc space-y-2 pl-6 text-[14px] text-white/75">
+                        <ul
+                          className="list-disc space-y-2 pl-6 text-[14px] font-medium leading-none tracking-[0] text-white/75"
+                          style={META_VALUE_STYLE}
+                        >
                           {event.whatToExpect.map((x) => (
                             <li key={x}>{x}</li>
                           ))}
                         </ul>
                       </div>
 
-                      <div>
-                        <div className="text-[16px] font-bold text-white/90">
+                      <div className="space-y-3">
+                        <div className={META_LABEL_BOX_CLASS}>
                           Cancellation Policy
                         </div>
-                        <div className="mt-3 text-[15px] leading-relaxed text-white/75">
+                        <div
+                          className={META_VALUE_CLASS}
+                          style={META_VALUE_STYLE}
+                        >
                           {event.cancellationPolicy}
                         </div>
                       </div>
 
-                      <div className="pt-3 max-w-60">
-                        <Button
-                          href="/events"
-                          variant="secondary"
-                          className="h-11 w-full px-6 text-[14px] font-bold"
-                        >
-                          Back to Events
-                        </Button>
-                      </div>
                     </div>
                   </div>
 
@@ -85,7 +96,11 @@ export default function EventDetailsPage({ event }: { event: EventDetail }) {
                     <Button
                       href={`/events/${event.slug}/confirmed`}
                       variant="primary"
-                      className="h-11 rounded-full bg-linear-to-r from-fuchsia-600 to-sky-500 px-8 text-[14px] font-extrabold text-white shadow-[0_14px_45px_rgba(0,0,0,0.55)] hover:brightness-110"
+                      className="h-11 rounded-full px-8 text-[14px] font-extrabold text-white shadow-[0_14px_45px_rgba(0,0,0,0.55)] hover:brightness-110"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(90deg, #7D3AF0 0%, #007AFF 100%)",
+                      }}
                     >
                       Register and Pay
                     </Button>
@@ -103,9 +118,16 @@ export default function EventDetailsPage({ event }: { event: EventDetail }) {
 
 function Block({ label, value }: { label: string; value: string }) {
   return (
-    <div>
-      <div className="text-[14px] font-bold text-white/90">{label}</div>
-      <div className="mt-2 text-[14px] text-white/75">{value}</div>
+    <div className="space-y-3">
+      <div className={META_LABEL_BOX_CLASS}>
+        {label}
+      </div>
+      <div
+        className={META_VALUE_CLASS}
+        style={META_VALUE_STYLE}
+      >
+        {value}
+      </div>
     </div>
   );
 }

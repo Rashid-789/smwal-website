@@ -12,7 +12,7 @@ export const DONATE = {
     pill: "The Impact",
     title: "SUPPORTING MEANINGFUL CONNECTIONS THROUGH GUIDANCE",
     subtitle:
-      "Every contribution to SMWAL helps create a safe, structured, and mentorship-driven environment where individuals can prepare for and build lasting marriages rooted in shared values and purpose.",
+      "Every contribution to SMWAL helps create a safe, structured, and mentorship-driven environment where individuals can prepare for and build\nlasting marriages rooted in shared values and purpose.",
     cta: { label: "Join Our Community", href: "/join" },
     image: { src: "/images/donate-impact.png", alt: "Couple outdoors" },
     cards: [

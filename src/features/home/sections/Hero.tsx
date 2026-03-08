@@ -5,28 +5,24 @@ import { scaleIn } from "@/shared/motion/variants";
 import { HOME_HERO } from "../content/home.content";
 import StoreBadges from "../components/StoreBadges";
 import PolaroidStack from "../components/PolaroidStack";
+import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-10 pb-14 md:pt-23 md:pb-20">
       {/* Background glows */}
-         <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-44 top-1/2 h-140 w-140 -translate-y-1/2 rounded-full bg-violet-600/25 blur-[130px]" />
-        <div className="absolute left-10 top-20 h-85 w-85 rounded-full bg-violet-500/15 blur-[120px]" />
-      </div>
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -left-40 -top-40 h-130 w-130 rounded-full bg-purple-600/30 blur-[130px]" />
-        <div className="absolute -right-65 -top-35 h-155 w-155 rounded-full bg-indigo-600/25 blur-[140px]" />
-        <div className="absolute left-1/2 -bottom-80 h-180 w-180 -translate-x-1/2 rounded-full bg-purple-600/20 blur-[160px]" />
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -right-44 top-1/2 h-140 w-140 -translate-y-1/2 rounded-full bg-violet-600/25 blur-[130px]" />
+        <div className="absolute right-10 top-20 h-85 w-85 rounded-full bg-violet-500/15 blur-[120px]" />
       </div>
 
       <Container>
-        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] mt-9">
+        <div className="mt-9 grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
           {/* Left content */}
           <Stagger className="max-w-2xl">
             <Reveal
               as="h1"
-              className="text-[36px] font-bold uppercase leading-[1.05] tracking-tight text-white md:text-[52px] lg:text-[45px]"
+              className={`${SECTION_HEADING_FONT_CLASS} flex flex-col gap-y-3 text-[60px] font-normal uppercase leading-[0.92] tracking-[0] text-white`}
             >
               {HOME_HERO.titleLines.map((line) => (
                 <span key={line} className="block">
@@ -37,16 +33,25 @@ export default function Hero() {
 
             <Reveal
               as="p"
-              className="mt-4 max-w-[680px] text-[14px] leading-[1.65] text-white/80 sm:text-[15px] md:text-[18px] md:leading-[1.7]"
+              className="mt-7 flex flex-col gap-y-2 text-[20px] font-medium leading-[1.08] tracking-[0] text-white"
+              style={{ fontFamily: "'General Sans', var(--font-sans)" }}
             >
-              {HOME_HERO.subtitle}
+              <span>
+                SMWAL is more than just a platform; it&apos;s a mission to
+                foster
+              </span>
+              <span>
+                intentional relationships through guided matchmaking,
+                mentorship,
+              </span>
+              <span>and faith-aligned growth.</span>
             </Reveal>
 
             <Reveal className="mt-8 flex flex-wrap gap-3">
               <Button
                 href={HOME_HERO.ctas.primary.href}
                 variant="primary"
-                className="h-11 rounded-full bg-linear-to-r from-fuchsia-600 to-sky-500 px-7 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
+                className="h-12 rounded-full bg-linear-to-r from-pink-800 to-blue-700 px-7 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
               >
                 {HOME_HERO.ctas.primary.label}
               </Button>
@@ -54,7 +59,7 @@ export default function Hero() {
               <Button
                 href={HOME_HERO.ctas.secondary.href}
                 variant="secondary"
-                className="h-11 rounded-full border border-white/15 bg-white/5 px-7 text-sm font-extrabold text-white/90 hover:bg-white/10"
+                className="h-12 rounded-full border border-white/15 bg-white/5 px-7 text-sm font-extrabold text-white/90 hover:bg-white/10"
               >
                 {HOME_HERO.ctas.secondary.label}
               </Button>
@@ -68,7 +73,7 @@ export default function Hero() {
             </Reveal>
           </Stagger>
 
-          {/* Right polaroids (✅ only 3in1.svg via PolaroidStack) */}
+          {/* Right polaroids */}
           <Reveal className="lg:justify-self-end" variant={scaleIn}>
             <PolaroidStack />
           </Reveal>

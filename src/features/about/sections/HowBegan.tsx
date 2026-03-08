@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ABOUT } from "../content/about.content";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
 import { scaleIn } from "@/shared/motion/variants";
+import { SECTION_HEADING_CLASS } from "@/lib/sectionTypography";
 
 export default function HowBegan() {
   const { began } = ABOUT;
@@ -21,16 +22,31 @@ export default function HowBegan() {
             <Stagger>
               <Reveal
                 as="h2"
-                className="text-2xl font-display font-extrabold uppercase tracking-tight text-white md:text-3xl"
+                className={SECTION_HEADING_CLASS}
               >
                 {began.title}
               </Reveal>
 
               <Reveal
                 as="p"
-                className="mt-4 whitespace-pre-line text-sm leading-relaxed text-white/70 md:text-base"
+                className="mt-4 text-[18px] leading-[1.45] text-white/70"
               >
-                {began.body}
+                <span className="block md:whitespace-nowrap">
+                  SMWAL was created with a simple but powerful vision - to help individuals build
+                  meaningful and lasting marriages through guidance, 
+                </span>
+                <span className="block md:whitespace-nowrap"> preparation, and shared values.</span>
+                <span className="block md:whitespace-nowrap">
+                  In a world of fast and often superficial connections, we saw the need for a
+                  structured and intentional approach to marriage.One that 
+                </span>
+                <span className="block md:whitespace-nowrap">
+                  supports personal growth, mentorship , , and compatibility before commitment. Today, SMWAL continues
+                  to grow as a trusted space 
+                </span>
+                <span className="block md:whitespace-nowrap">
+                  for those seeking meaningful relationships and strong foundations for lifelong partnership.
+                </span>
               </Reveal>
 
               <Reveal className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-black">

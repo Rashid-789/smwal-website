@@ -7,6 +7,7 @@ import { fadeIn, scaleIn } from "@/shared/motion/variants";
 import { HOME_PRICING } from "../content/home.content";
 import PricingToggle from "../components/PricingToggle";
 import PricingCard from "../components/PricingCard";
+import { SECTION_HEADING_CLASS, SECTION_SUBHEADING_CLASS } from "@/lib/sectionTypography";
 
 export type BillingPeriod = "monthly" | "yearly";
 
@@ -28,12 +29,12 @@ export default function Pricing() {
 
             <Reveal
               as="h2"
-              className="mt-5 text-[28px] font-display font-extrabold uppercase leading-[1.12] tracking-tight text-white md:text-[37px]"
+              className={`mt-5 ${SECTION_HEADING_CLASS}`}
             >
               {HOME_PRICING.title}
             </Reveal>
 
-            <Reveal as="p" className="mt-3 text-sm leading-relaxed text-white/70 md:text-base">
+            <Reveal as="p" className={`mt-5 ${SECTION_SUBHEADING_CLASS}`}>
               {HOME_PRICING.subtitle}
             </Reveal>
           </div>

@@ -164,7 +164,7 @@ export default function ContactFormCard() {
             {/* Submit */}
             <button
               type="submit"
-              className="mt-2 h-12 w-full rounded-xl bg-sky-800 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
+              className="mt-2 h-12 w-full rounded-xl bg-[#007AFF] text-sm font-bold text-white  transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007AFF]/60"
             >
               {CONTACT.form.button}
             </button>

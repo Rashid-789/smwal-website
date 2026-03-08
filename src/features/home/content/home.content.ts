@@ -1,7 +1,7 @@
 export const HOME_HERO = {
   titleLines: ["BUILDING MEANINGFUL", "CONNECTIONS WITH PURPOSE."],
   subtitle:
-    "SMWAL is more than just a platform; it’s a mission to foster intentional relationships through guided matchmaking, mentorship, and faith-aligned growth.",
+    "SMWAL is more than just a platform; it's a mission to foster intentional relationships through guided matchmaking, mentorship, and faith-aligned growth.",
   ctas: {
     primary: { label: "Join the Platform", href: "/join" },
     secondary: { label: "Support the Mission", href: "/donate" },
@@ -202,7 +202,7 @@ export const HOME_HANGOUTS = {
   pill: "Our Hangouts & Community Events",
   title: "CONNECT BEYOND THE SCREEN",
   subtitle:
-    "Whether you,re part of the app or visiting for thr firsur secinh upoi join okjde humnb hfui iui uywu cw ",
+    "Join ministry-led hangouts, teaching nights, and guided community gatherings designed to build meaningful connections in a respectful and faith-centered environment. ",
   cta: { label: "View Upcoming Events", href: "/events" },
   events: [
     {
@@ -269,7 +269,7 @@ export type EventCardItem = {
 export const EVENTS_HERO = {
   title: "VIEW UPCOMING EVENTS",
   subtitle:
-    "Explore our upcoming ministry events designed to bring like-minded individuals together in a safe, guided, and faith-aligned setting.",
+    "Explore our upcoming ministry events designed to bring like-minded\n individuals together in a safe, guided, and faith-aligned setting.",
   image: { src: "/images/donate-hero.jpg", alt: "Upcoming events hero" },
   primary: { label: "See Events", href: "#events" },
   secondary: { label: "Support our Mission", href: "/donate" },

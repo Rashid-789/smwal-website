@@ -7,6 +7,10 @@ import { DONATE } from "../content/donate.content";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
 import { scaleIn } from "@/shared/motion/variants";
 import { scrollToId } from "@/lib/scrollToId";
+import {
+  SECTION_HEADING_FONT_CLASS,
+  SECTION_SUBHEADING_CLASS,
+} from "@/lib/sectionTypography";
 
 export default function DonateHero() {
   const { hero } = DONATE;
@@ -46,14 +50,14 @@ export default function DonateHero() {
               <Stagger className="max-w-2xl">
                 <Reveal
                   as="h1"
-                  className="whitespace-pre-line text-[34px] font-display font-bold uppercase leading-[1.05] tracking-tight text-white sm:text-[40px] md:text-[53px]"
+                  className={`whitespace-pre-line ${SECTION_HEADING_FONT_CLASS} text-[65px] font-normal uppercase leading-[1] tracking-[0] text-white`}
                 >
                   {hero.title}
                 </Reveal>
 
                 <Reveal
                   as="p"
-                  className="mt-4 max-w-xl text-[14px] leading-relaxed text-white/80 sm:text-[15px] md:text-[16px]"
+                  className={`mt-5 max-w-xl ${SECTION_SUBHEADING_CLASS}`}
                 >
                   {hero.subtitle}
                 </Reveal>
@@ -61,9 +65,9 @@ export default function DonateHero() {
                 <Reveal className="mt-6 flex flex-wrap gap-3">
                   <Button
                     href={hero.primary.href}
-                    onClick={onDonateNow as any}
+                    onClick={onDonateNow}
                     variant="primary"
-                    className="h-11 rounded-full bg-linear-to-r from-fuchsia-600 to-sky-500 px-6 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
+                    className="h-12 rounded-full bg-linear-to-r from-pink-800 to-blue-700 px-7 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
                   >
                     {hero.primary.label}
                   </Button>

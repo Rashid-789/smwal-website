@@ -11,6 +11,18 @@ type EventDetail = {
   fee: string;
 };
 
+const META_LABEL_CLASS =
+  "text-[16px] font-medium leading-[1] tracking-[0] align-middle text-white/50";
+const META_LABEL_STYLE = {
+  fontFamily: "'General Sans', var(--font-sans)",
+  verticalAlign: "middle",
+} as const;
+const META_VALUE_CLASS =
+  "mt-1 text-[18px] font-semibold leading-[1] tracking-[0] text-white/90";
+const META_VALUE_STYLE = {
+  fontFamily: "'General Sans', var(--font-sans)",
+} as const;
+
 function toDisplayTimeRange(timeRange: string) {
   // converts "Start: 8:00 AM | End: 6:00 PM" -> "8:00 AM - 6:00 PM"
   const startMatch = timeRange.match(/Start:\s*([^|]+)/i);
@@ -58,7 +70,7 @@ export default function BookingConfirmedPage({
                   Booking Confirmed!
                 </h1>
 
-                <span className="grid h-5 w-5 place-items-center rounded-full bg-sky-500">
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-[#007AFF]">
                   <svg
                     viewBox="0 0 24 24"
                     className="h-3.5 w-3.5"
@@ -77,29 +89,37 @@ export default function BookingConfirmedPage({
               {/* details */}
               <div className="mt-6 divide-y divide-white/10 text-left">
                 <div className="py-4">
-                  <p className="text-xs text-white/50">Event</p>
-                  <p className="mt-1 text-sm font-semibold text-white/90">
+                  <p className={META_LABEL_CLASS} style={META_LABEL_STYLE}>
+                    Event
+                  </p>
+                  <p className={META_VALUE_CLASS} style={META_VALUE_STYLE}>
                     {event.title}
                   </p>
                 </div>
 
                 <div className="py-4">
-                  <p className="text-xs text-white/50">Date</p>
-                  <p className="mt-1 text-sm font-semibold text-white/90">
+                  <p className={META_LABEL_CLASS} style={META_LABEL_STYLE}>
+                    Date
+                  </p>
+                  <p className={META_VALUE_CLASS} style={META_VALUE_STYLE}>
                     {event.date}
                   </p>
                 </div>
 
                 <div className="py-4">
-                  <p className="text-xs text-white/50">Time</p>
-                  <p className="mt-1 text-sm font-semibold text-white/90">
+                  <p className={META_LABEL_CLASS} style={META_LABEL_STYLE}>
+                    Time
+                  </p>
+                  <p className={META_VALUE_CLASS} style={META_VALUE_STYLE}>
                     {toDisplayTimeRange(event.timeRange)}
                   </p>
                 </div>
 
                 <div className="py-4">
-                  <p className="text-xs text-white/50">Location</p>
-                  <p className="mt-1 text-sm font-semibold text-white/90">
+                  <p className={META_LABEL_CLASS} style={META_LABEL_STYLE}>
+                    Location
+                  </p>
+                  <p className={META_VALUE_CLASS} style={META_VALUE_STYLE}>
                     {event.location}
                   </p>
                 </div>
@@ -107,8 +127,10 @@ export default function BookingConfirmedPage({
                 <div className="py-4">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-xs text-white/50">Total Price:</p>
-                      <p className="mt-1 text-sm font-semibold text-white/90">
+                      <p className={META_LABEL_CLASS} style={META_LABEL_STYLE}>
+                        Total Price:
+                      </p>
+                      <p className={META_VALUE_CLASS} style={META_VALUE_STYLE}>
                         {event.fee}
                       </p>
                     </div>

@@ -11,7 +11,7 @@ export const ABOUT = {
   began: {
     title: "HOW SMWAL BEGAN",
     body:
-      "SMWAL was created with a simple but powerful vision — to help individuals build meaningful and lasting marriages through guidance, preparation, and shared values.In a world of fast and often superficial connections, we saw the need for a structured and intentional approach to marriage. One that supports personal growth, mentorship, and compatibility before commitment. Today, SMWAL continues to grow as a trusted space for those seeking meaningful relationships and strong foundations for lifelong partnership.",
+      "SMWAL was created with a simple but powerful vision - to help individuals build meaningful and lasting marriages through guidance, preparation, and shared values.\nIn a world of fast and often superficial connections, we saw the need for a structured and intentional approach to marriage. One that supports personal growth, mentorship, and compatibility before commitment. Today, SMWAL continues to grow as a trusted space for those seeking meaningful relationships and strong foundations for lifelong partnership.",
     image: { src: "/images/about-began.png", alt: "Happy group photo" },
   },
 

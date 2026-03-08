@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { BillingPeriod } from "../sections/Pricing";
 
@@ -14,14 +15,23 @@ type Plan = {
   features: readonly Feature[];
 };
 
+const BLUE = "#007AFF";
+const BUTTON = "#007AFF";
+
+const TITLE_FONT = `"Bebas Neue", "Oswald", "Arial Narrow", sans-serif`;
+const BODY_FONT = `'General Sans', var(--font-sans)`;
+
 function Diamond({ muted }: { muted?: boolean }) {
   return (
     <span
       className={[
-        "mt-1.5 inline-block h-2.5 w-2.5 rotate-45 rounded-xs",
-        muted ? "bg-white/30" : "bg-yellow-400",
+        "mt-0.5 inline-flex shrink-0 select-none items-center justify-center text-[18px] leading-none",
+        muted ? "text-white/35" : "text-[#FFD21F]",
       ].join(" ")}
-    />
+      aria-hidden="true"
+    >
+      ✦
+    </span>
   );
 }
 
@@ -39,91 +49,116 @@ export default function PricingCard({
   const price = period === "monthly" ? plan.price.monthly : plan.price.yearly;
   const suffix = period === "monthly" ? "/Month" : "/Year";
 
-  // BEST DEAL (Guided) card style from screenshots
   if (plan.bestDeal) {
     return (
-      <article className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-sky-500/35 bg-black/35 shadow-[0_35px_90px_rgba(0,0,0,0.70)] backdrop-blur lg:-translate-y-3">
-        {/* top bar */}
-        <div className="flex h-12 items-center justify-center bg-linear-to-r from-fuchsia-600 via-rose-600 to-rose-600 text-xs font-extrabold text-white">
-          <span className="inline-flex items-center gap-2">
-            <span className="text-sm leading-none">↳</span>
+      <article className="relative flex h-full min-h-132.5 flex-col overflow-hidden rounded-3xl bg-[linear-gradient(180deg,#D10F59_0%,#B61D97_48%,#1383F4_100%)] p-px shadow-[0_28px_80px_rgba(0,0,0,0.65)] lg:-translate-y-6">
+        <div className="flex h-10.5 items-center justify-center bg-[linear-gradient(90deg,#D41467_0%,#D41467_50%,#C11259_100%)] px-6 text-white">
+          <span className="inline-flex items-center gap-2 text-[15px] font-bold">
+            <Image
+              src="/images/errowsign.svg"
+              alt="Best Deal"
+              width={16}
+              height={16}
+              className="h-4 w-4 object-contain"
+              unoptimized
+            />
             Best Deal
           </span>
         </div>
 
-        {/* subtle body tint */}
-        <div className="absolute inset-0 -z-10 bg-linear-to-b from-fuchsia-600/12 via-transparent to-sky-500/10" />
-
-        <div className="flex flex-1 flex-col p-6">
+        <div className="mx-2.5 mb-2.5 flex flex-1 flex-col rounded-[18px] border border-white/6 bg-[#0A0B0E] px-7 pb-6 pt-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
           <Header plan={plan} />
           <Price price={price} suffix={suffix} />
           <Divider />
-
           <Features list={plan.features} />
-
           <CTA href={plan.cta.href} label={plan.cta.label} />
         </div>
-
-        {/* bottom blue strip */}
-        <div className="h-1 w-full bg-sky-500/80" />
       </article>
     );
   }
 
-  // Regular cards
   return (
-    <article className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-black/35 p-6 shadow-[0_24px_70px_rgba(0,0,0,0.55)] backdrop-blur">
-      {/* subtle top glow */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_55%_at_50%_0%,rgba(59,130,246,0.14),transparent_60%)]" />
+    <article className="relative flex h-full min-h-122 flex-col overflow-hidden rounded-[20px] border border-white/10 bg-[#0A0B0E]/95 px-7 pb-6 pt-7 shadow-[0_22px_70px_rgba(0,0,0,0.55)] ring-1 ring-inset ring-white/5 backdrop-blur-xl">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_55%_at_50%_0%,rgba(0,122,255,0.08),transparent_58%)]" />
 
-      <Header plan={plan} />
-      <Price price={price} suffix={suffix} />
-      <Divider />
-
-      <Features list={plan.features} />
-
-      <CTA href={plan.cta.href} label={plan.cta.label} />
+      <div className="relative z-10 flex h-full flex-col">
+        <Header plan={plan} />
+        <Price price={price} suffix={suffix} />
+        <Divider />
+        <Features list={plan.features} />
+        <CTA href={plan.cta.href} label={plan.cta.label} />
+      </div>
     </article>
   );
 }
 
 function Header({ plan }: { plan: Plan }) {
   return (
-    <div className="flex items-start justify-between gap-3">
-      <div>
-        <div className="text-xl font-extrabold uppercase text-white">
-          {plan.name}
+    <div className="w-full">
+      <div className="flex min-h-8.5 w-full items-start justify-between gap-3 pr-1">
+        <div className="min-w-0 flex-1 pr-2">
+          <div
+            className="text-[21px] uppercase leading-[0.92] tracking-[0.03em] text-white sm:text-[25px]"
+            style={{
+              fontFamily: TITLE_FONT,
+              fontWeight: 200,
+            }}
+          >
+            {plan.name}
+          </div>
         </div>
-        <p className="mt-2 text-sm leading-relaxed text-white/65">
-          {plan.description}
-        </p>
+
+        <span
+          className="shrink-0 rounded-full px-2.5 py-1 text-[12px] font-bold leading-none"
+          style={{
+            color: BLUE,
+            backgroundColor: "#D9EEFF",
+          }}
+        >
+          {plan.save}
+        </span>
       </div>
 
-      <span className="shrink-0 rounded-full bg-sky-500/15 px-3 py-1 text-[11px] font-extrabold text-sky-300 ring-1 ring-sky-400/20">
-        {plan.save}
-      </span>
+      <p
+        className="mt-3 text-[15px] leading-[1.45] tracking-[0] text-white/70"
+        style={{
+          fontFamily: BODY_FONT,
+        }}
+      >
+        {plan.description}
+      </p>
     </div>
   );
 }
 
 function Price({ price, suffix }: { price: number; suffix: string }) {
   return (
-    <div className="mt-5 flex items-end gap-1">
-      <div className="text-2xl font-extrabold text-white">
+    <div className="mt-6 flex items-end gap-0.5 text-white">
+      <span className="text-[10px] font-semibold leading-none sm:text-[21px]">
         {formatPrice(price)}
-      </div>
-      <div className="pb-0.5 text-sm font-semibold text-white/70">{suffix}</div>
+      </span>
+      <span className="text-[15px] font-medium leading-none text-white/92">
+        {suffix}
+      </span>
     </div>
   );
 }
 
 function Divider() {
   return (
-    <div className="mt-5">
-      <div className="flex items-center gap-4">
-        <div className="h-px flex-1 bg-sky-500/45" />
-        <div className="text-xs font-extrabold text-white/70">BENEFITS</div>
-        <div className="h-px flex-1 bg-sky-500/45" />
+    <div className="mt-6">
+      <div className="flex items-center gap-3">
+        <div className="h-px flex-1" style={{ backgroundColor: BLUE }} />
+        <div
+          className="text-[17px] uppercase leading-none tracking-[0.03em] text-white/85"
+          style={{
+            fontFamily: TITLE_FONT,
+            fontWeight: 200,
+          }}
+        >
+          Benefits
+        </div>
+        <div className="h-px flex-1" style={{ backgroundColor: BLUE }} />
       </div>
     </div>
   );
@@ -131,14 +166,16 @@ function Divider() {
 
 function Features({ list }: { list: readonly Feature[] }) {
   return (
-    <ul className="mt-5 flex-1 space-y-3">
+    <ul className="mt-7 flex-1 space-y-4">
       {list.map((f) => (
-        <li key={f.text} className="flex gap-3">
+        <li key={f.text} className="flex items-start gap-4">
           <Diamond muted={f.muted} />
           <span
-            className={
-              f.muted ? "text-sm text-white/45" : "text-sm text-white/80"
-            }
+            className={[
+              "text-[15px] leading-[1.45]",
+              f.muted ? "text-white/45" : "text-white/86",
+            ].join(" ")}
+            style={{ fontFamily: BODY_FONT }}
           >
             {f.text}
           </span>
@@ -152,7 +189,8 @@ function CTA({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className="mt-6 block w-full rounded-xl bg-sky-500 py-3 text-center text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
+      className="mt-8 flex h-[42px] w-full items-center justify-center rounded-[12px] text-center text-[15px] font-bold text-white shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition duration-200 hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+      style={{ backgroundColor: BUTTON }}
     >
       {label}
     </Link>

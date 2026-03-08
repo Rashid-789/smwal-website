@@ -6,13 +6,13 @@ export default function Brand() {
       <Image
         src="/images/logo.svg"
         alt="SMWAL"
-        width={44}
-        height={44}
+        width={52}
+        height={52}
         priority
-        className="h-10 w-10"
+        className="h-[52px] w-[52px]"
       />
       <span className="text-[15px] font-bold tracking-[0.02em] text-white">
-        Single & Mareied<br></br> WITH A LIFE
+        Single & Married<br></br> WITH A LIFE
       </span>
       
     </div>

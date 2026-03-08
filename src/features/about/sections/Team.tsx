@@ -2,6 +2,7 @@ import Container from "@/components/ui/Container";
 import { ABOUT } from "../content/about.content";
 import TeamCard from "../components/TeamCard";
 import { HoverLift, Reveal, Stagger } from "@/shared/motion/Motion";
+import { SECTION_HEADING_CLASS } from "@/lib/sectionTypography";
 
 export default function Team() {
   const { team } = ABOUT;
@@ -17,16 +18,21 @@ export default function Team() {
         <Stagger>
           <Reveal
             as="h2"
-            className="text-2xl font-display font-extrabold uppercase tracking-tight text-white md:text-3xl"
+            className={SECTION_HEADING_CLASS}
           >
             {team.title}
           </Reveal>
 
           <Reveal
             as="p"
-            className="mt-3 max-w-3xl text-sm leading-relaxed text-white/70 md:text-base"
+            className="mt-4 max-w-none text-[18px] font-medium leading-[1.2] tracking-[0] text-white/90"
+            style={{ fontFamily: "'General Sans', var(--font-sans)" }}
           >
-            {team.subtitle}
+            <span className="block md:whitespace-nowrap">
+              SMWAL is built by a dedicated team committed to strengthening marriages and
+              supporting individuals on their journey toward meaningful
+            </span>
+            <span className="mt-1 block">partnerships.</span>
           </Reveal>
         </Stagger>
 

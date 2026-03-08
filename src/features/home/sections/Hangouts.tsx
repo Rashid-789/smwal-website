@@ -3,6 +3,7 @@ import Button from "@/components/ui/Button";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
 import { HOME_HANGOUTS } from "../content/home.content";
 import HangoutEventCardFigma from "../components/HangoutEventCardFigma";
+import { SECTION_HEADING_CLASS } from "@/lib/sectionTypography";
 
 export default function Hangouts() {
   const events = HOME_HANGOUTS.events;
@@ -24,16 +25,23 @@ export default function Hangouts() {
 
           <Reveal
             as="h2"
-            className="mt-5 text-[24px] font-display font-extrabold uppercase leading-[1.1] tracking-tight text-white sm:text-[26px] md:text-[34px]"
+            className={`mt-5 ${SECTION_HEADING_CLASS}`}
           >
             {HOME_HANGOUTS.title}
           </Reveal>
 
           <Reveal
             as="p"
-            className="mt-3 max-w-[680px] text-[13px] leading-[1.65] text-white/70 sm:text-[14px] md:text-[15px]"
+            className="mt-5 max-w-[680px] text-[20px] font-medium leading-[1] tracking-[0] text-white"
+            style={{ fontFamily: "'General Sans', var(--font-sans)" }}
           >
-            {HOME_HANGOUTS.subtitle}
+            <span className="block md:whitespace-nowrap">
+              Join ministry-led hangouts, teaching nights, and guided community gatherings
+            </span>
+            <span className="block md:whitespace-nowrap mt-2">
+              designed to build meaningful connections in a respectful and faith-centered
+            </span>
+            <span className="block mt-2">environment.</span>
           </Reveal>
 
           <Reveal className="mt-6">
