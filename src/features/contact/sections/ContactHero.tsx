@@ -9,12 +9,6 @@ import { SECTION_HEADING_CLASS, SECTION_SUBHEADING_CLASS } from "@/lib/sectionTy
 export default function ContactHero() {
   return (
     <section className="relative overflow-hidden py-14 md:py-20">
-      {/* background glows like your pages */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -left-45 -top-40 h-155 w-155 rounded-full bg-purple-600/25 blur-[150px]" />
-        <div className="absolute -right-60 top-10 h-155 w-155 rounded-full bg-indigo-600/18 blur-[160px]" />
-        <div className="absolute left-1/2 -bottom-90 h-190 w-190 -translate-x-1/2 rounded-full bg-sky-500/10 blur-[170px]" />
-      </div>
 
       <Container>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">

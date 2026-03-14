@@ -10,11 +10,6 @@ import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-10 pb-14 md:pt-23 md:pb-20">
-      {/* Background glows */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -right-44 top-1/2 h-140 w-140 -translate-y-1/2 rounded-full bg-violet-600/25 blur-[130px]" />
-        <div className="absolute right-10 top-20 h-85 w-85 rounded-full bg-violet-500/15 blur-[120px]" />
-      </div>
 
       <Container>
         <div className="mt-9 grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">

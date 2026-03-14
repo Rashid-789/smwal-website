@@ -11,12 +11,7 @@ export default function Impact() {
   const { impact } = DONATE;
 
   return (
-    <section className="relative py-14 md:py-20">
-      {/* glow background */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -left-40 top-10 h-105 w-105 rounded-full bg-purple-600/18 blur-[130px]" />
-        <div className="absolute -right-40 bottom-0 h-130 w-130 rounded-full bg-indigo-600/14 blur-[150px]" />
-      </div>
+    <section className="relative overflow-hidden py-14 md:py-20">
 
       <Container>
         <Stagger className="max-w-310">

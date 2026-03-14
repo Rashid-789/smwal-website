@@ -1,9 +1,17 @@
+import type { CSSProperties } from "react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
 import { HOME_HANGOUTS } from "../content/home.content";
 import HangoutEventCardFigma from "../components/HangoutEventCardFigma";
 import { SECTION_HEADING_CLASS } from "@/lib/sectionTypography";
+
+const marqueeStyle: CSSProperties &
+  Record<"--marquee-gap" | "--marquee-shift" | "--marquee-duration", string> = {
+  "--marquee-gap": "24px",
+  "--marquee-shift": "50%",
+  "--marquee-duration": "26s",
+};
 
 export default function Hangouts() {
   const events = HOME_HANGOUTS.events;
@@ -12,7 +20,11 @@ export default function Hangouts() {
   const loop = [...events, ...events];
 
   return (
-    <section id="events" className="pt-10 pb-14 md:pt-14 md:pb-20">
+    <section
+      id="events"
+      className="relative overflow-hidden pt-10 pb-14 md:pt-14 md:pb-20"
+    >
+
       <Container>
         {/* top text */}
         <Stagger className="max-w-3xl lg:max-w-[1100px]">
@@ -60,15 +72,7 @@ export default function Hangouts() {
           {/* marquee */}
           <div
             className="marquee"
-            style={
-              {
-                // tune speed + gap here
-                ["--marquee-gap" as any]: "24px",
-                // track will move half width because we duplicate list
-                ["--marquee-shift" as any]: "50%",
-                ["--marquee-duration" as any]: "26s",
-              } as React.CSSProperties
-            }
+            style={marqueeStyle}
           >
             <div className="marquee__track">
               {loop.map((e, idx) => (

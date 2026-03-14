@@ -12,12 +12,6 @@ export default function JoinHero() {
 
   return (
     <section className="relative overflow-hidden">
-      {/* background glows */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -left-40 -top-40 h-130 w-130 rounded-full bg-purple-600/25 blur-[130px]" />
-        <div className="absolute -right-70 -top-40 h-160 w-160 rounded-full bg-indigo-600/20 blur-[150px]" />
-        <div className="absolute left-1/2 -bottom-80 h-190 w-190 -translate-x-1/2 rounded-full bg-sky-500/10 blur-[170px]" />
-      </div>
 
       <Reveal variant={scaleIn} className="relative">
         {/* banner height like your screenshot */}

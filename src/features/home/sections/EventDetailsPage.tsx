@@ -12,8 +12,9 @@ const META_VALUE_STYLE = {
 
 export default function EventDetailsPage({ event }: { event: EventDetail }) {
   return (
-    <main className="bg-black">
-      <section className="pb-14 md:pb-20">
+    <main className="relative overflow-hidden">
+      <section className="relative overflow-hidden pb-14 md:pb-20">
+
         <div className="relative left-1/2 w-screen -translate-x-1/2">
           <div className="w-full overflow-hidden bg-black/35 shadow-[0_25px_80px_rgba(0,0,0,0.55)] backdrop-blur">
             {/* HERO FULL WIDTH */}
@@ -33,10 +34,6 @@ export default function EventDetailsPage({ event }: { event: EventDetail }) {
 
             {/* BELOW HERO */}
             <div className="relative">
-              <div className="pointer-events-none absolute inset-0">
-                <div className="absolute -left-44 top-0 h-130 w-130 rounded-full bg-purple-600/18 blur-[150px]" />
-              </div>
-
               <div className="relative mx-auto max-w-350 px-6 py-10 sm:px-10 lg:px-14">
                 <div className="grid gap-10 lg:grid-cols-[620px_1fr] lg:items-start">
                   <div className="text-left">

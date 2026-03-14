@@ -23,19 +23,8 @@ export default function HangoutEventCardFigma({
   className = "",
   href,
 }: Props) {
-  const CardTag: any = href ? Link : "div";
-  const cardProps = href ? { href } : {};
-
-  return (
-    <CardTag
-      {...cardProps}
-      className={cn(
-        "group block overflow-hidden rounded-2xl border border-white/10",
-        "bg-white/4 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md",
-        "transition duration-200 hover:-translate-y-0.5 hover:border-white/15",
-        className,
-      )}
-    >
+  const content = (
+    <>
       {/* Image (inset like Figma) */}
       <div className="p-3">
         <div className="relative aspect-16/10 w-full overflow-hidden rounded-xl border border-white/10 bg-black/30">
@@ -71,6 +60,27 @@ export default function HangoutEventCardFigma({
           </div>
         </div>
       </div>
-    </CardTag>
+    </>
+  );
+
+  const cardClassName = cn(
+    "group block overflow-hidden rounded-2xl border border-white/10",
+    "bg-white/4 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md",
+    "transition duration-200 hover:-translate-y-0.5 hover:border-white/15",
+    className,
+  );
+
+  if (href) {
+    return (
+      <Link href={href} className={cardClassName}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <div className={cardClassName}>
+      {content}
+    </div>
   );
 }

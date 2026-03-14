@@ -7,7 +7,8 @@ import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 
 export default function Purpose() {
   return (
-    <section className="py-14 md:py-20">
+    <section className="relative overflow-hidden py-14 md:py-20">
+
       <Container>
         <Stagger className="max-w-full lg:max-w-275">
           <Reveal

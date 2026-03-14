@@ -9,12 +9,7 @@ export default function HowBegan() {
   const { began } = ABOUT;
 
   return (
-    <section className="relative py-14 md:py-25">
-      {/* section glow */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -left-40 top-10 h-105 w-105 rounded-full bg-purple-600/18 blur-[130px]" />
-        <div className="absolute -right-40 bottom-0 h-130 w-130 rounded-full bg-sky-500/10 blur-[140px]" />
-      </div>
+    <section className="relative overflow-hidden py-14 md:py-25">
 
       <Container>
         <Reveal variant={scaleIn}>

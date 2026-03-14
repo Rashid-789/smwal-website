@@ -8,7 +8,7 @@ import { SECTION_HEADING_CLASS, SECTION_SUBHEADING_CLASS } from "@/lib/sectionTy
 
 export default function EventsPage() {
   return (
-    <main className="bg-black">
+    <main className="relative overflow-hidden">
       {/* HERO TOP IMAGE */}
       <section className="relative overflow-hidden">
         <div className="relative h-90 w-full sm:h-105 lg:h-130">
@@ -70,7 +70,8 @@ export default function EventsPage() {
       </section>
 
       {/* CONNECT + 9 CARDS */}
-      <section id="events" className="py-14 md:py-20">
+      <section id="events" className="relative overflow-hidden py-14 md:py-20">
+
         <Container>
           <h2 className={SECTION_HEADING_CLASS}>
             {HOME_HANGOUTS.title}

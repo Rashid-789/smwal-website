@@ -8,7 +8,8 @@ import { SECTION_HEADING_FONT_CLASS, SECTION_SUBHEADING_CLASS } from "@/lib/sect
 
 export default function Journey() {
   return (
-    <section className="py-14 md:py-20">
+    <section className="relative overflow-hidden py-14 md:py-20">
+
       <Container>
         {/* wider on desktop so subtitle can stay 1 line like Figma */}
         <Stagger className="max-w-3xl lg:max-w-[1100px]">

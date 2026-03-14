@@ -8,11 +8,7 @@ export default function Team() {
   const { team } = ABOUT;
 
   return (
-    <section className="relative pb-10 md:pb-16">
-      {/* glow */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/2 -bottom-60 h-160 w-160 -translate-x-1/2 rounded-full bg-indigo-600/18 blur-[160px]" />
-      </div>
+    <section className="relative overflow-hidden pb-10 md:pb-16">
 
       <Container>
         <Stagger>

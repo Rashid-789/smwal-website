@@ -16,7 +16,8 @@ export default function Pricing() {
   const plans = useMemo(() => HOME_PRICING.plans, []);
 
   return (
-    <section className="py-14 md:py-20">
+    <section className="relative overflow-hidden py-14 md:py-20">
+
       <Container>
         <Stagger className="flex flex-col gap-6">
           <div className="max-w-2xl">

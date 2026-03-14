@@ -27,7 +27,8 @@ export default function Experience() {
     EXP.image?.alt ?? EXP.photo?.alt ?? EXP.media?.alt ?? "Experience image";
 
   return (
-    <section className="py-14 md:py-20">
+    <section className="relative overflow-hidden py-14 md:py-20">
+
       <Container>
         {/* stretch so right image can match left column height */}
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch lg:gap-14">

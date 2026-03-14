@@ -39,12 +39,7 @@ export default function BookingConfirmedPage({
   event: EventDetail;
 }) {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#07070B] py-10 sm:py-14">
-      {/* purple glow background (like screenshot) */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-44 top-1/2 h-140 w-140 -translate-y-1/2 rounded-full bg-violet-600/25 blur-[130px]" />
-        <div className="absolute left-10 top-20 h-85 w-85 rounded-full bg-violet-500/15 blur-[120px]" />
-      </div>
+    <main className="relative min-h-screen overflow-hidden py-10 sm:py-14">
 
       <Container>
         <div className="relative mx-auto w-full max-w-190 px-4 sm:px-0">

@@ -21,12 +21,10 @@ export default function Contribution() {
   };
 
   return (
-    <section id="contribute" className="relative py-14 md:py-20">
-      {/* background glow */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -left-40 top-10 h-105 w-105 rounded-full bg-purple-600/16 blur-[130px]" />
-        <div className="absolute -right-40 bottom-0 h-130 w-130 rounded-full bg-sky-500/10 blur-[150px]" />
-      </div>
+    <section
+      id="contribute"
+      className="relative overflow-hidden py-14 md:py-20"
+    >
 
       <Container>
         <Stagger className="max-w-275">
