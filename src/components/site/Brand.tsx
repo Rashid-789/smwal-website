@@ -9,7 +9,7 @@ export default function Brand() {
         width={52}
         height={52}
         priority
-        className="h-[52px] w-[52px]"
+        className="h-13 w-13"
       />
       <span className="text-[15px] font-bold tracking-[0.02em] text-white">
         Single & Married<br></br> WITH A LIFE
