@@ -14,7 +14,5 @@ export const SITE = {
     { label: "Donations", href: "/donate" },
     { label: "Contact", href: "/contact" },
 
-    // { label: "Privacy policy", href: "/privacy" },
-    // { label: "Terms", href: "/terms" },
   ],
 };
