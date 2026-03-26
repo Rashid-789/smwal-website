@@ -125,10 +125,10 @@ export default function ContactFormCard() {
             />
 
             {/* Subject */}
-            <div className="relative">
-              <Select value={form.subject} onChange={onChange("subject")}>
+            <div className="relative ">
+              <Select value={form.subject} onChange={onChange("subject")} >
                 {subjects.map((s) => (
-                  <option key={s} value={s}>
+                  <option key={s} value={s} className="text-black">
                     {s}
                   </option>
                 ))}

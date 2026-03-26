@@ -35,11 +35,11 @@ export default function Journey() {
             {HOME_JOURNEY.subtitle}
           </Reveal>
 
-          <Reveal className="mt-6">
+          {/* <Reveal className="mt-6">
             <Button href={HOME_JOURNEY.cta.href} variant="primary" className="h-11 px-6">
-              {HOME_JOURNEY.cta.label}
+              {HOME_JOURNEY.cta.label}11
             </Button>
-          </Reveal>
+          </Reveal> */}
         </Stagger>
 
         <Stagger className="mt-10 grid gap-10 md:grid-cols-3">

@@ -34,7 +34,7 @@ export default function Impact() {
             {impact.subtitle}
           </Reveal>
 
-          <Reveal className="mt-6">
+          {/* <Reveal className="mt-6">
             <Button
               href={impact.cta.href}
               variant="primary"
@@ -42,7 +42,7 @@ export default function Impact() {
               >
               {impact.cta.label}
             </Button>
-          </Reveal>
+          </Reveal> */}
         </Stagger>
 
         <Reveal className="mt-10" variant={scaleIn}>

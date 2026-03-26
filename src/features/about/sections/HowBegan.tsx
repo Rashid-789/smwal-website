@@ -36,7 +36,7 @@ export default function HowBegan() {
                   structured and intentional approach to marriage.One that 
                 </span>
                 <span className="block md:whitespace-nowrap">
-                  supports personal growth, mentorship , , and compatibility before commitment. Today, SMWAL continues
+                  supports personal growth, mentorship, and compatibility before commitment. Today, SMWAL continues
                   to grow as a trusted space 
                 </span>
                 <span className="block md:whitespace-nowrap">

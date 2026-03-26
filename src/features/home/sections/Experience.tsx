@@ -56,7 +56,7 @@ export default function Experience() {
                 {EXP.subtitle}
               </Reveal>
 
-              <Reveal className="mt-6">
+              {/* <Reveal className="mt-6">
                 <Button
                   href={EXP.cta?.href}
                   variant="primary"
@@ -64,7 +64,7 @@ export default function Experience() {
                 >
                   {EXP.cta?.label}
                 </Button>
-              </Reveal>
+              </Reveal> */}
             </Stagger>
 
             <Stagger className="mt-8 space-y-6">

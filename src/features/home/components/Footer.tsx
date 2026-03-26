@@ -3,7 +3,7 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import { SITE } from "@/config/site";
-import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "./SocialIcons";
+import { FacebookIcon, InstagramIcon, TikTokIcon, YouTubeIcon } from "../../../components/site/SocialIcons";
 import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 
 export default function Footer() {
@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* <div className="lg:justify-self-end">
+          <div className="lg:justify-self-end">
             <p className="text-sm text-white/65">
               Subscribe to stay tuned for new web design <br />
               and latest updates. Let’s do it!
@@ -51,7 +51,7 @@ export default function Footer() {
                 Subscribe
               </button>
             </div>
-          </div> */}
+          </div>
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-8">

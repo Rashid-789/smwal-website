@@ -17,7 +17,7 @@ export default function SiteFrame({ children }: { children: React.ReactNode }) {
     <SiteShell>
       <Navbar />
       <main className="pt-16">{children}</main>
-      {!hideFooter && <Footer />}
+      {!hideFooter}
     </SiteShell>
   );
 }

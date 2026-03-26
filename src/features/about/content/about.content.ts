@@ -4,12 +4,12 @@ export const ABOUT = {
     subtitle:
       "A mission-driven platform dedicated to helping individuals build meaningful, guided, and faith-centered marriages through mentorship, education, and intentional connections.",
     image: { src: "/images/about-hero.jpg", alt: "People collaborating and smiling" },
-    primary: { label: "Download App", href: "#" },
-    secondary: { label: "Contact Us", href: "/contact" },
+    primary: { label: "Get the App", href: "#" },
+    secondary: { label: "Support the Mission", href: "/contact" },
   },
 
   began: {
-    title: "HOW SMWAL BEGAN",
+    title: "OUR  STORY",
     body:
       "SMWAL was created with a simple but powerful vision - to help individuals build meaningful and lasting marriages through guidance, preparation, and shared values.\nIn a world of fast and often superficial connections, we saw the need for a structured and intentional approach to marriage. One that supports personal growth, mentorship, and compatibility before commitment. Today, SMWAL continues to grow as a trusted space for those seeking meaningful relationships and strong foundations for lifelong partnership.",
     image: { src: "/images/about-began.png", alt: "Happy group photo" },

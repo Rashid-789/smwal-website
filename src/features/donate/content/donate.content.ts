@@ -5,11 +5,11 @@ export const DONATE = {
       "Donations directly support mentorship programs, educational resources, and the technological growth of our platform.",
     image: { src: "/images/donate-hero.jpg", alt: "Community gathering" },
     primary: { label: "Donate Now", href: "#contribute" },
-    secondary: { label: "Send Us a Message", href: "/contact" },
+    secondary: { label: "Get the App", href: "/join" },
   },
 
   impact: {
-    pill: "The Impact",
+    pill: "Your Impact",
     title: "SUPPORTING MEANINGFUL CONNECTIONS THROUGH GUIDANCE",
     subtitle:
       "Every contribution to SMWAL helps create a safe, structured, and mentorship-driven environment where individuals can prepare for and build\nlasting marriages rooted in shared values and purpose.",

@@ -4,8 +4,8 @@ export const JOIN = {
     subtitle:
       "Access our full range of features through the SMWAL mobile application.",
     image: { src: "/images/join-hero.jpg", alt: "People having coffee" },
-    primary: { label: "Download App", href: "#" },
-    secondary: { label: "Contact Us", href: "/contact" },
+    primary: { label: "Get the App", href: "#" },
+    secondary: { label: "Join the community", href: "/events" },
     stores: {
       googlePlay: { href: "#", label: "Get it on Google Play" },
       appStore: { href: "#", label: "Download on the App Store" },
@@ -20,11 +20,11 @@ export const JOIN = {
   ],
 
   experience: {
-    pill: "The Experience",
+    pill: "Why Join Us?",
     title: "SUPPORTING MEANINGFUL CONNECTIONS\nTHROUGH GUIDANCE",
     subtitle:
       "SMWAL creates a safe, structured, mentorship-driven space for individuals to grow, prepare, and build meaningful connections.",
-    cta: { label: "Join Our Community", href: "/join" },
+    cta: { label: "Join the Community", href: "/join" },
     image: { src: "/images/join-experience.png", alt: "Wedding couple" },
     items: [
       {
@@ -45,3 +45,46 @@ export const JOIN = {
     ],
   },
 } as const;
+
+export const JOIN_JOURNEY = {
+  pill: "The Journey",
+  title: "YOUR PATH TO A MEANINGFUL CONNECTION",
+  subtitle:
+    "Joining SMWAL is simple -- and every step is designed to guide you toward a purposeful and lasting marriage",
+  // cta: { label: "Discover Our Vision", href: "/about" },
+  cards: [
+    {
+      image: "/images/purpose-1.svg",
+      alt: "Create Your Profile",
+      title: "Create Your Profile",
+      description:
+        "Download the app and build your intentional profile reflecting your values, goals, and vision for marriage",
+      action: { label: "Get the App", href: "/join" },
+    },
+    {
+      image: "/images/purpose-2.svg",
+      alt: "Learn and Grow",
+      title: "Learn and Grow",
+      description:
+        "Access mentorship, relationship education, and personal development resources designed to help you build a successful and meaningful marriage.",
+      action: { label: "Explore Resources", href: "/about" },
+    },
+    {
+      image: "/images/purpose-3.svg",
+      alt: "Connect with Purpose",
+      title: "Connect with Purpose",
+      description:
+        "Enter guided matchmaking designed to create meaningful, values-aligned connections for long-term commitment ",
+      action: { label: "Start Your Journey", href: "/join" },
+    },
+  ],
+};
+
+export const JOIN_CTA_BANNER = {
+  title: "READY TO BEGIN YOUR JOURNEY?",
+  subtitle:
+    "Take the first step toward a meaningful, guided, and faith-centered marriage journey supported by mentorship and intentional connections.",
+  primary: { label: "Get the App", href: "/join" },
+  secondary: { label: "Join the community", href: "/donate" },
+  image: { src: "/images/cta-banner.jpg", alt: "Happy couple" },
+}; 

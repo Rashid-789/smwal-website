@@ -1,6 +1,7 @@
 import DonateHero from "@/features/donate/sections/DonateHero";
 import Impact from "@/features/donate/sections/Impact";
 import Contribution from "@/features/donate/sections/Contribution";
+import Footer from "@/components/site/Footer";
 
 
 export default function DonatePage() {
@@ -9,6 +10,7 @@ export default function DonatePage() {
       <DonateHero />
       <Impact />
       <Contribution />
+      <Footer/>
      
     </>
   );

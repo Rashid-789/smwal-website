@@ -3,7 +3,7 @@ export const HOME_HERO = {
   subtitle:
     "SMWAL is more than just a platform; it's a mission to foster intentional relationships through guided matchmaking, mentorship, and faith-aligned growth.",
   ctas: {
-    primary: { label: "Join the Platform", href: "/join" },
+    primary: { label: "Get the App", href: "/join" },
     secondary: { label: "Support the Mission", href: "/donate" },
   },
   stores: {
@@ -18,7 +18,7 @@ export const HOME_HERO = {
 };
 
 export const HOME_PURPOSE = {
-  pill: "Our Purpose",
+  pill: "How We Work",
   title: "A GUIDED PATH TO LASTING, INTENTIONAL RELATIONSHIPS",
   subtitle:
     "We believe strong marriages don’t happen by chance — they are built with intention, preparation, and the right support.",
@@ -30,7 +30,7 @@ export const HOME_PURPOSE = {
       title: "Guided Matchmaking",
       description:
         "Our guided matchmaking process focuses on compatibility, shared values, and long-term alignment — helping you find a partner with intention and clarity.",
-      action: { label: "Learn More", href: "/about" },
+      action: { label: "View Plans", href: "/about" },
     },
     {
       image: "/images/purpose-2.svg",
@@ -196,6 +196,33 @@ export const HOME_CTA_BANNER = {
   secondary: { label: "Support the Mission", href: "/donate" },
   image: { src: "/images/cta-banner.jpg", alt: "Happy couple" },
 };     
+
+export const OurMissionPurpose = {
+    pill: "Our Mission/Purpose",
+    title: "SUPPORTING MEANINGFUL CONNECTIONS\nTHROUGH GUIDANCE",
+    subtitle:
+      "SMWAL creates a safe, structured, mentorship-driven space for individuals to grow, prepare, and build meaningful connections.",
+    cta: { label: "Join the Community", href: "/join" },
+    image: { src: "/images/join-experience.png", alt: "Wedding couple" },
+    items: [
+      {
+        n: "1",
+        title: "Guidance Through Education",
+        desc: "Access curated resources to help individuals build strong foundations for lifelong commitment.",
+      },
+      {
+        n: "2",
+        title: "Structured & Intentional Matching",
+        desc: "Our matchmaking emphasizes compatibility and shared values for meaningful connections.",
+      },
+      {
+        n: "3",
+        title: "Mentorship & Community Support",
+        desc: "Get mentorship and community support, fostering a respectful and growth-focused environment.",
+      },
+    ],
+  };
+
 
 
 export const HOME_HANGOUTS = {

@@ -4,14 +4,17 @@ export const SITE = {
     { label: "HOME", href: "/" },
     { label: "ABOUT US", href: "/about" },
     { label: "JOIN US", href: "/join" },
-    { label: "DONATE US", href: "/donate" },
+    { label: "DONATIONS", href: "/donate" },
     { label: "CONTACT US", href: "/contact" },
   ],
   footerLinks: [
+    { label: "Home", href: "/" },
     { label: "About", href: "/about" },
+    { label: "Join Us", href: "/join" },
+    { label: "Donations", href: "/donate" },
     { label: "Contact", href: "/contact" },
-    { label: "Donate", href: "/donate" },
-    { label: "Privacy policy", href: "/privacy" },
-    { label: "Terms", href: "/terms" },
+
+    // { label: "Privacy policy", href: "/privacy" },
+    // { label: "Terms", href: "/terms" },
   ],
 };
