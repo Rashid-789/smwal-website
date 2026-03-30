@@ -202,7 +202,7 @@ export const OurMissionPurpose = {
     title: "SUPPORTING MEANINGFUL CONNECTIONS\nTHROUGH GUIDANCE",
     subtitle:
       "SMWAL creates a safe, structured, mentorship-driven space for individuals to grow, prepare, and build meaningful connections.",
-    cta: { label: "Join the Community", href: "/join" },
+    cta: { label: "Join the Community", href: "/events" },
     image: { src: "/images/join-experience.png", alt: "Wedding couple" },
     items: [
       {
