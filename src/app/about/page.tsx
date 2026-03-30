@@ -10,9 +10,10 @@ export default function AboutPage() {
     <>
       <AboutHero />
       <HowBegan />
+      <Team />
       <CommunityImpact />
       <Experience />
-      <Team />
+      
       <Footer />
     </>
   );

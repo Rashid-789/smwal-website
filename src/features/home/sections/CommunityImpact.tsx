@@ -22,14 +22,14 @@ export default function CommunityImpact() {
           </Reveal>
 
           {/*  heading one-line on desktop */}
-          <Reveal
+          {/* <Reveal
             as="h2"
             className={`mt-5 lg:whitespace-nowrap ${SECTION_HEADING_FONT_CLASS} text-[48px] font-normal leading-[1] tracking-[0] text-white`}
           >
             {HOME_IMPACT.title}
-          </Reveal>
+          </Reveal> */}
 
-          <Reveal
+          {/* <Reveal
             as="p"
             className="mt-5 text-[20px] font-medium leading-[1.35] tracking-[0] text-white"
             style={{ fontFamily: "'General Sans', var(--font-sans)" }}
@@ -39,13 +39,13 @@ export default function CommunityImpact() {
               connected
             </span>
             <span className="block">community rooted in shared values, faith, and purpose.</span>
-          </Reveal>
+          </Reveal> */}
 
-          <Reveal className="mt-6">
+          {/* <Reveal className="mt-6">
             <Button href={HOME_IMPACT.cta.href} variant="primary" className="h-11 px-6">
               {HOME_IMPACT.cta.label}
             </Button>
-          </Reveal>
+          </Reveal> */}
         </Stagger>
 
         {/* Image card */}

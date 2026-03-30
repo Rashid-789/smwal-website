@@ -226,7 +226,7 @@ export const OurMissionPurpose = {
 
 
 export const HOME_HANGOUTS = {
-  pill: "Our Hangouts & Community Events",
+  pill: "Community Hangouts/Events",
   title: "CONNECT BEYOND THE SCREEN",
   subtitle:
     "Join ministry-led hangouts, teaching nights, and guided community gatherings designed to build meaningful connections in a respectful and faith-centered environment. ",
