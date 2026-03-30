@@ -42,6 +42,11 @@ export const JOIN = {
         title: "Mentorship & Community Support",
         desc: "Get mentorship and community support, fostering a respectful and growth-focused environment.",
       },
+       {
+        n: "4",
+        title: "The Faith Based Connections",
+        desc: "We organize prayer retreats to deepen faith and strengthen our bonds.",
+      },
     ],
   },
 } as const;
