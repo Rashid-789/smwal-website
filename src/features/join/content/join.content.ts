@@ -86,7 +86,7 @@ export const JOIN_JOURNEY = {
 };
 
 export const JOIN_CTA_BANNER = {
-  title: "READY TO BEGIN YOUR JOURNEY?",
+  title: "READY TO BEGIN YOUR GUIDED JOURNEY?",
   subtitle:
     "Take the first step toward a meaningful, guided, and faith-centered marriage journey supported by mentorship and intentional connections.",
   primary: { label: "Get the App", href: "/join" },
