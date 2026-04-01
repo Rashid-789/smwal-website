@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+// updated
 export default function Brand() {
   return (
     <div className="flex items-center gap-3">
