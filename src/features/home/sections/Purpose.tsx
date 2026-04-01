@@ -18,14 +18,14 @@ export default function Purpose() {
             {HOME_PURPOSE.pill}
           </Reveal>
 
-          <Reveal
+          {/* <Reveal
             as="h2"
             className={`mt-5 ${SECTION_HEADING_FONT_CLASS} text-[48px] font-normal uppercase leading-[1] tracking-[0] text-white`}
           >
             {HOME_PURPOSE.title}
-          </Reveal>
+          </Reveal> */}
 
-          <Reveal
+          {/* <Reveal
             as="p"
             className="mt-5 max-w-[1120px] text-[20px] font-medium leading-[1.35] tracking-[0] text-white"
             style={{ fontFamily: "'General Sans', var(--font-sans)" }}
@@ -36,9 +36,9 @@ export default function Purpose() {
             </>
             <br />
             <>preparation, and the right support.</>
-          </Reveal>
+          </Reveal> */}
 
-          <Reveal className="mt-6">
+          {/* <Reveal className="mt-6">
             <Button
               href={HOME_PURPOSE.cta.href}
               variant="primary"
@@ -46,7 +46,7 @@ export default function Purpose() {
             >
               {HOME_PURPOSE.cta.label}
             </Button>
-          </Reveal>
+          </Reveal> */}
         </Stagger>
 
         <Stagger className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

@@ -18,7 +18,7 @@ export const HOME_HERO = {
 };
 
 export const HOME_PURPOSE = {
-  pill: "How We Work",
+  pill: "Our Purpose",
   title: "A GUIDED PATH TO LASTING, INTENTIONAL RELATIONSHIPS",
   subtitle:
     "We believe strong marriages don’t happen by chance — they are built with intention, preparation, and the right support.",
@@ -33,7 +33,7 @@ export const HOME_PURPOSE = {
       action: { label: "View Plans", href: "/about" },
     },
     {
-      image: "/images/purpose-2.svg",
+      image: "/images/purpose-4.svg",
       alt: "Mentorship and education",
       title: "Mentorship & Education",
       description:
