@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      {/* <HomeOurMissionPurpose/> */}
+      <HomeOurMissionPurpose/>
       <Purpose />
       {/* <Journey /> */}
       {/* <CommunityImpact /> */}

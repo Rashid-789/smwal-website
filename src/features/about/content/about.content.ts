@@ -5,7 +5,7 @@ export const ABOUT = {
       "A mission-driven platform dedicated to helping individuals build meaningful, guided, and faith-centered marriages through mentorship, education, and intentional connections.",
     image: { src: "/images/about-hero.jpg", alt: "People collaborating and smiling" },
     primary: { label: "Get the App", href: "#" },
-    secondary: { label: "Support the Mission", href: "/contact" },
+    secondary: { label: "Support the Mission", href: "/donate" },
   },
 
   began: {

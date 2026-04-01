@@ -4,13 +4,11 @@ import { Reveal, Stagger } from "@/shared/motion/Motion";
 import Image from "next/image";
 import { JOIN_CTA_BANNER } from "../content/join.content";
 import { SECTION_HEADING_CLASS } from "@/lib/sectionTypography";
-import StoreBadges from "@/features/home/components/StoreBadges";
-import { JOIN } from "../content/join.content";
 
 export default function JoinCraBanner() {
-  const { hero } = JOIN;
   return (
     <section className="relative overflow-hidden py-12 md:py-16">
+
       <Container>
         <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/35 shadow-[0_25px_80px_rgba(0,0,0,0.55)] lg:h-130">
           {/* background image */}
@@ -29,7 +27,10 @@ export default function JoinCraBanner() {
 
           {/* content */}
           <Stagger className="relative px-6 py-10 text-center md:px-10 md:py-45">
-            <Reveal as="h3" className={SECTION_HEADING_CLASS}>
+            <Reveal
+              as="h3"
+              className={SECTION_HEADING_CLASS}
+            >
               {JOIN_CTA_BANNER.title}
             </Reveal>
 
@@ -56,7 +57,7 @@ export default function JoinCraBanner() {
                 className={[
                   "h-14.5 px-9 rounded-full",
                   "bg-linear-to-b from-white to-zinc-100",
-                  "text-zinc-900 hover:text-zinc-900 active:text-zinc-900",
+                  "text-zinc-900 hover:text-zinc-900 active:text-zinc-900", 
                   "font-extrabold text-lg",
                   "border border-white/60",
                   "shadow-[0_14px_30px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.95),inset_0_-1px_0_rgba(0,0,0,0.05)]",
@@ -67,13 +68,6 @@ export default function JoinCraBanner() {
               >
                 {JOIN_CTA_BANNER.secondary.label}
               </Button>
-            </Reveal>
-
-            <Reveal className="mt-6 flex flex-wrap justify-center gap-3">
-              <StoreBadges
-                googlePlayHref={hero.stores.googlePlay.href}
-                appStoreHref={hero.stores.appStore.href}
-              />
             </Reveal>
           </Stagger>
         </div>

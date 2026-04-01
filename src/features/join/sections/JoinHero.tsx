@@ -30,7 +30,7 @@ export default function JoinHero() {
           <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
 
           {/* text + actions */}
-          {/* <div className="absolute inset-0 flex items-center">
+          <div className="absolute inset-0 flex items-center">
             <Container className="py-10 md:py-14">
               <Stagger className="max-w-2xl">
                 <Reveal
@@ -73,7 +73,7 @@ export default function JoinHero() {
                 </Reveal>
               </Stagger>
             </Container>
-          </div> */}
+          </div>
         </div>
       </Reveal>
     </section>

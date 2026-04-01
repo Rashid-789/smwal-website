@@ -21,7 +21,7 @@ export default function JoinExperienceCard({
         className,
       ].join(" ")}
     >
-      {/*  changed items-start--  items-center */}
+      {/*  changed items-start -> items-center */}
       <div className="flex items-center gap-5 p-6">
         {/* yellow badge */}
         <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-yellow-400">

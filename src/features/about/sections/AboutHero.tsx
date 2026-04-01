@@ -23,7 +23,7 @@ export default function AboutHero() {
             className="object-cover object-[50%_20%]"
           />
 
-          {/* overlay like screenshot */}
+          {/* overlays like screenshot */}
           <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/35 to-transparent" />
 

@@ -202,7 +202,7 @@ export const OurMissionPurpose = {
     title: "SUPPORTING MEANINGFUL CONNECTIONS\nTHROUGH GUIDANCE",
     subtitle:
       "SMWAL creates a safe, structured, mentorship-driven space for individuals to grow, prepare, and build meaningful connections.",
-    cta: { label: "Join the Community", href: "/events" },
+    cta: { label: "Join the Community", href: "/join" },
     image: { src: "/images/join-experience.png", alt: "Wedding couple" },
     items: [
       {
@@ -226,7 +226,7 @@ export const OurMissionPurpose = {
 
 
 export const HOME_HANGOUTS = {
-  pill: "Community Hangouts/Events",
+  pill: "Our Hangouts & Community Events",
   title: "CONNECT BEYOND THE SCREEN",
   subtitle:
     "Join ministry-led hangouts, teaching nights, and guided community gatherings designed to build meaningful connections in a respectful and faith-centered environment. ",

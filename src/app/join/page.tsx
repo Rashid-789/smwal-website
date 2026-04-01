@@ -12,7 +12,7 @@ export default function JoinPage() {
   return (
     <>
       <JoinHero />
-      {/* <Journey /> */}
+      <Journey />
       {/* <JoinStats /> */}
       <JoinExperience />
       <Pricing />

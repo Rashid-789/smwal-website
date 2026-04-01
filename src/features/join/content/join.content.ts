@@ -24,7 +24,7 @@ export const JOIN = {
     title: "SUPPORTING MEANINGFUL CONNECTIONS\nTHROUGH GUIDANCE",
     subtitle:
       "SMWAL creates a safe, structured, mentorship-driven space for individuals to grow, prepare, and build meaningful connections.",
-    cta: { label: "Join the Community", href: "/events" },
+    cta: { label: "Join the Community", href: "/join" },
     image: { src: "/images/join-experience.png", alt: "Wedding couple" },
     items: [
       {
@@ -41,11 +41,6 @@ export const JOIN = {
         n: "3",
         title: "Mentorship & Community Support",
         desc: "Get mentorship and community support, fostering a respectful and growth-focused environment.",
-      },
-       {
-        n: "4",
-        title: "The Faith Based Connections",
-        desc: "We organize prayer retreats to deepen faith and strengthen our bonds.",
       },
     ],
   },
@@ -86,10 +81,10 @@ export const JOIN_JOURNEY = {
 };
 
 export const JOIN_CTA_BANNER = {
-  title: "READY TO BEGIN YOUR GUIDED JOURNEY?",
+  title: "READY TO BEGIN YOUR JOURNEY?",
   subtitle:
     "Take the first step toward a meaningful, guided, and faith-centered marriage journey supported by mentorship and intentional connections.",
   primary: { label: "Get the App", href: "/join" },
-  secondary: { label: "Join the community", href: "/events" },
+  secondary: { label: "Join the community", href: "/donate" },
   image: { src: "/images/cta-banner.jpg", alt: "Happy couple" },
 }; 

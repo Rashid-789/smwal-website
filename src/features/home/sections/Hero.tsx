@@ -39,9 +39,7 @@ export default function Hero() {
                 intentional relationships through guided matchmaking,
                 mentorship,
               </span>
-              <span>and faith-aligned growth.  We believe strong marriages don’t happen</span>
-              <span>by chance — they are built with intention, preparation, and the right</span>
-              <span>support.</span>
+              <span>and faith-aligned growth.</span>
             </Reveal>
 
             <Reveal className="mt-8 flex flex-wrap gap-3">
