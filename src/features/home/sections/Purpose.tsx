@@ -18,6 +18,8 @@ export default function Purpose() {
             {HOME_PURPOSE.pill}
           </Reveal>
 
+
+
           {/* <Reveal
             as="h2"
             className={`mt-5 ${SECTION_HEADING_FONT_CLASS} text-[48px] font-normal uppercase leading-[1] tracking-[0] text-white`}
