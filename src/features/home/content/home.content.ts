@@ -33,7 +33,7 @@ export const HOME_PURPOSE = {
       action: { label: "View Plans", href: "/about" },
     },
     {
-      image: "/images/purpose-4.svg",
+      image: "/images/purpose-5.svg",
       alt: "Mentorship and education",
       title: "Mentorship & Education",
       description:
