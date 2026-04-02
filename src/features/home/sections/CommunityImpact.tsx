@@ -22,7 +22,7 @@ export default function CommunityImpact() {
           </Reveal>
 
           {/*  heading one-line on desktop */}
-          <Reveal
+          {/* <Reveal
             as="h2"
             className={`mt-5 lg:whitespace-nowrap ${SECTION_HEADING_FONT_CLASS} text-[48px] font-normal leading-[1] tracking-[0] text-white`}
           >
@@ -45,7 +45,7 @@ export default function CommunityImpact() {
             <Button href={HOME_IMPACT.cta.href} variant="primary" className="h-11 px-6">
               {HOME_IMPACT.cta.label}
             </Button>
-          </Reveal>
+          </Reveal> */}
         </Stagger>
 
         {/* Image card */}

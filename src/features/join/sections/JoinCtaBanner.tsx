@@ -2,10 +2,14 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
 import Image from "next/image";
+import { JOIN } from "../content/join.content";
 import { JOIN_CTA_BANNER } from "../content/join.content";
 import { SECTION_HEADING_CLASS } from "@/lib/sectionTypography";
+import StoreBadges from "@/features/home/components/StoreBadges";
 
 export default function JoinCraBanner() {
+  const { hero } = JOIN;
+
   return (
     <section className="relative overflow-hidden py-12 md:py-16">
 
@@ -69,6 +73,30 @@ export default function JoinCraBanner() {
                 {JOIN_CTA_BANNER.secondary.label}
               </Button>
             </Reveal>
+                            {/* <Reveal className="mt-6 flex flex-wrap gap-3">
+                  <Button
+                    href={hero.primary.href}
+                    variant="primary"
+                           className="h-12 rounded-full bg-linear-to-r from-pink-800 to-blue-700 px-7 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
+              >
+                    {hero.primary.label}
+                  </Button>
+
+                  {/* <Button
+                    href={hero.secondary.href}
+                    variant="secondary"
+                    className="h-11 rounded-full border border-white/15 bg-white/5 px-6 text-sm font-extrabold text-white/90 hover:bg-white/10"
+                  >
+                    {hero.secondary.label}
+                  </Button> 
+                </Reveal> */}
+
+                <Reveal className="mt-6 flex flex-wrap justify-center gap-3">
+                  <StoreBadges
+                    googlePlayHref={hero.stores.googlePlay.href}
+                    appStoreHref={hero.stores.appStore.href}
+                  />
+                </Reveal>
           </Stagger>
         </div>
       </Container>

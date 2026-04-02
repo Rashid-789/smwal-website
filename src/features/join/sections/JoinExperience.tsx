@@ -38,8 +38,8 @@ export default function JoinExperience() {
           </Reveal>
 
           <div>
-            <Stagger>
-              <Reveal
+            {/* <Stagger> */}
+              {/* <Reveal
                 as="h3"
                 className={`${SECTION_HEADING_FONT_CLASS} flex flex-col gap-y-2 text-[45px] font-normal leading-none tracking-[0] text-white`}
               >
@@ -48,9 +48,9 @@ export default function JoinExperience() {
                     {line}
                   </span>
                 ))}
-              </Reveal>
+              </Reveal> */}
 
-              <Reveal
+              {/* <Reveal
                 as="p"
                 className="mt-5 max-w-[58ch] text-[18px] font-medium leading-[1] tracking-[0] text-white"
                 style={{ fontFamily: "'General Sans', var(--font-sans)" }}
@@ -61,9 +61,9 @@ export default function JoinExperience() {
                 <span className="mt-2 block">
                   individuals to grow, prepare, and build meaningful connections.
                 </span>
-              </Reveal>
+              </Reveal> */}
 
-              <Reveal className="mt-7">
+              {/* <Reveal className="mt-7">
                 <Button
                   href={experience.cta.href}
                   variant="primary"
@@ -71,8 +71,8 @@ export default function JoinExperience() {
                 >
                   {experience.cta.label}
                 </Button>
-              </Reveal>
-            </Stagger>
+              </Reveal> */}
+            {/* </Stagger> */}
 
             <Stagger className="mt-6 space-y-2">
               {experience.items.map((it) => (

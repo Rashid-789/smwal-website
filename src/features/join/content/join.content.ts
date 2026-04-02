@@ -42,6 +42,12 @@ export const JOIN = {
         title: "Mentorship & Community Support",
         desc: "Get mentorship and community support, fostering a respectful and growth-focused environment.",
       },
+      {
+        n: "4",
+        title: "The Faith Based Connections",
+        desc: "We organize prayer retreats to deepen faith and strengthen our bonds.",
+      },
+
     ],
   },
 } as const;
@@ -81,9 +87,9 @@ export const JOIN_JOURNEY = {
 };
 
 export const JOIN_CTA_BANNER = {
-  title: "READY TO BEGIN YOUR JOURNEY?",
+  title: "Ready To Begin your guided journey?",
   subtitle:
-    "Take the first step toward a meaningful, guided, and faith-centered marriage journey supported by mentorship and intentional connections.",
+    "Access our full range of features through the SMWAL mobile application.",
   primary: { label: "Get the App", href: "/join" },
   secondary: { label: "Join the community", href: "/donate" },
   image: { src: "/images/cta-banner.jpg", alt: "Happy couple" },
