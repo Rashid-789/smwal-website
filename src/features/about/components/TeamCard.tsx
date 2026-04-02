@@ -10,7 +10,7 @@ type Props = {
 function YellowIcon() {
   return (
     <span className="grid h-12 w-12 place-items-center rounded-full bg-yellow-400 text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-      {/* briefcase icon (same look as screenshot) */}
+      {/* briefcase icon (same look screenshot) */}
       <svg
         width="22"
         height="22"
