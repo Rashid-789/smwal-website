@@ -24,7 +24,7 @@ export const JOIN = {
     title: "SUPPORTING MEANINGFUL CONNECTIONS\nTHROUGH GUIDANCE",
     subtitle:
       "SMWAL creates a safe, structured, mentorship-driven space for individuals to grow, prepare, and build meaningful connections.",
-    cta: { label: "Join the Community", href: "/join" },
+    cta: { label: "Join the Community", href: "/events" },
     image: { src: "/images/join-experience.png", alt: "Wedding couple" },
     items: [
       {
@@ -91,6 +91,6 @@ export const JOIN_CTA_BANNER = {
   subtitle:
     "Access our full range of features through the SMWAL mobile application.",
   primary: { label: "Get the App", href: "/join" },
-  secondary: { label: "Join the community", href: "/donate" },
+  secondary: { label: "Join the community", href: "/events" },
   image: { src: "/images/cta-banner.jpg", alt: "Happy couple" },
 }; 
