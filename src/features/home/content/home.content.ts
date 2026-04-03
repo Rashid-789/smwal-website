@@ -267,6 +267,42 @@ export const HOME_HANGOUTS = {
   ],
 };
 
+export const HOME_GROW_WITH_PURPOSE  = {
+  pill: "Grow with Purpose",
+  title: "Access structured lessons designed to guide you toward meaningful and intentional relationships.",
+  subtitle:
+    "Join ministry-led hangouts, teaching nights, and guided community gatherings designed to build meaningful connections in a respectful and faith-centered environment. ",
+  cta: { label: "View Upcoming Events", href: "/events" },
+  events: [
+    {
+      image: "/images/grow-1.svg",
+      alt: "Community Hangout",
+      title: "Understanding Intentional Relationships",
+      summary: "Learn the foundations of building purposeful and accountable connections.",
+      type: "Audio Lesson",
+      time: "10 minutes"
+
+        },
+    {
+      image: "/images/grow-2.svg",
+      alt: "Community Hangout",
+      title: "Preparing for Marriage Mindfully",
+      summary: "Readiness and self-awareness shape healthy relationships.",
+      type: "Video Lesson",
+      time: "20 minutes"
+      
+        },
+  {
+      image: "/images/grow-3.svg",
+      alt: "Communication with Integrity",
+      title: "Communication with Integrity",
+      summary: "Explore honest communication in relationships.",
+      type: "Video Lesson",
+      time: "25 minutes"
+      
+        },
+  ],
+};
 
 
 
