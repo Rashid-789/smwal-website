@@ -10,6 +10,7 @@ import OurMissionPurposeCard from "@/features/home/components/OurMissionPurposeC
 import HomeOurMissionPurpose from "@/features/home/sections/HomeOurMissionPurpose";
 import ContactHero from "@/features/contact/sections/ContactHero";
 import Footer from "@/features/home/components/Footer";
+import HomeGrowWithPurpose from "@/features/home/sections/HomeGrowWithPurpose";
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
       {/* <CommunityImpact /> */}
       {/* <Experience /> */}
       <Hangouts />
+      <HomeGrowWithPurpose />
       <Pricing />
       <CtaBanner />
       <ContactHero />
