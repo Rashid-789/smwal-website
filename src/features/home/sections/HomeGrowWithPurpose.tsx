@@ -64,9 +64,7 @@ export default function HomeGrowWithPurpose() {
 
         {/* ✅ Infinite scroll row (all screens) */}
         <div className="relative mt-10">
-          {/* edge fades like figma */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-black to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-black to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 " />
 
           {/* marquee */}
           <div className="marquee" style={marqueeStyle}>
@@ -80,7 +78,7 @@ export default function HomeGrowWithPurpose() {
                   summary={e.summary}
                   time={e.time}
                   type={e.type}
-                  className="min-w-[300px] max-w-[260px] md:min-w-[280px] md:max-w-[280px]"
+                  className="min-w-[380px] max-w-[380px] md:min-w-[380px] md:max-w-[380px]"
                   // href={e.slug ? `/events/${e.slug}` : undefined}
                 />
               ))}

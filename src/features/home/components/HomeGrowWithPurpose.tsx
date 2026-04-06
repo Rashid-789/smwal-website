@@ -44,18 +44,38 @@ export default function HomeGrowWithPurpose({
         <div className="mt-3">
           {/* Title + Price row */}
           <div className="flex flex-col gap-y-2 items-start justify-between">
-            <h3 className=" text-[13px] leading-[1.15] text-white">
+            <h3 className=" text-[18px] leading-[1.15] text-[##F2F2F2] font-semibold">
               {title}
             </h3>
-             <h3 className=" text-[13px]  leading-[1.15] text-white">
+            <h3 className="whitespace-pre-line text-[14px] leading-[1.15] text-[##E5E5E5] font-medium">
               {summary}
             </h3>
           </div>
 
-          {/* Time + place */}
-          <div className="mt-2 space-y-1 flex justify-between">
-            <p className="text-[11px] font-medium text-white/65">{type}</p>
-            <p className="text-[11px] font-medium text-white/55">{time}</p>
+          {/* Time + type */}
+          <div className="mt-2 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2">
+              <Image
+                src="/images/frequency.svg"
+                alt=""
+                width={20}
+                height={16}
+              />
+              <p className="text-[11px] leading-none font-medium text-white/65">
+                {type}
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/images/clock.svg"
+                alt=""
+                width={20}
+                height={20}
+              />
+              <p className="text-[11px] leading-none font-medium text-white/55">
+                {time}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -64,7 +84,7 @@ export default function HomeGrowWithPurpose({
 
   const cardClassName = cn(
     "group block overflow-hidden rounded-2xl border border-white/10",
-    "bg-white/4 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md",
+    // "bg-white/4 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md",
     "transition duration-200 hover:-translate-y-0.5 hover:border-white/15",
     className,
   );

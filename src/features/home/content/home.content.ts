@@ -296,7 +296,7 @@ export const HOME_GROW_WITH_PURPOSE  = {
       image: "/images/grow-3.svg",
       alt: "Communication with Integrity",
       title: "Communication with Integrity",
-      summary: "Explore honest communication in relationships.",
+      summary: "Explore honest communication in\nrelationships.",
       type: "Video Lesson",
       time: "25 minutes"
       
