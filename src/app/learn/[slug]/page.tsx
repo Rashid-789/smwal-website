@@ -17,6 +17,7 @@ export default async function Page({
           title: "Understanding Intentional Relationships",
           description:
             "Learn the foundations of building purposeful and accountable connections.",
+          background: "/images/grow-5.svg",
           image: "/images/grow-5.svg",
           imageAlt: "Silhouettes riding bicycles at sunset",
           status: "not-started",
