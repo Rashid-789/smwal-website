@@ -18,7 +18,7 @@ const FILTERS: Array<{ key: LessonFilter; label: string }> = [
   { key: "not-started", label: "Not Started" },
   { key: "in-progress", label: "In Progress" },
   { key: "completed", label: "Completed" },
-  { key: "Paid", label: "Paid" },
+  { key: "UnSubscribed", label: "UnSubscribed" },
 ];
 
 
@@ -26,7 +26,7 @@ const FILTERS: Array<{ key: LessonFilter; label: string }> = [
 function getBadgeLabel(status: LessonStatus) {
   if (status === "not-started") return "Not started";
   if (status === "in-progress") return "In progress";
-    if (status === "Paid") return "Paid";
+    if (status === "UnSubscribed") return "UnSubscribed";
   return "Completed";
 }
 
@@ -80,9 +80,9 @@ export default function Learn() {
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {visibleLessons.map((lesson) => {
-              const isPaid = lesson.status === "Paid";
+              const isUnSubscribed = lesson.status === "UnSubscribed";
 
-              if (isPaid) {
+              if (isUnSubscribed) {
                 return (
                   <div
                     key={lesson.slug}

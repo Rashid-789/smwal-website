@@ -131,7 +131,7 @@ export default function BookingConfirmedPage({
                     </div>
 
                     <span className="mt-1 inline-flex items-center rounded-md bg-violet-600 px-3 py-1 text-xs font-semibold text-white">
-                      Paid
+                      UnSubscribed
                     </span>
                   </div>
                 </div>

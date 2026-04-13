@@ -30,7 +30,7 @@ export const HOME_PURPOSE = {
       title: "Guided Matchmaking",
       description:
         "Our guided matchmaking process focuses on compatibility, shared values, and long-term alignment — helping you find a partner with intention and clarity.",
-      action: { label: "View Plans", href: "/about" },
+      action: { label: "View Plans", href: "#pricing" },
     },
     {
       image: "/images/purpose-5.svg",
@@ -38,7 +38,7 @@ export const HOME_PURPOSE = {
       title: "Mentorship & Education",
       description:
         "Access mentorship, relationship education, and personal development resources designed to help you build a successful and meaningful marriage.",
-      action: { label: "Explore Resources", href: "/about" },
+      action: { label: "Explore Resources", href: "#explore" },
     },
     {
       image: "/images/purpose-3.svg",
@@ -307,7 +307,7 @@ export const HOME_GROW_WITH_PURPOSE = {
   ],
 };
 
-export type LessonStatus = "not-started" | "in-progress" | "completed" | "Paid";
+export type LessonStatus = "not-started" | "in-progress" | "completed" | "UnSubscribed";
 
 export type LessonOutlineItem = {
   title: string;
@@ -361,7 +361,7 @@ export const LESSONS: { lessons: LessonContent[] } = {
       image: "/images/grow-1.svg",
       background: "/images/grow-5.svg",
       imageAlt: "Silhouettes riding bicycles at sunset",
-     status: "Paid",
+     status: "UnSubscribed",
       type: "Audio Lesson",
       duration: "10 minutes",
       subtitle:
@@ -380,7 +380,7 @@ export const LESSONS: { lessons: LessonContent[] } = {
             "Understand what it means to approach relationships with intention.",
           image: "/images/grow-1.svg",
           imageAlt: "Lesson outline on relationship foundations",
-         status: "Paid",
+         status: "UnSubscribed",
         },
         {
           title: "Readiness and Self-Awareness",
@@ -388,7 +388,7 @@ export const LESSONS: { lessons: LessonContent[] } = {
             "Reflect on personal readiness and the role of emotional maturity.",
           image: "/images/grow-2.svg",
           imageAlt: "Lesson outline on self-awareness",
-          status: "Paid",
+          status: "UnSubscribed",
         },
         {
           title: "Accountability in Connection",
@@ -396,7 +396,7 @@ export const LESSONS: { lessons: LessonContent[] } = {
             "Learn why guidance and accountability are central to healthy bonds.",
           image: "/images/grow-3.svg",
           imageAlt: "Lesson outline on accountability in relationships",
-          status: "Paid",
+          status: "UnSubscribed",
         },
       ],
     },
@@ -407,7 +407,7 @@ export const LESSONS: { lessons: LessonContent[] } = {
       image: "/images/grow-2.svg",
       background: "/images/grow-2.svg",
       imageAlt: "A smiling couple standing together outdoors",
-      status: "Paid",
+      status: "UnSubscribed",
       type: "Audio Lesson",
       duration: "15 minutes",
       subtitle:
@@ -426,7 +426,7 @@ export const LESSONS: { lessons: LessonContent[] } = {
             "Identify common triggers that create unnecessary friction.",
           image: "/images/grow-2.svg",
           imageAlt: "Conflict trigger lesson card",
-          status: "Paid",
+          status: "UnSubscribed",
         },
         {
           title: "Empathetic Listening",
@@ -434,14 +434,14 @@ export const LESSONS: { lessons: LessonContent[] } = {
             "Practice hearing your partner before defending yourself.",
           image: "/images/grow-3.svg",
           imageAlt: "Empathetic listening lesson card",
-          status: "Paid",
+          status: "UnSubscribed",
         },
         {
           title: "Repair Conversations",
           description: "Learn how to move from hurt toward healthy resolution.",
           image: "/images/grow-1.svg",
           imageAlt: "Repair conversations lesson card",
-          status: "Paid",
+          status: "UnSubscribed",
         },
       ],
     },
@@ -453,7 +453,7 @@ export const LESSONS: { lessons: LessonContent[] } = {
       image: "/images/grow-3.svg",
       background: "/images/grow-3.svg",
       imageAlt: "Two people holding hands across a table",
-      status: "Paid",
+      status: "UnSubscribed",
       type: "Audio Lesson",
       duration: "12 minutes",
       subtitle:
@@ -471,21 +471,21 @@ export const LESSONS: { lessons: LessonContent[] } = {
           description: "Separate healthy openness from emotional overexposure.",
           image: "/images/grow-3.svg",
           imageAlt: "What vulnerability is lesson card",
-          status: "Paid",
+          status: "UnSubscribed",
         },
         {
           title: "Creating Safe Space",
           description: "Learn how safety and empathy invite honest sharing.",
           image: "/images/grow-1.svg",
           imageAlt: "Creating safe space lesson card",
-          status: "Paid",
+          status: "UnSubscribed",
         },
         {
           title: "Mutual Trust",
           description: "Build habits that turn openness into dependable trust.",
           image: "/images/grow-2.svg",
           imageAlt: "Mutual trust lesson card",
-          status: "Paid",
+          status: "UnSubscribed",
         },
       ],
     },

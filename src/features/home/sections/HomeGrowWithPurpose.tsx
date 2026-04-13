@@ -22,7 +22,7 @@ export default function HomeGrowWithPurpose() {
 
   return (
     <section
-      id="events"
+      id="explore"
       className="relative overflow-hidden pt-10 pb-14 md:pt-14 md:pb-20"
     >
       <Container>
