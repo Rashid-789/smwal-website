@@ -55,11 +55,11 @@ export default function HomeGrowWithPurpose() {
             {/* <span className="block mt-2">environment.</span> */}
           </Reveal>
 
-          {/* <Reveal className="mt-6">
-            <Button href="/events" variant="primary" className="h-11 px-6">
+          <Reveal className="mt-6">
+            <Button href="/learn" variant="primary" className="h-11 px-6">
               {HOME_GROW_WITH_PURPOSE.cta.label}
             </Button>
-          </Reveal> */}
+          </Reveal>
         </Stagger>
 
         {/* ✅ Infinite scroll row (all screens) */}
@@ -79,7 +79,7 @@ export default function HomeGrowWithPurpose() {
                   time={e.time}
                   type={e.type}
                   className="min-w-[380px] max-w-[380px] md:min-w-[380px] md:max-w-[380px]"
-                  // href={e.slug ? `/events/${e.slug}` : undefined}
+                  href={e.slug ? `/learn/${e.slug}` : undefined}
                 />
               ))}
             </div>

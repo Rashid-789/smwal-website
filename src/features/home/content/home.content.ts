@@ -267,42 +267,689 @@ export const HOME_HANGOUTS = {
   ],
 };
 
-export const HOME_GROW_WITH_PURPOSE  = {
+export const HOME_GROW_WITH_PURPOSE = {
   pill: "Grow with Purpose",
-  title: "Access structured lessons designed to guide you toward meaningful and intentional relationships.",
+  title:
+    "Access structured lessons designed to guide you toward meaningful and intentional relationships.",
   subtitle:
     "Join ministry-led hangouts, teaching nights, and guided community gatherings designed to build meaningful connections in a respectful and faith-centered environment. ",
-  cta: { label: "View Upcoming Events", href: "/events" },
+  cta: { label: "View All Lessons", href: "/learn" },
   events: [
     {
+      slug: "understanding-intentional-relationships",
       image: "/images/grow-1.svg",
+      background: "/images/grow-5-bg.svg",
       alt: "Community Hangout",
       title: "Understanding Intentional Relationships",
-      summary: "Learn the foundations of building purposeful and accountable connections.",
+      summary:
+        "Learn the foundations of building purposeful and accountable connections.",
       type: "Audio Lesson",
-      time: "10 minutes"
-
-        },
+      time: "10 minutes",
+    },
     {
+      slug: "preparing-for-marriage-mindfully",
       image: "/images/grow-2.svg",
       alt: "Community Hangout",
       title: "Preparing for Marriage Mindfully",
       summary: "Readiness and self-awareness shape healthy relationships.",
       type: "Video Lesson",
-      time: "20 minutes"
-      
-        },
-  {
+      time: "20 minutes",
+    },
+    {
+      slug: "communication-with-integrity",
       image: "/images/grow-3.svg",
       alt: "Communication with Integrity",
       title: "Communication with Integrity",
       summary: "Explore honest communication in\nrelationships.",
       type: "Video Lesson",
-      time: "25 minutes"
-      
-        },
+      time: "25 minutes",
+    },
   ],
 };
+
+export type LessonStatus = "not-started" | "in-progress" | "completed" | "Paid";
+
+export type LessonOutlineItem = {
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  status: LessonStatus;
+};
+
+export type LessonOutlineDetail = {
+  parentLessonSlug: string;
+  slug: string;
+  title: string;
+  subtitle: string;
+  image: string;
+  imageAlt: string;
+  status: LessonStatus;
+  reflect: string;
+  value: string;
+  format: string;
+  duration: string;
+  keyTakeaways: string[];
+  ctaLabel: string;
+};
+
+export type LessonContent = {
+  slug: string;
+  title: string;
+  description: string;
+  background: string;
+  image: string;
+  imageAlt: string;
+  status: LessonStatus;
+  type: "Audio Lesson" | "Video Lesson";
+  duration: string;
+  progress?: number;
+  subtitle: string;
+  value: string;
+  format: string;
+  learnPoints: string[];
+  outline: LessonOutlineItem[];
+};
+
+export const LESSONS: { lessons: LessonContent[] } = {
+  lessons: [
+    {
+      slug: "understanding-intentional-relationships",
+      title: "Understanding Intentional Relationships",
+      description:
+        "Learn the foundations of building purposeful and accountable connections.",
+      image: "/images/grow-1.svg",
+      background: "/images/grow-5.svg",
+      imageAlt: "Silhouettes riding bicycles at sunset",
+     status: "Paid",
+      type: "Audio Lesson",
+      duration: "10 minutes",
+      subtitle:
+        "Learn the foundations of building purposeful and accountable connections.",
+      value: "Guided Teaching",
+      format: "Written and Audio",
+      learnPoints: [
+        "Understanding intentional relationship foundations",
+        "Recognizing personal readiness",
+        "Approaching relationships with clarity and responsibility",
+      ],
+      outline: [
+        {
+          title: "Defining Relationships",
+          description:
+            "Understand what it means to approach relationships with intention.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Lesson outline on relationship foundations",
+         status: "Paid",
+        },
+        {
+          title: "Readiness and Self-Awareness",
+          description:
+            "Reflect on personal readiness and the role of emotional maturity.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Lesson outline on self-awareness",
+          status: "Paid",
+        },
+        {
+          title: "Accountability in Connection",
+          description:
+            "Learn why guidance and accountability are central to healthy bonds.",
+          image: "/images/grow-3.svg",
+          imageAlt: "Lesson outline on accountability in relationships",
+          status: "Paid",
+        },
+      ],
+    },
+    {
+      slug: "navigating-conflict-with-compassion",
+      title: "Navigating Conflict with Compassion",
+      description: "Learn strategies for resolving disagreements with empathy.",
+      image: "/images/grow-2.svg",
+      background: "/images/grow-2.svg",
+      imageAlt: "A smiling couple standing together outdoors",
+      status: "Paid",
+      type: "Audio Lesson",
+      duration: "15 minutes",
+      subtitle:
+        "Grow your ability to navigate hard moments while preserving trust and dignity.",
+      value: "Conflict Guidance",
+      format: "Written and Audio",
+      learnPoints: [
+        "Responding without escalating tension",
+        "Listening for emotion beneath the words",
+        "Using compassion to restore connection",
+      ],
+      outline: [
+        {
+          title: "Conflict Triggers",
+          description:
+            "Identify common triggers that create unnecessary friction.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Conflict trigger lesson card",
+          status: "Paid",
+        },
+        {
+          title: "Empathetic Listening",
+          description:
+            "Practice hearing your partner before defending yourself.",
+          image: "/images/grow-3.svg",
+          imageAlt: "Empathetic listening lesson card",
+          status: "Paid",
+        },
+        {
+          title: "Repair Conversations",
+          description: "Learn how to move from hurt toward healthy resolution.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Repair conversations lesson card",
+          status: "Paid",
+        },
+      ],
+    },
+    {
+      slug: "building-trust-through-vulnerability",
+      title: "Building Trust through Vulnerability",
+      description:
+        "Discover the power of sharing your true self in relationships.",
+      image: "/images/grow-3.svg",
+      background: "/images/grow-3.svg",
+      imageAlt: "Two people holding hands across a table",
+      status: "Paid",
+      type: "Audio Lesson",
+      duration: "12 minutes",
+      subtitle:
+        "Explore how honesty, openness, and courage create deeper connection.",
+      value: "Trust Building",
+      format: "Written and Audio",
+      learnPoints: [
+        "Understanding safe vulnerability",
+        "Sharing fears and hopes with wisdom",
+        "Strengthening emotional security through honesty",
+      ],
+      outline: [
+        {
+          title: "What Vulnerability Is",
+          description: "Separate healthy openness from emotional overexposure.",
+          image: "/images/grow-3.svg",
+          imageAlt: "What vulnerability is lesson card",
+          status: "Paid",
+        },
+        {
+          title: "Creating Safe Space",
+          description: "Learn how safety and empathy invite honest sharing.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Creating safe space lesson card",
+          status: "Paid",
+        },
+        {
+          title: "Mutual Trust",
+          description: "Build habits that turn openness into dependable trust.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Mutual trust lesson card",
+          status: "Paid",
+        },
+      ],
+    },
+    {
+      slug: "understanding-intentional-relationships",
+      title: "Understanding Intentional Relationships",
+      description:
+        "Learn the foundations of building purposeful and accountable connections.",
+      image: "/images/grow-1.svg",
+      background: "/images/grow-5.svg",
+      imageAlt: "Silhouettes riding bicycles at sunset",
+      status: "not-started",
+      type: "Audio Lesson",
+      duration: "10 minutes",
+      subtitle:
+        "Learn the foundations of building purposeful and accountable connections.",
+      value: "Guided Teaching",
+      format: "Written and Audio",
+      learnPoints: [
+        "Understanding intentional relationship foundations",
+        "Recognizing personal readiness",
+        "Approaching relationships with clarity and responsibility",
+      ],
+      outline: [
+        {
+          title: "Defining Relationships",
+          description:
+            "Understand what it means to approach relationships with intention.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Lesson outline on relationship foundations",
+          status: "in-progress",
+        },
+        {
+          title: "Readiness and Self-Awareness",
+          description:
+            "Reflect on personal readiness and the role of emotional maturity.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Lesson outline on self-awareness",
+          status: "not-started",
+        },
+        {
+          title: "Accountability in Connection",
+          description:
+            "Learn why guidance and accountability are central to healthy bonds.",
+          image: "/images/grow-3.svg",
+          imageAlt: "Lesson outline on accountability in relationships",
+          status: "not-started",
+        },
+      ],
+    },
+    {
+      slug: "navigating-conflict-with-compassion",
+      title: "Navigating Conflict with Compassion",
+      description: "Learn strategies for resolving disagreements with empathy.",
+      image: "/images/grow-2.svg",
+      background: "/images/grow-2.svg",
+      imageAlt: "A smiling couple standing together outdoors",
+      status: "not-started",
+      type: "Audio Lesson",
+      duration: "15 minutes",
+      subtitle:
+        "Grow your ability to navigate hard moments while preserving trust and dignity.",
+      value: "Conflict Guidance",
+      format: "Written and Audio",
+      learnPoints: [
+        "Responding without escalating tension",
+        "Listening for emotion beneath the words",
+        "Using compassion to restore connection",
+      ],
+      outline: [
+        {
+          title: "Conflict Triggers",
+          description:
+            "Identify common triggers that create unnecessary friction.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Conflict trigger lesson card",
+          status: "not-started",
+        },
+        {
+          title: "Empathetic Listening",
+          description:
+            "Practice hearing your partner before defending yourself.",
+          image: "/images/grow-3.svg",
+          imageAlt: "Empathetic listening lesson card",
+          status: "not-started",
+        },
+        {
+          title: "Repair Conversations",
+          description: "Learn how to move from hurt toward healthy resolution.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Repair conversations lesson card",
+          status: "not-started",
+        },
+      ],
+    },
+    {
+      slug: "building-trust-through-vulnerability",
+      title: "Building Trust through Vulnerability",
+      description:
+        "Discover the power of sharing your true self in relationships.",
+      image: "/images/grow-3.svg",
+      background: "/images/grow-3.svg",
+      imageAlt: "Two people holding hands across a table",
+      status: "not-started",
+      type: "Audio Lesson",
+      duration: "12 minutes",
+      subtitle:
+        "Explore how honesty, openness, and courage create deeper connection.",
+      value: "Trust Building",
+      format: "Written and Audio",
+      learnPoints: [
+        "Understanding safe vulnerability",
+        "Sharing fears and hopes with wisdom",
+        "Strengthening emotional security through honesty",
+      ],
+      outline: [
+        {
+          title: "What Vulnerability Is",
+          description: "Separate healthy openness from emotional overexposure.",
+          image: "/images/grow-3.svg",
+          imageAlt: "What vulnerability is lesson card",
+          status: "not-started",
+        },
+        {
+          title: "Creating Safe Space",
+          description: "Learn how safety and empathy invite honest sharing.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Creating safe space lesson card",
+          status: "not-started",
+        },
+        {
+          title: "Mutual Trust",
+          description: "Build habits that turn openness into dependable trust.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Mutual trust lesson card",
+          status: "not-started",
+        },
+      ],
+    },
+    {
+      slug: "cultivating-emotional-intelligence",
+      title: "Cultivating Emotional Intelligence",
+      description:
+        "Develop skills to understand and manage your emotions in relationships.",
+      image: "/images/grow-1.svg",
+      background: "/images/grow-5.svg",
+      imageAlt: "A couple walking in the mountains",
+      status: "in-progress",
+      type: "Video Lesson",
+      duration: "30 minutes",
+      progress: 40,
+      subtitle:
+        "Develop emotional awareness so your relationships grow with steadiness and maturity.",
+      value: "Emotional Growth",
+      format: "Video Lesson",
+      learnPoints: [
+        "Recognizing emotional patterns",
+        "Responding instead of reacting",
+        "Building emotional steadiness in partnership",
+      ],
+      outline: [
+        {
+          title: "Naming Emotions",
+          description: "Learn to identify emotions before they shape behavior.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Naming emotions lesson card",
+          status: "completed",
+        },
+        {
+          title: "Managing Reactions",
+          description: "Practice regulation tools for difficult conversations.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Managing reactions lesson card",
+          status: "in-progress",
+        },
+        {
+          title: "Relational Awareness",
+          description: "Use emotional intelligence to support a healthier bond.",
+          image: "/images/grow-3.svg",
+          imageAlt: "Relational awareness lesson card",
+          status: "not-started",
+        },
+      ],
+    },
+    {
+      slug: "communication-with-integrity",
+      title: "Communication with Integrity",
+      description:
+        "Mastering Empathetic Listening Skills and communication with integrity",
+      image: "/images/grow-2.svg",
+      background: "/images/grow-2.svg",
+      imageAlt: "People holding hands outdoors",
+      status: "in-progress",
+      type: "Video Lesson",
+      duration: "25 minutes",
+      progress: 30,
+      subtitle:
+        "Build honest, respectful communication that reflects maturity and care.",
+      value: "Communication Practice",
+      format: "Video Lesson",
+      learnPoints: [
+        "Speaking honestly without harm",
+        "Listening to understand before answering",
+        "Practicing clarity, empathy, and respect",
+      ],
+      outline: [
+        {
+          title: "Honest Expression",
+          description: "Learn to say what is true with wisdom and gentleness.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Honest expression lesson card",
+          status: "completed",
+        },
+        {
+          title: "Empathetic Listening",
+          description: "Focus on hearing both words and underlying needs.",
+          image: "/images/grow-3.svg",
+          imageAlt: "Empathetic listening lesson card",
+          status: "in-progress",
+        },
+        {
+          title: "Transparent Habits",
+          description:
+            "Build habits that keep communication consistent and safe.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Transparent habits lesson card",
+          status: "not-started",
+        },
+      ],
+    },
+    {
+      slug: "preparing-for-marriage-mindfully",
+      title: "Preparing for Marriage Mindfully",
+      description:
+        "Readiness and self-awareness shape healthy relationships.",
+      image: "/images/grow-3.svg",
+      background: "/images/grow-3.svg",
+      imageAlt: "A close-up of hands holding outdoors",
+      status: "in-progress",
+      type: "Video Lesson",
+      duration: "20 minutes",
+      progress: 10,
+      subtitle:
+        "Reflect on readiness, values, and intentional preparation for lasting commitment.",
+      value: "Marriage Preparation",
+      format: "Video Lesson",
+      learnPoints: [
+        "Assessing readiness for commitment",
+        "Clarifying values and expectations",
+        "Preparing with intention instead of emotion alone",
+      ],
+      outline: [
+        {
+          title: "Readiness Check",
+          description:
+            "Examine emotional, spiritual, and practical readiness.",
+          image: "/images/grow-3.svg",
+          imageAlt: "Readiness check lesson card",
+          status: "in-progress",
+        },
+        {
+          title: "Shared Vision",
+          description:
+            "Learn to align expectations around marriage and family.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Shared vision lesson card",
+          status: "not-started",
+        },
+        {
+          title: "Intentional Next Steps",
+          description: "Create a thoughtful path toward a healthy commitment.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Intentional next steps lesson card",
+          status: "not-started",
+        },
+      ],
+    },
+    {
+      slug: "managing-expectations-in-partnerships",
+      title: "Managing Expectations in Partnerships",
+      description:
+        "Learn how to set clear, healthy expectations with your partner.",
+      image: "/images/grow-1.svg",
+      background: "/images/grow-5.svg",
+      imageAlt: "A couple standing together outdoors",
+      status: "in-progress",
+      type: "Video Lesson",
+      duration: "22 minutes",
+      progress: 50,
+      subtitle:
+        "Discover how clarity and healthy expectations reduce confusion and resentment.",
+      value: "Relational Clarity",
+      format: "Video Lesson",
+      learnPoints: [
+        "Clarifying expectations early",
+        "Preventing disappointment through healthy dialogue",
+        "Aligning roles, needs, and boundaries",
+      ],
+      outline: [
+        {
+          title: "Expectation Mapping",
+          description:
+            "Surface hidden assumptions that shape relationship tension.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Expectation mapping lesson card",
+          status: "completed",
+        },
+        {
+          title: "Boundary Conversations",
+          description: "Learn to discuss needs and limits with confidence.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Boundary conversations lesson card",
+          status: "in-progress",
+        },
+        {
+          title: "Shared Agreements",
+          description: "Turn assumptions into healthy, mutual agreements.",
+          image: "/images/grow-3.svg",
+          imageAlt: "Shared agreements lesson card",
+          status: "not-started",
+        },
+      ],
+    },
+    {
+      slug: "cultivating-open-dialogue",
+      title: "Communication with Integrity",
+      description:
+        "Cultivating a Culture of Open Dialogue and communication with integrity",
+      image: "/images/grow-2.svg",
+      background: "/images/grow-2.svg",
+      imageAlt: "A couple sitting by a lake in the mountains",
+      status: "completed",
+      type: "Video Lesson",
+      duration: "28 minutes",
+      progress: 100,
+      subtitle:
+        "Strengthen connection through open dialogue that welcomes honesty and mutual respect.",
+      value: "Open Dialogue",
+      format: "Video Lesson",
+      learnPoints: [
+        "Creating space for honest dialogue",
+        "Reducing defensiveness in hard conversations",
+        "Building habits of openness and repair",
+      ],
+      outline: [
+        {
+          title: "Inviting Openness",
+          description:
+            "Create conversations where both people feel safe to speak.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Inviting openness lesson card",
+          status: "completed",
+        },
+        {
+          title: "Handling Tension",
+          description:
+            "Stay engaged and respectful during uncomfortable moments.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Handling tension lesson card",
+          status: "completed",
+        },
+        {
+          title: "Repair and Growth",
+          description:
+            "Use dialogue to heal disconnection and strengthen trust.",
+          image: "/images/grow-3.svg",
+          imageAlt: "Repair and growth lesson card",
+          status: "completed",
+        },
+      ],
+    },
+    {
+      slug: "fostering-trust-through-communication",
+      title: "Communication with Integrity",
+      description: "Fostering Trust Through Transparent Communication",
+      image: "/images/grow-3.svg",
+      background: "/images/grow-3.svg",
+      imageAlt: "A couple dancing in a wooded area",
+      status: "completed",
+      type: "Video Lesson",
+      duration: "25 minutes",
+      progress: 100,
+      subtitle:
+        "See how clear, transparent communication builds steadiness and trust over time.",
+      value: "Trust Through Clarity",
+      format: "Video Lesson",
+      learnPoints: [
+        "Using consistency to deepen trust",
+        "Communicating with transparency and care",
+        "Repairing doubt through honest action",
+      ],
+      outline: [
+        {
+          title: "Trust Foundations",
+          description:
+            "Learn what makes communication feel reliable and safe.",
+          image: "/images/grow-3.svg",
+          imageAlt: "Trust foundations lesson card",
+          status: "completed",
+        },
+        {
+          title: "Consistency in Action",
+          description: "Practice dependable communication habits every day.",
+          image: "/images/grow-2.svg",
+          imageAlt: "Consistency in action lesson card",
+          status: "completed",
+        },
+        {
+          title: "Trust Maintenance",
+          description:
+            "Protect trust through clarity, honesty, and follow-through.",
+          image: "/images/grow-1.svg",
+          imageAlt: "Trust maintenance lesson card",
+          status: "completed",
+        },
+      ],
+    },
+  ],
+};
+
+export function getLessonBySlug(slug: string): LessonContent | null {
+  return LESSONS.lessons.find((lesson) => lesson.slug === slug) ?? null;
+}
+
+export function getLessonOutlineSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export function getLessonOutlineBySlugs(
+  lessonSlug: string,
+  outlineSlug: string,
+): LessonOutlineDetail | null {
+  const lesson = getLessonBySlug(lessonSlug);
+  if (!lesson) return null;
+
+  const outline = lesson.outline.find(
+    (item) => getLessonOutlineSlug(item.title) === outlineSlug,
+  );
+
+  if (!outline) return null;
+
+  return {
+    parentLessonSlug: lesson.slug,
+    slug: outlineSlug,
+    title: outline.title,
+    subtitle: outline.description,
+    image: outline.image,
+    imageAlt: outline.imageAlt,
+    status: outline.status,
+    reflect: `Take a moment to consider how "${outline.title}" can shape the way you approach intentional relationships.`,
+    value: lesson.value,
+    format: lesson.type === "Video Lesson" ? "Video" : lesson.format,
+    duration: "4 minutes",
+    keyTakeaways: [
+      outline.description,
+      `${lesson.value} begins with intentional clarity and consistency.`,
+      "Commitment begins before connection.",
+    ],
+    ctaLabel: "Start Learning",
+  };
+}
 
 
 
