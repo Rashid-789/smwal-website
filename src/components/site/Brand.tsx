@@ -1,5 +1,5 @@
 import Image from "next/image";
-// updated
+// updated the text to be more concise and clear, and added a line break for better readability
 export default function Brand() {
   return (
     <div className="flex items-center gap-3">
