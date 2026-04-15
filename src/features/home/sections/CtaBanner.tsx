@@ -7,7 +7,7 @@ import { SECTION_HEADING_CLASS } from "@/lib/sectionTypography";
 
 export default function CtaBanner() {
   return (
-    <section className="relative overflow-hidden py-12 md:py-16">
+    <section id="cta" className="relative overflow-hidden py-12 md:py-16">
 
       <Container>
         <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/35 shadow-[0_25px_80px_rgba(0,0,0,0.55)] lg:h-130">

@@ -1,5 +1,5 @@
 "use client";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -25,43 +25,43 @@ const COLORS = {
   purple: "#6E56CF",
 };
 
-function MailIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 text-white/55"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="3.5" y="5.5" width="17" height="13" rx="2.5" />
-      <path d="m5.5 8 6.5 5 6.5-5" />
-    </svg>
-  );
-}
+// function MailIcon() {
+//   return (
+//     <svg
+//       aria-hidden="true"
+//       viewBox="0 0 24 24"
+//       className="h-5 w-5 text-white/55"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="1.8"
+//       strokeLinecap="round"
+//       strokeLinejoin="round"
+//     >
+//       <rect x="3.5" y="5.5" width="17" height="13" rx="2.5" />
+//       <path d="m5.5 8 6.5 5 6.5-5" />
+//     </svg>
+//   );
+// }
 
-function EyeOffIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 text-white/45"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M3 3l18 18" />
-      <path d="M10.6 10.7a3 3 0 0 0 4 4" />
-      <path d="M9.4 5.6A10.9 10.9 0 0 1 12 5.3c5.2 0 9.4 4.7 10 6.7-.2.8-1 2-2.2 3.3" />
-      <path d="M6.2 6.2C4 7.7 2.5 9.9 2 12c.9 2.8 5.1 6.7 10 6.7 1.5 0 2.9-.3 4.2-.8" />
-    </svg>
-  );
-}
+// function EyeOffIcon() {
+//   return (
+//     <svg
+//       aria-hidden="true"
+//       viewBox="0 0 24 24"
+//       className="h-5 w-5 text-white/45"
+//       fill="none"
+//       stroke="currentColor"
+//       strokeWidth="1.8"
+//       strokeLinecap="round"
+//       strokeLinejoin="round"
+//     >
+//       <path d="M3 3l18 18" />
+//       <path d="M10.6 10.7a3 3 0 0 0 4 4" />
+//       <path d="M9.4 5.6A10.9 10.9 0 0 1 12 5.3c5.2 0 9.4 4.7 10 6.7-.2.8-1 2-2.2 3.3" />
+//       <path d="M6.2 6.2C4 7.7 2.5 9.9 2 12c.9 2.8 5.1 6.7 10 6.7 1.5 0 2.9-.3 4.2-.8" />
+//     </svg>
+//   );
+// }
 
 function GoogleIcon() {
   return (

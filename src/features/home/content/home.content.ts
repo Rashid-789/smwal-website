@@ -41,7 +41,7 @@ export const HOME_PURPOSE = {
       action: { label: "Explore Resources", href: "#explore" },
     },
     {
-      image: "/images/purpose-3.svg",
+      image: "/images/purpose-6.svg",
       alt: "Community focus",
       title: "Community Focus",
       description:
@@ -906,8 +906,22 @@ export const LESSONS: { lessons: LessonContent[] } = {
   ],
 };
 
+function getLessonCtaLabel(status: LessonStatus) {
+  if (status === "not-started") return "Start Learning";
+  if (status === "in-progress") return "Resume Learning";
+  if (status === "completed") return "Continue Learning";
+  return "Unlock Lesson";
+}
+
 export function getLessonBySlug(slug: string): LessonContent | null {
-  return LESSONS.lessons.find((lesson) => lesson.slug === slug) ?? null;
+  const matchingLessons = LESSONS.lessons.filter((lesson) => lesson.slug === slug);
+
+  if (matchingLessons.length === 0) return null;
+
+  return (
+    matchingLessons.find((lesson) => lesson.status !== "UnSubscribed") ??
+    matchingLessons[0]
+  );
 }
 
 export function getLessonOutlineSlug(title: string): string {
@@ -947,7 +961,7 @@ export function getLessonOutlineBySlugs(
       `${lesson.value} begins with intentional clarity and consistency.`,
       "Commitment begins before connection.",
     ],
-    ctaLabel: "Start Learning",
+    ctaLabel: getLessonCtaLabel(outline.status),
   };
 }
 

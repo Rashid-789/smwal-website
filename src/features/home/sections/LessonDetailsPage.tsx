@@ -18,9 +18,19 @@ function getBadgeClassName(status: LessonStatus) {
   return "bg-[#7F3FFF] text-white";
 }
 
+function getLessonCtaLabel(status: LessonStatus) {
+  if (status === "not-started") return "Start Learning";
+  if (status === "in-progress") return "Resume Learning";
+  return "Continue Learning";
+}
+
 export default function LessonDetailsPage({ lesson }: { lesson: LessonContent }) {
-  const showProgress = lesson.status === "completed";
-  const progressValue = lesson.progress ?? (lesson.status === "completed" ? 100 : 0);
+  const showProgress =
+    lesson.status === "in-progress" || lesson.status === "completed";
+  const progressValue = lesson.status === "completed"
+    ? 100
+    : lesson.progress ?? 0;
+  const ctaLabel = getLessonCtaLabel(lesson.status);
 
   return (
     <main className="min-h-screen minb bg-black pb-16 text-white">
@@ -53,7 +63,7 @@ export default function LessonDetailsPage({ lesson }: { lesson: LessonContent })
                 type="button"
                 className="inline-flex h-12 w-full items-center justify-center rounded-full bg-gradient-to-r from-[#8A35FF] to-[#0D8BFF] px-6 text-sm font-semibold text-white sm:w-auto"
               >
-                Continue Learning
+                {ctaLabel}
               </button>
             </div>
 

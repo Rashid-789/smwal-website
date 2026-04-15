@@ -1,13 +1,13 @@
 import Container from "@/components/ui/Container";
-import Button from "@/components/ui/Button";
+// import Button from "@/components/ui/Button";
 import { HoverLift, Reveal, Stagger } from "@/shared/motion/Motion";
 import { HOME_PURPOSE } from "../content/home.content";
 import PurposeCard from "../components/PurposeCard";
-import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
+// import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 
 export default function Purpose() {
   return (
-    <section className="relative overflow-hidden py-14 md:py-20">
+    <section id="purpose" className="relative overflow-hidden py-14 md:py-20">
 
       <Container>
         <Stagger className="max-w-full lg:max-w-275">

@@ -8,7 +8,7 @@ import { SECTION_HEADING_CLASS, SECTION_SUBHEADING_CLASS } from "@/lib/sectionTy
 
 export default function ContactHero() {
   return (
-    <section className="relative overflow-hidden py-14 md:py-20">
+    <section id="contacthero" className="relative overflow-hidden py-14 md:py-20">
 
       <Container>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">

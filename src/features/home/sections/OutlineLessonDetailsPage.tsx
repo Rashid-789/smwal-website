@@ -7,7 +7,8 @@ import type {
 function getBadgeLabel(status: LessonStatus) {
   if (status === "not-started") return "Not Started";
   if (status === "in-progress") return "In Progress";
-  return "Completed";
+  if (status === "completed") return "Completed";
+  return "Unsubscribed";
 }
 
 export default function OutlineLessonDetailsPage({
