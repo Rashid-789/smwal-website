@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 
 const BUBBLE_SIZE = 620;
-
+// The glow effect is inspired by the one on https://www.apple.com/airpods-pro/
 export default function HeroSectionGlow() {
   const reducedMotion = useReducedMotion();
 
