@@ -79,13 +79,13 @@ export default function Learn() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {visibleLessons.map((lesson) => {
+            {visibleLessons.map((lesson, index) => {
               const isUnSubscribed = lesson.status === "UnSubscribed";
 
               if (isUnSubscribed) {
                 return (
                   <div
-                    key={lesson.slug}
+                    key={`${lesson.slug}-${index}`}
                     className="block rounded-[14px] border border-white/10 bg-[#1F1F1F] p-3 shadow-[0_16px_42px_rgba(0,0,0,0.28)] opacity-60 cursor-not-allowed"
                   >
                 <div className="relative overflow-hidden rounded-[10px]">
@@ -163,7 +163,7 @@ export default function Learn() {
 
               return (
                 <Link
-                  key={lesson.slug}
+                  key={`${lesson.slug}-${index}`}
                   href={`/learn/${lesson.slug}`}
                   className="block rounded-[14px] border border-white/10 bg-[#1F1F1F] p-3 shadow-[0_16px_42px_rgba(0,0,0,0.28)] transition hover:-translate-y-0.5 hover:border-white/20"
                 >

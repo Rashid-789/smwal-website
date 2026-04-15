@@ -41,7 +41,7 @@ export const HOME_PURPOSE = {
       action: { label: "Explore Resources", href: "#explore" },
     },
     {
-      image: "/images/purpose-6.svg",
+      image: "/images/purpose-7.svg",
       alt: "Community focus",
       title: "Community Focus",
       description:
