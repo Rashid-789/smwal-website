@@ -59,16 +59,16 @@ export default function Footer() {
             <div className="text-sm text-white/60 text-[17px]">© 2021 All Rights Reserved</div>
 
             <div className="flex items-center gap-4">
-              <a href="#" aria-label="YouTube" className="opacity-95 hover:opacity-100">
+              <a href="https://youtube.com/@peaceamewowor" aria-label="YouTube" target="__blank" className="opacity-95 hover:opacity-100">
                 <YouTubeIcon />
               </a>
-              <a href="#" aria-label="Facebook" className="opacity-95 hover:opacity-100">
+              <a href="https://www.facebook.com/@singlemarriedwithalife/" aria-label="Facebook" target="__blank" className="opacity-95 hover:opacity-100">
                 <FacebookIcon />
               </a>
-              <a href="#" aria-label="Instagram" className="opacity-95 hover:opacity-100">
+              <a href="https://www.instagram.com/singlemarriedwithalife" aria-label="Instagram" target="__blank" className="opacity-95 hover:opacity-100">
                 <InstagramIcon />
               </a>
-              <a href="#" aria-label="TikTok" className="opacity-95 hover:opacity-100">
+              <a href="https://www.tiktok.com/@theamewowors" aria-label="TikTok" target="__blank" className="opacity-95 hover:opacity-100">
                 <TikTokIcon />
               </a>
             </div>
@@ -78,3 +78,4 @@ export default function Footer() {
     </footer>
   );
 }
+

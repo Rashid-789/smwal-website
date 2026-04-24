@@ -56,7 +56,11 @@ export default function HomeGrowWithPurpose() {
           </Reveal>
 
           <Reveal className="mt-6">
-            <Button href="/learn" variant="primary" className="h-11 px-6">
+            <Button
+              href="/learn"
+              variant="primary"
+              className="h-11 px-6 !text-[#FFAA00]"
+            >
               {HOME_GROW_WITH_PURPOSE.cta.label}
             </Button>
           </Reveal>

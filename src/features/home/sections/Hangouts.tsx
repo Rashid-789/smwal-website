@@ -57,7 +57,11 @@ export default function Hangouts() {
           </Reveal>
 
           <Reveal className="mt-6">
-            <Button href="/events" variant="primary" className="h-11 px-6">
+            <Button
+              href="/events"
+              variant="primary"
+              className="h-11 px-6 !text-[#FFAA00]"
+            >
               {HOME_HANGOUTS.cta.label}
             </Button>
           </Reveal>

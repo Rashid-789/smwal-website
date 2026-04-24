@@ -19,6 +19,10 @@ export const ABOUT = {
     title: "GET TO KNOW US",
     subtitle:
       "SMWAL is built by a dedicated team committed to strengthening marriages and supporting individuals on their journey toward meaningful partnerships.",
+    cta: {
+      label: "Explore Vendors",
+      href: "https://www.youtube.com/watch?v=MFSS3TwGEng&list=PLWzZf6NFIkpjrIXLRhXmIS4HktRSLRX21",
+    },
     members: [
       {
         name: "Max Hunter",

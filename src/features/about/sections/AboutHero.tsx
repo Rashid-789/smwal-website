@@ -56,8 +56,8 @@ export default function AboutHero() {
                   <Button
                     href={hero.primary.href}
                     variant="primary"
-                      className="h-12 rounded-full bg-linear-to-r from-pink-800 to-blue-700 px-7 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
-              >
+                    className="h-12 rounded-full bg-linear-to-r from-pink-800 to-blue-700 px-7 text-sm font-extrabold text-white shadow-[0_18px_55px_rgba(0,0,0,0.55)] hover:brightness-110"
+                  >
                     {hero.primary.label}
                   </Button>
 

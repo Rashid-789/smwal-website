@@ -1,4 +1,5 @@
 import Container from "@/components/ui/Container";
+import Button from "@/components/ui/Button";
 import { ABOUT } from "../content/about.content";
 import TeamCard from "../components/TeamCard";
 import { HoverLift, Reveal, Stagger } from "@/shared/motion/Motion";
@@ -41,6 +42,18 @@ export default function Team() {
             </Reveal>
           ))}
         </Stagger>
+
+        <Reveal className="mt-10 flex justify-center">
+          <Button
+            href={team.cta.href}
+            variant="primary"
+            target="_blank"
+            rel="noreferrer"
+            className="h-14 min-w-[240px] rounded-full bg-linear-to-r from-pink-800 to-blue-700 px-10 text-[20px] font-extrabold text-white shadow-[0_20px_60px_rgba(0,0,0,0.55)] hover:brightness-110"
+          >
+            {team.cta.label}
+          </Button>
+        </Reveal>
       </Container>
     </section>
   );
