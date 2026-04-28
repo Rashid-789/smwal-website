@@ -21,6 +21,8 @@ export const ABOUT = {
       "SMWAL is built by a dedicated team committed to strengthening marriages and supporting individuals on their journey toward meaningful partnerships.",
     cta: {
       label: "Explore Vendors",
+      intro:
+        "SMWAL works with a group of vendors who provide their services during events and hangouts.",
       href: "https://www.youtube.com/watch?v=MFSS3TwGEng&list=PLWzZf6NFIkpjrIXLRhXmIS4HktRSLRX21",
     },
     members: [

@@ -43,16 +43,21 @@ export default function Team() {
           ))}
         </Stagger>
 
-        <Reveal className="mt-10 flex justify-center">
-          <Button
-            href={team.cta.href}
-            variant="primary"
-            target="_blank"
-            rel="noreferrer"
-            className="h-14 min-w-[240px] rounded-full bg-linear-to-r from-pink-800 to-blue-700 px-10 text-[20px] font-extrabold text-white shadow-[0_20px_60px_rgba(0,0,0,0.55)] hover:brightness-110"
-          >
-            {team.cta.label}
-          </Button>
+        <Reveal className="mt-10 flex flex-col items-center text-center">
+          <p className="mb-5 max-w-3xl text-[18px] font-medium leading-[1.45] tracking-[0] text-white/85">
+            {team.cta.intro}
+          </p>
+          <div className="flex justify-center">
+            <Button
+              href={team.cta.href}
+              variant="primary"
+              target="_blank"
+              rel="noreferrer"
+              className="h-14 min-w-[240px] rounded-full bg-linear-to-r from-pink-800 to-blue-700 px-10 text-[20px] font-extrabold text-white shadow-[0_20px_60px_rgba(0,0,0,0.55)] hover:brightness-110"
+            >
+              {team.cta.label}
+            </Button>
+          </div>
         </Reveal>
       </Container>
     </section>
