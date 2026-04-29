@@ -55,7 +55,7 @@ export default function JoinCraBanner() {
               </Button>
 
               {/* Support the Mission (text stays black on hover) */}
-              <Button
+              {/* <Button
                 href={JOIN_CTA_BANNER.secondary.href}
                 variant="ghost"
                 className={[
@@ -71,7 +71,7 @@ export default function JoinCraBanner() {
                 ].join(" ")}
               >
                 {JOIN_CTA_BANNER.secondary.label}
-              </Button>
+              </Button> */}
             </Reveal>
                             {/* <Reveal className="mt-6 flex flex-wrap gap-3">
                   <Button

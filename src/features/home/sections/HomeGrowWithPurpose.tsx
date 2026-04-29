@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import CenteredCtaButton from "@/components/ui/CenteredCtaButton";
 import { Reveal, Stagger } from "@/shared/motion/Motion";
 import { HOME_GROW_WITH_PURPOSE } from "../content/home.content";
 // import HangoutEventCardFigma from "../components/HangoutEventCardFigma";
@@ -23,7 +24,7 @@ export default function HomeGrowWithPurpose() {
   return (
     <section
       id="explore"
-      className="relative overflow-hidden pt-10 pb-14 md:pt-14 md:pb-20"
+      className="relative overflow-hidden pt-10 pb-10 md:pt-14 md:pb-12"
     >
       <Container>
         {/* top text */}
@@ -89,7 +90,15 @@ export default function HomeGrowWithPurpose() {
             </div>
           </div>
         </div>
+
       </Container>
+
+      <CenteredCtaButton
+        label={HOME_GROW_WITH_PURPOSE.bookCta.label}
+        href={HOME_GROW_WITH_PURPOSE.bookCta.href}
+        wrapperClassName="mt-10 py-8 md:mt-12"
+        className="h-14 min-w-[220px] px-9 text-[19px]"
+      />
     </section>
   );
 }

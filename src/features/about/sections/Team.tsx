@@ -3,7 +3,10 @@ import Button from "@/components/ui/Button";
 import { ABOUT } from "../content/about.content";
 import TeamCard from "../components/TeamCard";
 import { HoverLift, Reveal, Stagger } from "@/shared/motion/Motion";
-import { SECTION_HEADING_CLASS } from "@/lib/sectionTypography";
+import {
+  SECTION_HEADING_CLASS,
+  SECTION_HEADING_FONT_CLASS,
+} from "@/lib/sectionTypography";
 
 export default function Team() {
   const { team } = ABOUT;
@@ -44,7 +47,9 @@ export default function Team() {
         </Stagger>
 
         <Reveal className="mt-10 flex flex-col items-center text-center">
-          <p className="mb-5 max-w-3xl text-[18px] font-medium leading-[1.45] tracking-[0] text-white/85">
+          <p
+            className={`mb-5 max-w-4xl text-[18px] font-normal leading-[1.18] tracking-[0] text-white/85 sm:text-[34px] md:text-[40px] ${SECTION_HEADING_FONT_CLASS}`}
+          >
             {team.cta.intro}
           </p>
           <div className="flex justify-center">

@@ -1,17 +1,16 @@
 import Container from "@/components/ui/Container";
-import Button from "@/components/ui/Button";
+import CenteredCtaButton from "@/components/ui/CenteredCtaButton";
 import Image from "next/image";
 import { JOIN } from "../content/join.content";
 import JoinExperienceCard from "../components/JoinExperienceCard";
 import { HoverLift, Reveal, Stagger } from "@/shared/motion/Motion";
 import { scaleIn } from "@/shared/motion/variants";
-import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 
 export default function JoinExperience() {
   const { experience } = JOIN;
 
   return (
-    <section className="relative overflow-hidden py-14 md:py-20">
+    <section className="relative overflow-hidden pt-14 pb-10 md:pt-20 md:pb-14">
 
       <Container>
         <Reveal
@@ -89,7 +88,15 @@ export default function JoinExperience() {
             </Stagger>
           </div>
         </div>
+
       </Container>
+
+      <CenteredCtaButton
+        label={experience.cta.label}
+        href={experience.cta.href}
+        wrapperClassName="mt-10 py-10 md:mt-14"
+        className="h-16 min-w-[260px] px-10 text-[20px]"
+      />
     </section>
   );
 }

@@ -15,7 +15,7 @@ export default function JoinPage() {
       {/* <Journey /> */}
       {/* <JoinStats /> */}
       <JoinExperience />
-      <Pricing />
+      {/* <Pricing /> */}
       {/* <CtaBanner /> */}
       <JoinCraBanner/>
       <Footer />

@@ -22,7 +22,7 @@ export const ABOUT = {
     cta: {
       label: "Explore Vendors",
       intro:
-        "SMWAL works with a group of vendors who provide their services during events and hangouts.",
+        "SMWAL partners with a curated network of vendors who bring their expertise and services to life at every event and hangout. Whether it’s food, entertainment, or experiences — our vendors make every gathering unforgettable.",
       href: "https://www.youtube.com/watch?v=MFSS3TwGEng&list=PLWzZf6NFIkpjrIXLRhXmIS4HktRSLRX21",
     },
     members: [
