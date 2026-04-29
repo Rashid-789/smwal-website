@@ -46,13 +46,13 @@ export default function Team() {
           ))}
         </Stagger>
 
-        <Reveal className="mt-10 flex flex-col items-center text-center">
+        <section className="mt-10 flex flex-col items-center justify-center gap-y-6 py-10 text-center md:mt-12 md:gap-y-7 md:py-12 lg:mt-14 lg:py-14">
           <p
-            className={`mb-5 max-w-4xl text-[18px] font-normal leading-[1.18] tracking-[0] text-white/85 sm:text-[34px] md:text-[40px] ${SECTION_HEADING_FONT_CLASS}`}
+            className={`mx-auto max-w-5xl text-[22px] font-normal leading-[1.15] tracking-[0] text-white/85 sm:text-[28px] md:text-[34px] lg:text-[38px] ${SECTION_HEADING_FONT_CLASS}`}
           >
             {team.cta.intro}
           </p>
-          <div className="flex justify-center">
+          <Reveal>
             <Button
               href={team.cta.href}
               variant="primary"
@@ -62,8 +62,8 @@ export default function Team() {
             >
               {team.cta.label}
             </Button>
-          </div>
-        </Reveal>
+          </Reveal>
+        </section>
       </Container>
     </section>
   );

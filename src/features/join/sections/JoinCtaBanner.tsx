@@ -11,10 +11,10 @@ export default function JoinCraBanner() {
   const { hero } = JOIN;
 
   return (
-    <section className="relative overflow-hidden py-12 md:py-16">
+    <section className="relative overflow-hidden -mt-12">
 
       <Container>
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/35 shadow-[0_25px_80px_rgba(0,0,0,0.55)] lg:h-130">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/35 shadow-[0_25px_80px_rgba(0,0,0,0.55)]">
           {/* background image */}
           <div className="absolute inset-0">
             <Image
@@ -30,7 +30,7 @@ export default function JoinCraBanner() {
           </div>
 
           {/* content */}
-          <Stagger className="relative px-6 py-10 text-center md:px-10 md:py-45">
+          <Stagger className="relative flex min-h-[420px] flex-col items-center justify-center px-6 py-14 text-center md:min-h-[520px] md:px-10 md:py-20 lg:min-h-[560px]">
             <Reveal
               as="h3"
               className={SECTION_HEADING_CLASS}
@@ -45,7 +45,7 @@ export default function JoinCraBanner() {
               {JOIN_CTA_BANNER.subtitle}
             </Reveal>
 
-            <Reveal className="mt-6 flex flex-wrap justify-center gap-3">
+            <Reveal className="mt-8 flex flex-wrap justify-center gap-3">
               <Button
                 href={JOIN_CTA_BANNER.primary.href}
                 variant="primary"
@@ -91,7 +91,7 @@ export default function JoinCraBanner() {
                   </Button> 
                 </Reveal> */}
 
-                <Reveal className="mt-6 flex flex-wrap justify-center gap-3">
+                <Reveal className="mt-6 flex w-full flex-wrap justify-center gap-3">
                   <StoreBadges
                     googlePlayHref={hero.stores.googlePlay.href}
                     appStoreHref={hero.stores.appStore.href}

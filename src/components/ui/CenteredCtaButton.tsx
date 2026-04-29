@@ -1,3 +1,4 @@
+import type React from "react";
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { Reveal } from "@/shared/motion/Motion";
@@ -5,6 +6,7 @@ import { Reveal } from "@/shared/motion/Motion";
 type CenteredCtaButtonProps = {
   label: string;
   href: string;
+  children?: React.ReactNode;
   className?: string;
   wrapperClassName?: string;
 };
@@ -12,17 +14,19 @@ type CenteredCtaButtonProps = {
 export default function CenteredCtaButton({
   label,
   href,
+  children,
   className,
   wrapperClassName,
 }: CenteredCtaButtonProps) {
   return (
-    <div
+    <section
       className={cn(
-        "grid w-full place-items-center px-4 py-12",
+        "flex w-full flex-col items-center justify-center px-4 py-14 text-center md:py-20 lg:py-24",
         wrapperClassName
       )}
     >
-      <Reveal>
+      <Reveal className="flex flex-col items-center justify-center gap-y-8 text-center md:gap-y-9">
+        {children}
         <Button
           href={href}
           variant="primary"
@@ -34,6 +38,6 @@ export default function CenteredCtaButton({
           {label}
         </Button>
       </Reveal>
-    </div>
+    </section>
   );
 }

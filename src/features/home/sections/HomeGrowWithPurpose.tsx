@@ -96,7 +96,6 @@ export default function HomeGrowWithPurpose() {
       <CenteredCtaButton
         label={HOME_GROW_WITH_PURPOSE.bookCta.label}
         href={HOME_GROW_WITH_PURPOSE.bookCta.href}
-        wrapperClassName="mt-10 py-8 md:mt-12"
         className="h-14 min-w-[220px] px-9 text-[19px]"
       />
     </section>

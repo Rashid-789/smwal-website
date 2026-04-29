@@ -9,7 +9,7 @@ import { SECTION_HEADING_FONT_CLASS } from "@/lib/sectionTypography";
 
 export default function CommunityImpact() {
   return (
-    <section className="relative overflow-hidden py-14 md:py-20">
+    <section className="relative overflow-hidden -mt-6">
 
       <Container>
         {/*wider on desktop so heading stays one line like Figma */}
