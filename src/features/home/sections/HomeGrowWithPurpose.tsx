@@ -6,7 +6,10 @@ import { Reveal, Stagger } from "@/shared/motion/Motion";
 import { HOME_GROW_WITH_PURPOSE } from "../content/home.content";
 // import HangoutEventCardFigma from "../components/HangoutEventCardFigma";
 import HomeGrowWithPurposeCard from "../components/HomeGrowWithPurpose";
-import { SECTION_HEADING_CLASS } from "@/lib/sectionTypography";
+import {
+  SECTION_HEADING_CLASS,
+  SECTION_HEADING_FONT_CLASS,
+} from "@/lib/sectionTypography";
 
 const marqueeStyle: CSSProperties &
   Record<"--marquee-gap" | "--marquee-shift" | "--marquee-duration", string> = {
@@ -97,7 +100,14 @@ export default function HomeGrowWithPurpose() {
         label={HOME_GROW_WITH_PURPOSE.bookCta.label}
         href={HOME_GROW_WITH_PURPOSE.bookCta.href}
         className="h-14 min-w-[220px] px-9 text-[19px]"
-      />
+        wrapperClassName="pt-10 md:pt-14 lg:pt-16"
+      >
+        <p
+          className={`${SECTION_HEADING_FONT_CLASS} mx-auto max-w-[920px] text-[34px] font-normal leading-[1.08] tracking-[0] text-white sm:text-[42px] md:text-[50px]`}
+        >
+          {HOME_GROW_WITH_PURPOSE.bookCta.text}
+        </p>
+      </CenteredCtaButton>
     </section>
   );
 }

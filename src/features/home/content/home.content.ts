@@ -274,7 +274,12 @@ export const HOME_GROW_WITH_PURPOSE = {
   subtitle:
     "Join ministry-led hangouts, teaching nights, and guided community gatherings designed to build meaningful connections in a respectful and faith-centered environment. ",
   cta: { label: "View All Lessons", href: "/learn" },
-  bookCta: { label: "Buy the Book", href: "#" },
+  bookCta: {
+    label: "Buy the Book",
+    href: "#",
+    text:
+      "Unlock deeper wisdom beyond the lesson, explore our ministry books and continue your journey with practical, faith-filled guidance.",
+  },
   events: [
     {
       slug: "understanding-intentional-relationships",
